@@ -30,7 +30,7 @@ public class Student extends Agent {
     }
 
 
-    
+
     public void setup() {
         addBehaviour(new WorkingBehaviour());
         addBehaviour(new ListeningBehaviour(this));
