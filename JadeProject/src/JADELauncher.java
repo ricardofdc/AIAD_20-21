@@ -1,4 +1,4 @@
-import jade.core.Agent;
+import agents.Student;
 import jade.core.Profile;
 import jade.core.ProfileImpl;
 import jade.core.Runtime;
@@ -17,12 +17,19 @@ public class JADELauncher {
 
         AgentController ac1;
         try {
-            ac1 = mainContainer.acceptNewAgent("helloWorldAgent", new HelloWorldAgent());
+            ac1 = mainContainer.acceptNewAgent("person1", new Student("name1", "MIEIC", 2));
             ac1.start();
         } catch (StaleProxyException e) {
             e.printStackTrace();
         }
 
+        AgentController ac2;
+        try {
+            ac2 = mainContainer.acceptNewAgent("person2", new Student("name2", "MIEIC", 3));
+            ac2.start();
+        } catch (StaleProxyException e) {
+            e.printStackTrace();
+        }
 
     }
 
