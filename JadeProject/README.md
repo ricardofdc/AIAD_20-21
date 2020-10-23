@@ -1,5 +1,26 @@
 # Tema Projeto 1 AIAD
 
+# AIAD Notas
+## Criação de agente em código (fora da interface)
+```
+void main(){
+    Runtime rt = Runtime.instance();
+    Profile profile = new ProfileImpl();
+    profile.setParameter(PROFILE.GUI, "true");
+    profile.setParameter(.......);
+    container controller ac = rt.createMainContainer(profile) ;
+    Agentcontroller agc = ac.createNewAgent("joao","seller",null);
+    agr.start();
+}
+```
+MainContainer tem que existir sempre
+AgentContainer quantos quisermos
+AgentController - controlador de agente. Cada agente precisa de 1.
+
+![](https://i.imgur.com/mPx3Gzx.png)
+
+ContractNetInitiator & ContractNetResponder - Behaviours
+
 
 
 ## Cenário de aplicação, agentes e suas interações, protocolos, objetivos individuals/globais, estratégias, …
