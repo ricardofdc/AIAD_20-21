@@ -16,11 +16,11 @@ public class Library {
 	private final int number_of_students;
 	private final int number_of_tables;
 	
-	private final ArrayList<>
+	//private final ArrayList<>
 
 	private final Runtime rt;
 	private final ProfileImpl p;
-	private final AgentContainer cc;
+	private final ContainerController cc;
 	
 	private AgentController ac1;
 
@@ -29,8 +29,6 @@ public class Library {
 		this.number_of_students = noStudents;	// students per table ??
 		this.number_of_tables = noTables; //tables per floor
 
-		
-		
 		this.rt = Runtime.instance();
 		this.p = new ProfileImpl();
 		this.p.setParameter(Profile.GUI, "true");
