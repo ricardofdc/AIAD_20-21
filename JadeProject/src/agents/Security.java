@@ -12,7 +12,7 @@ public class Security extends Agent {
     public Security(String id, int floor, int noiseTolerance){
         this.id=id;
         this.floor=floor;
-        this.noideTolerance=noiseTolerance;
+        this.noiseTolerance=noiseTolerance;
     }
 
     public String getID(){ return id; }
