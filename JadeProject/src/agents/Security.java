@@ -5,21 +5,17 @@ import agentBehaviours.WorkingBehaviour;
 import jade.core.Agent;
 
 public class Security extends Agent {
-    private final String id;
-    private final int floor;
+    private final library.Floor floor;
     private final int noiseTolerance;
 
-    public Security(String id, int floor, int noiseTolerance){
-        this.id=id;
+    public Security(library.Floor floor, int noiseTolerance){
         this.floor=floor;
         this.noiseTolerance=noiseTolerance;
     }
 
-    public String getID(){ return id; }
+    public library.Floor getFloor(){ return floor; }
 
-    public int getFloor(){ return floor; }
-
-    public int getNoiseTolerance() { return floor; }
+    public int getNoiseTolerance() { return noiseTolerance; }
 
     public void setup() {
         addBehaviour(new WorkingBehaviour());

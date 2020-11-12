@@ -2,7 +2,6 @@ package agents;
 
 import java.util.ArrayList;
 
-import agentBehaviours.ListeningBehaviour;
 import jade.core.AID;
 import jade.core.Agent;
 import jade.domain.DFService;
@@ -10,22 +9,20 @@ import jade.domain.FIPAException;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
 
-public class Librarian extends Agent {
+public class Floor extends Agent {
 	
-	private ArrayList<AID> floors;
-
-    public void setup() {    	
-    	registerLibrarian();
-    	updateFloorsAID();
-    	
-    	addBehaviour(new ListeningBehaviour(this));
-    }
-    
-    private void registerLibrarian() {
-    	DFAgentDescription dfd = new DFAgentDescription();
+	private ArrayList<AID> seats;
+	
+	public void setup() {
+		registerFloor();
+		updateSeatsAID();
+	}
+	
+	private void registerFloor() {
+		DFAgentDescription dfd = new DFAgentDescription();
     	ServiceDescription sd = new ServiceDescription();
     	
-		sd.setType("receptionist");
+		sd.setType("floor");
 		sd.setName(getLocalName());
 		
 		dfd.setName(getAID());
@@ -36,25 +33,23 @@ public class Librarian extends Agent {
 		} catch(FIPAException fe) {
 			fe.printStackTrace();
 		}
-    }
-    
-    private void updateFloorsAID() {
-    	DFAgentDescription dfd = new DFAgentDescription();
+	}
+	
+	private void updateSeatsAID() {
+		DFAgentDescription dfd = new DFAgentDescription();
 		ServiceDescription sd = new ServiceDescription();
 		
-		sd.setType("floor");
+		sd.setType("seat");
 		dfd.addServices(sd);
 		
 		try {
 			DFAgentDescription[] result = DFService.search(this, dfd);
 			
 			for(int i = 0; i < result.length; i++) {
-				System.out.println("Found " + result[i].getName());
-				floors.add(result[i].getName());
+				seats.add(result[i].getName());
 			}
 		} catch(FIPAException fe) {
 			fe.printStackTrace();
 		}
-    }
-
+	}
 }

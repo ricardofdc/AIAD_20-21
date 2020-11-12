@@ -5,33 +5,20 @@ import agentBehaviours.WorkingBehaviour;
 import jade.core.Agent;
 
 public class Table extends Agent {
-    private final String id;
-    private final int floor;
-    private final int space;
+    private final library.Floor floor;
+    private boolean isFree;
 
-    public Table(String id, int floor, int space){
-        this.id=id;
+
+    public Table(library.Floor floor){
         this.floor=floor;
-        this.space=space;
+        this.isFree = true;
     }
 
-    public String getID(){ return id; }
+    public library.Floor getFloor(){ return floor; }
 
-    public int getFloor(){ return floor; }
-
-    public int getSpace(){ return space; }
-
-    private int addStudent(){
-        return this.space-1;
-    }
-
-    private int removeStudent(){ return this.space+1; }
 
     public boolean isFree(){
-        if (space == 0)
-            return false;
-        else
-            return true;
+        return isFree;
     }
 
     public void setup() {
