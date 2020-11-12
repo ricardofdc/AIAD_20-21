@@ -9,21 +9,22 @@ import jade.domain.DFService;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
 import jade.domain.FIPAException;
+import library.Floor;
 
 import java.util.ArrayList;
 
 public class Security extends Agent {
-    private final library.Floor floor;
+    private final Floor floor;
     private final int noiseTolerance;
 
     private ArrayList<AID> tables;
 
-    public Security(library.Floor floor, int noiseTolerance){
+    public Security(Floor floor, int noiseTolerance){
         this.floor=floor;
         this.noiseTolerance=noiseTolerance;
     }
 
-    public library.Floor getFloor(){ return floor; }
+    public Floor getFloor(){ return floor; }
 
     public int getNoiseTolerance() { return noiseTolerance; }
 

@@ -7,18 +7,19 @@ import jade.domain.DFService;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
 import jade.domain.FIPAException;
+import library.Floor;
 
 public class Table extends Agent {
-    private final library.Floor floor;
+    private final Floor floor;
     private boolean isFree;
 
 
-    public Table(library.Floor floor){
+    public Table(Floor floor){
         this.floor=floor;
         this.isFree = true;
     }
 
-    public library.Floor getFloor(){ return floor; }
+    public Floor getFloor(){ return floor; }
 
 
     public boolean isFree(){
