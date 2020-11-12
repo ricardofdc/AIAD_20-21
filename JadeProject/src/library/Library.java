@@ -36,6 +36,8 @@ public class Library {
 		try{
 			createContainers();
 
+			mainContainer.acceptNewAgent("librarian", new Librarian()).start();
+
 			BufferedReader reader = new BufferedReader(new FileReader(filename));
 
 			number_of_floors = Integer.parseInt(reader.readLine());
@@ -84,14 +86,10 @@ public class Library {
 					studentsContainer.acceptNewAgent(i+"_"+name, new Student(course, noise, action)).start();
 				}
 			}
-
 			reader.close();
 		} catch (IOException | StaleProxyException e) {
 			e.printStackTrace();
 		}
-
-
-
 	}
 
 	public void createContainers() {
@@ -112,5 +110,4 @@ public class Library {
 		p2.setParameter(Profile.CONTAINER_NAME, "Students");
 		studentsContainer = rt.createAgentContainer(p2);
 	}
-
 }
