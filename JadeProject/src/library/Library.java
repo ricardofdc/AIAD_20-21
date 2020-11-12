@@ -1,5 +1,16 @@
 package library;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.util.List;
+import java.util.Map;
+
+import org.snakeyaml.engine.v2.api.Load;
+import org.snakeyaml.engine.v2.api.LoadSettings;
+import org.snakeyaml.engine.v2.api.LoadSettingsBuilder;
+
 import agents.Librarian;
 import agents.Student;
 import jade.core.Profile;
@@ -20,7 +31,7 @@ public class Library {
 
 	private final Runtime rt;
 	private final ProfileImpl p;
-	private final ContainerController cc;
+	private final AgentContainer cc;
 	
 	private AgentController ac1;
 
@@ -42,20 +53,40 @@ public class Library {
 		} catch (StaleProxyException e) {
 			e.printStackTrace(); 
 		}
-
+	}
+	
+	public Library(String yamlFilename) throws FileNotFoundException {
+		rt = null;
+		p = null;
+		cc = null;
+		this.number_of_floors = 1;
+		this.number_of_students = 1;
+		this.number_of_tables = 1;
+		
+		System.out.println(yamlFilename);
+		
+		File file = new File(yamlFilename);
+		InputStream inputStream = (InputStream) new FileInputStream(file);
+		
+		LoadSettings settings = LoadSettings.builder().setLabel("Custom user configuration").build();
+		Load load = new Load(settings);
+		Object list = load.loadFromInputStream(inputStream);
+		System.out.println(list);
 	}
 	
 	private void createFloors(int noTables, int noStudents) {
 		
 	}
 
-	public static void main(String[] args) {
-		if (args.length != 3) {
+	public static void main(String[] args) throws FileNotFoundException {
+		if (args.length == 3) {
+			new Library(Integer.parseUnsignedInt(args[0]), Integer.parseUnsignedInt(args[1]), Integer.parseUnsignedInt(args[2]));
+		} else if (args.length == 1) {
+			new Library(args[0]);
+		} else {
 			System.err.println("Usage: java Library <num_floors> <num_tables_per_floor> <num_students_per_table>");
 			System.exit(1);
 		}
-
-		Library l1 = new Library(Integer.parseUnsignedInt(args[0]), Integer.parseUnsignedInt(args[1]), Integer.parseUnsignedInt(args[2]));
 	}
 
 }
