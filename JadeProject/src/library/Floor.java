@@ -1,16 +1,16 @@
 package library;
 
 public class Floor {
-    private final int id;
+    private final int floor_nr;
     private final String course;
 
-    public Floor(int id, String course) {
-        this.id = id;
+    public Floor(int floor_nr, String course) {
+        this.floor_nr = floor_nr;
         this.course = course;
     }
 
-    public int getId() {
-        return id;
+    public int getfloorNr() {
+        return floor_nr;
     }
 
     public String getCourse() {

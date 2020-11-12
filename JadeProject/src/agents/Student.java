@@ -1,14 +1,19 @@
 package agents;
 
 import agentBehaviours.*;
+import jade.core.AID;
 import jade.core.Agent;
+import jade.core.behaviours.WakerBehaviour;
 import jade.domain.DFService;
 import jade.domain.FIPAException;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
 
+import java.util.ArrayList;
+
 public class Student extends Agent {
 
+    private ArrayList<AID> librarian;
 
     private final String course;
     private final int noise;
@@ -35,24 +40,56 @@ public class Student extends Agent {
     }
 
     public void setup() {
-    	
-    	DFAgentDescription template = new DFAgentDescription();
-		ServiceDescription sd = new ServiceDescription();
-		sd.setType("receptionist");
-		template.addServices(sd);
-		try {
-			DFAgentDescription[] result = DFService.search(this, template);
-			for(int i=0; i<result.length; ++i) {
-				System.out.println("Found " + result[i].getName());
-			}
-		} catch(FIPAException fe) {
-			fe.printStackTrace();
-		}
-		
-        addBehaviour(new WorkingBehaviour());
-        addBehaviour(new ListeningBehaviour(this));
+    	super.setup();
 
-        System.out.println(getLocalName() + ": starting to work!");
+    	registerStudent();
+    	getLibrarianAID();
+		
+        //addBehaviour(new WorkingBehaviour());
+        //addBehaviour(new ListeningBehaviour(this));
+
+        //System.out.println(getLocalName() + ": starting to work!");
+    }
+
+    private void registerStudent(){
+        DFAgentDescription dfd = new DFAgentDescription();
+        ServiceDescription sd = new ServiceDescription();
+        sd.setType("student");
+        sd.setName(this.getName()); // name: 008_barbara@192.168.1.91:1099/JADE
+        dfd.setName(getAID());
+        dfd.addServices(sd);
+        try {
+            DFService.register(this, dfd);
+        } catch(FIPAException fe) {
+            fe.printStackTrace();
+        }
+    }
+
+    private void getLibrarianAID() {
+        addBehaviour(new WakerBehaviour(this, 1000) {
+            @Override
+            protected void onWake() {
+                super.onWake();
+
+                DFAgentDescription dfd = new DFAgentDescription();
+                ServiceDescription sd = new ServiceDescription();
+
+                sd.setType("librarian");
+                dfd.addServices(sd);
+
+                try {
+                    DFAgentDescription[] result = DFService.search(myAgent, dfd);
+                    librarian = new ArrayList<AID>();
+
+                    for(int i = 0; i < result.length; i++) {
+                        System.out.println("Student found " + result[i].getName());
+                        librarian.add(result[i].getName());
+                    }
+                } catch(FIPAException fe) {
+                    fe.printStackTrace();
+                }
+            }
+        });
     }
 
     public void takeDown() {

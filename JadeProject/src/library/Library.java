@@ -1,7 +1,6 @@
 package library;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -20,13 +19,16 @@ public class Library {
 
 	private int number_of_floors = 0;
 	private int number_of_students = 0;
-	private int number_of_tables = 0;
+	//private int number_of_tables = 0;
 
 	private Runtime rt;
-	private ProfileImpl profile;
-	private ProfileImpl p1;
-	private ProfileImpl p2;
+	private ProfileImpl mainProfile;
+	private ProfileImpl librariansProfile;
+	private ProfileImpl securitiesProfile;
+	private ProfileImpl tablesProfile;
+	private ProfileImpl studentsProfile;
 	private AgentContainer mainContainer;
+	private AgentContainer librariansContainer;
 	private AgentContainer securitiesContainer;
 	private AgentContainer tablesContainer;
 	private AgentContainer studentsContainer;
@@ -36,7 +38,7 @@ public class Library {
 		try{
 			createContainers();
 
-			mainContainer.acceptNewAgent("librarian", new Librarian()).start();
+			librariansContainer.acceptNewAgent("librarian", new Librarian()).start();
 
 			BufferedReader reader = new BufferedReader(new FileReader(filename));
 
@@ -67,10 +69,12 @@ public class Library {
 				if(in_arr.length != 4){
 					System.err.println("Error on parse of file " + filename + ".");
 					System.err.println("Students must have 4 arguments: \"<name> <course> <noise> <action>\".");
+					System.err.println("Noise must be between 1 and 10.");
 					System.err.println("Action = 0 -> student wants a table.");
 					System.err.println("Action = 1 -> student wants a book.");
 					System.exit(1);
 				}
+
 
 				String name = in_arr[0];
 				String course = in_arr[1];
@@ -94,20 +98,24 @@ public class Library {
 
 	public void createContainers() {
 		rt = Runtime.instance();
-		profile = new ProfileImpl();
-		profile.setParameter(Profile.GUI, "true");
-		mainContainer = rt.createMainContainer(profile);
+		mainProfile = new ProfileImpl();
+		mainProfile.setParameter(Profile.GUI, "true");
+		mainContainer = rt.createMainContainer(mainProfile);
 
-		p1 = new ProfileImpl();
-		p1.setParameter(Profile.CONTAINER_NAME, "Securities");
-		securitiesContainer = rt.createAgentContainer(p1);
+		librariansProfile = new ProfileImpl();
+		librariansProfile.setParameter(Profile.CONTAINER_NAME, "Librarians");
+		librariansContainer = rt.createAgentContainer(librariansProfile);
 
-		p2 = new ProfileImpl();
-		p2.setParameter(Profile.CONTAINER_NAME, "Tables");
-		tablesContainer = rt.createAgentContainer(p2);
+		securitiesProfile = new ProfileImpl();
+		securitiesProfile.setParameter(Profile.CONTAINER_NAME, "Securities");
+		securitiesContainer = rt.createAgentContainer(securitiesProfile);
 
-		p2 = new ProfileImpl();
-		p2.setParameter(Profile.CONTAINER_NAME, "Students");
-		studentsContainer = rt.createAgentContainer(p2);
+		tablesProfile = new ProfileImpl();
+		tablesProfile.setParameter(Profile.CONTAINER_NAME, "Tables");
+		tablesContainer = rt.createAgentContainer(tablesProfile);
+
+		studentsProfile = new ProfileImpl();
+		studentsProfile.setParameter(Profile.CONTAINER_NAME, "Students");
+		studentsContainer = rt.createAgentContainer(studentsProfile);
 	}
 }

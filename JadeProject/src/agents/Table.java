@@ -3,6 +3,10 @@ package agents;
 import agentBehaviours.ListeningBehaviour;
 import agentBehaviours.WorkingBehaviour;
 import jade.core.Agent;
+import jade.domain.DFService;
+import jade.domain.FIPAAgentManagement.DFAgentDescription;
+import jade.domain.FIPAAgentManagement.ServiceDescription;
+import jade.domain.FIPAException;
 
 public class Table extends Agent {
     private final library.Floor floor;
@@ -22,10 +26,26 @@ public class Table extends Agent {
     }
 
     public void setup() {
-        addBehaviour(new WorkingBehaviour());
-        addBehaviour(new ListeningBehaviour(this));
+        //addBehaviour(new WorkingBehaviour());
+        //addBehaviour(new ListeningBehaviour(this));
 
-        System.out.println(getLocalName() + ": starting to work!");
+        //System.out.println(getLocalName() + ": starting to work!");
+
+        registerTable();
+    }
+
+    private void registerTable() {
+        DFAgentDescription dfd = new DFAgentDescription();
+        ServiceDescription sd = new ServiceDescription();
+        sd.setType("table_" + this.floor.getfloorNr());
+        sd.setName(this.getName()); // name: 008_barbara@192.168.1.91:1099/JADE
+        dfd.setName(getAID());
+        dfd.addServices(sd);
+        try {
+            DFService.register(this, dfd);
+        } catch(FIPAException fe) {
+            fe.printStackTrace();
+        }
     }
 
     public void takeDown() {
