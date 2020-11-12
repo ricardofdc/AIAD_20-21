@@ -17,10 +17,6 @@ import jade.wrapper.AgentContainer;
 
 public class Library {
 
-	private int number_of_floors = 0;
-	private int number_of_students = 0;
-	//private int number_of_tables = 0;
-
 	private Runtime rt;
 	private ProfileImpl mainProfile;
 	private ProfileImpl librariansProfile;
@@ -42,8 +38,8 @@ public class Library {
 
 			BufferedReader reader = new BufferedReader(new FileReader(filename));
 
-			number_of_floors = Integer.parseInt(reader.readLine());
-			for(int i=0; i<number_of_floors; i++){
+			int number_of_floors = Integer.parseInt(reader.readLine());
+			for(int i = 0; i< number_of_floors; i++){
 				String in = reader.readLine();
 				String[] in_arr = in.split(" ");
 				if(in_arr.length != 3){
@@ -62,8 +58,8 @@ public class Library {
 				}
 			}
 
-			number_of_students = Integer.parseInt(reader.readLine());
-			for(int i=0; i<number_of_students; i++){
+			int number_of_students = Integer.parseInt(reader.readLine());
+			for(int i = 0; i< number_of_students; i++){
 				String in = reader.readLine();
 				String[] in_arr = in.split(" ");
 				if(in_arr.length != 4){
