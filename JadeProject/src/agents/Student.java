@@ -2,6 +2,10 @@ package agents;
 
 import agentBehaviours.*;
 import jade.core.Agent;
+import jade.domain.DFService;
+import jade.domain.FIPAException;
+import jade.domain.FIPAAgentManagement.DFAgentDescription;
+import jade.domain.FIPAAgentManagement.ServiceDescription;
 
 public class Student extends Agent {
 
@@ -30,8 +34,21 @@ public class Student extends Agent {
     }
 
 
-
     public void setup() {
+    	
+    	DFAgentDescription template = new DFAgentDescription();
+		ServiceDescription sd = new ServiceDescription();
+		sd.setType("receptionist");
+		template.addServices(sd);
+		try {
+			DFAgentDescription[] result = DFService.search(this, template);
+			for(int i=0; i<result.length; ++i) {
+				System.out.println("Found " + result[i].getName());
+			}
+		} catch(FIPAException fe) {
+			fe.printStackTrace();
+		}
+		
         addBehaviour(new WorkingBehaviour());
         addBehaviour(new ListeningBehaviour(this));
 
