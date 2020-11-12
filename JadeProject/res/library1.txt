@@ -1,0 +1,19 @@
+5
+4 MIEIC 6
+4 MIEM 5
+4 MIEGI 7
+4 MIEC 9
+4 MIEQ 4
+12
+rui MIEIC 3 0
+ricardo MIEIC 2 0
+ana MIEIC 4 0
+francisca MIEM 5 0
+carolina MIEM 7 0
+antonio MIEGI 7 0
+jose MIEC 1 0
+carlos MIEC 3 0
+barbara MIEQ 2 0
+joana MIEQ 8 0
+rute MIEM 4 0
+andre MIEGI 3 0

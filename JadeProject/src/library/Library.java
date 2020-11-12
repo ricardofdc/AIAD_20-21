@@ -43,8 +43,8 @@ public class Library {
 				String in = reader.readLine();
 				String[] in_arr = in.split(" ");
 				if(in_arr.length != 3){
-					System.out.println("Error on parse of file " + filename + ".");
-					System.out.println("Floors must have 3 arguments: \"<n.tables> <course> <noise_tol>\".");
+					System.err.println("Error on parse of file " + filename + ".");
+					System.err.println("Floors must have 3 arguments: \"<n.tables> <course> <noise_tol>\".");
 					System.exit(1);
 				}
 				int num_tables = Integer.parseInt(in_arr[0]);
@@ -63,10 +63,10 @@ public class Library {
 				String in = reader.readLine();
 				String[] in_arr = in.split(" ");
 				if(in_arr.length != 4){
-					System.out.println("Error on parse of file " + filename + ".");
-					System.out.println("Students must have 4 arguments: \"<name> <course> <noise> <action>\".");
-					System.out.println("Action = 0 -> student wants a table.");
-					System.out.println("Action = 1 -> student wants a book.");
+					System.err.println("Error on parse of file " + filename + ".");
+					System.err.println("Students must have 4 arguments: \"<name> <course> <noise> <action>\".");
+					System.err.println("Action = 0 -> student wants a table.");
+					System.err.println("Action = 1 -> student wants a book.");
 					System.exit(1);
 				}
 
@@ -74,7 +74,15 @@ public class Library {
 				String course = in_arr[1];
 				int noise = Integer.parseInt(in_arr[2]);
 				int action = Integer.parseInt(in_arr[3]);
-				studentsContainer.acceptNewAgent(i + "_" + name, new Student(course, noise, action)).start();
+				if (i<10) {
+					studentsContainer.acceptNewAgent("00"+i+"_"+name, new Student(course, noise, action)).start();
+				}
+				else if (i<100){
+					studentsContainer.acceptNewAgent("0"+i+"_"+name, new Student(course, noise, action)).start();
+				}
+				else{
+					studentsContainer.acceptNewAgent(i+"_"+name, new Student(course, noise, action)).start();
+				}
 			}
 
 			reader.close();
