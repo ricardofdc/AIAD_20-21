@@ -3,6 +3,7 @@ package library;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Random;
 
 import agents.Security;
 import agents.Table;
@@ -28,7 +29,9 @@ public class Library {
 	private AgentContainer securitiesContainer;
 	private AgentContainer tablesContainer;
 	private AgentContainer studentsContainer;
-
+	
+	// Period of time, in milliseconds, the library is working.
+	private int workingTime;
 
 	public Library(String filename) {
 		try{
@@ -37,8 +40,10 @@ public class Library {
 			librariansContainer.acceptNewAgent("librarian", new Librarian()).start();
 
 			BufferedReader reader = new BufferedReader(new FileReader(filename));
+			
+			workingTime = Integer.parseUnsignedInt(reader.readLine() + "000");
 
-			int number_of_floors = Integer.parseInt(reader.readLine());
+			int number_of_floors = Integer.parseUnsignedInt(reader.readLine());
 			for(int i = 0; i< number_of_floors; i++){
 				String in = reader.readLine();
 				String[] in_arr = in.split(" ");
@@ -47,9 +52,9 @@ public class Library {
 					System.err.println("Floors must have 3 arguments: \"<n.tables> <course> <noise_tol>\".");
 					System.exit(1);
 				}
-				int num_tables = Integer.parseInt(in_arr[0]);
+				int num_tables = Integer.parseUnsignedInt(in_arr[0]);
 				String course = in_arr[1];
-				int noise_tolerance = Integer.parseInt(in_arr[2]);
+				int noise_tolerance = Integer.parseUnsignedInt(in_arr[2]);
 
 				Floor floor = new Floor(i, course);
 				securitiesContainer.acceptNewAgent("security_" + i, new Security(floor, noise_tolerance)).start();
@@ -58,8 +63,10 @@ public class Library {
 				}
 			}
 
-			int number_of_students = Integer.parseInt(reader.readLine());
-			for(int i = 0; i< number_of_students; i++){
+			Random random = new Random();
+			
+			int number_of_students = Integer.parseUnsignedInt(reader.readLine());
+			for(int i = 0; i< number_of_students; i++) {
 				String in = reader.readLine();
 				String[] in_arr = in.split(" ");
 				if(in_arr.length != 4){
@@ -71,20 +78,24 @@ public class Library {
 					System.exit(1);
 				}
 
-
 				String name = in_arr[0];
 				String course = in_arr[1];
-				int noise = Integer.parseInt(in_arr[2]);
-				int action = Integer.parseInt(in_arr[3]);
+				int noise = Integer.parseUnsignedInt(in_arr[2]);
+				int action = Integer.parseUnsignedInt(in_arr[3]);
+				int timeOfArrival = random.nextInt(this.workingTime);
+				
+				String nickname;
 				if (i<10) {
-					studentsContainer.acceptNewAgent("00"+i+"_"+name, new Student(course, noise, action)).start();
+					nickname = "00"+i+"_"+name;	
 				}
 				else if (i<100){
-					studentsContainer.acceptNewAgent("0"+i+"_"+name, new Student(course, noise, action)).start();
+					nickname = "0"+i+"_"+name;
 				}
 				else{
-					studentsContainer.acceptNewAgent(i+"_"+name, new Student(course, noise, action)).start();
+					nickname = i+"_"+name;
 				}
+				
+				studentsContainer.acceptNewAgent(nickname, new Student(course, noise, action, timeOfArrival)).start();
 			}
 			reader.close();
 		} catch (IOException | StaleProxyException e) {

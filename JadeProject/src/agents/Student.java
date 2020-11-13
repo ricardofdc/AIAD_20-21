@@ -18,11 +18,13 @@ public class Student extends Agent {
     private final String course;
     private final int noise;
     private final int action; // 0 -> get table; 1 -> get book
+    private final int timeOfArrival;
 
-    public Student( String course, int noise, int action){
+    public Student( String course, int noise, int action, int timeOfArrival) {
         this.course = course;
         this.noise = noise;
         this.action = action;
+        this.timeOfArrival = timeOfArrival;	//milliseconds
 
         //later we can make noise and course be random
     }
@@ -45,6 +47,7 @@ public class Student extends Agent {
     	registerStudent();
     	getLibrarianAID();
 		
+    	addBehaviour(new StudentRequestTable(this, (long) timeOfArrival));
         //addBehaviour(new WorkingBehaviour());
         //addBehaviour(new ListeningBehaviour(this));
 
