@@ -35,6 +35,7 @@ public class Library {
 
 	public Library(String filename) {
 		try{
+			Logs.init();
 			createContainers();
 
 			librariansContainer.acceptNewAgent("librarian", new Librarian()).start();

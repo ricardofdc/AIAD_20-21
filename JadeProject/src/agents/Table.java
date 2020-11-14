@@ -8,6 +8,7 @@ import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
 import jade.domain.FIPAException;
 import library.Floor;
+import library.Logs;
 
 public class Table extends Agent {
     private final Floor floor;
@@ -44,13 +45,19 @@ public class Table extends Agent {
         dfd.addServices(sd);
         try {
             DFService.register(this, dfd);
+            Logs.write(this.getName() + " REGISTERED AS TABLE_" + this.floor.getfloorNr(), "table");
         } catch(FIPAException fe) {
             fe.printStackTrace();
         }
     }
 
-    public void takeDown() {
-        System.out.println(getLocalName() + ": done working.");
+    protected void takeDown() {
+        try {
+            DFService.deregister(this);
+            Logs.write(this.getName() + " TAKEN DOWN AND UNREGISTERED FROM DFSERVICE", "table");
+        } catch(FIPAException e) {
+            e.printStackTrace();
+        }
     }
 
 }

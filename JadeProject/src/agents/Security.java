@@ -10,6 +10,7 @@ import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
 import jade.domain.FIPAException;
 import library.Floor;
+import library.Logs;
 
 import java.util.ArrayList;
 
@@ -47,6 +48,7 @@ public class Security extends Agent {
         dfd.addServices(sd);
         try {
             DFService.register(this, dfd);
+            Logs.write(this.getName() + " REGISTERED AS SECURITY", "security");
         } catch(FIPAException fe) {
             fe.printStackTrace();
         }
@@ -69,9 +71,9 @@ public class Security extends Agent {
                     DFAgentDescription[] result = DFService.search(myAgent, dfd);
                     tables = new ArrayList<AID>();
 
-                    for(int i = 0; i < result.length; i++) {
-                        System.out.println("Security" + floor + " found " + result[i].getName());
-                        tables.add(result[i].getName());
+                    for (DFAgentDescription agent : result) {
+                        Logs.write(this.myAgent.getName() + " FOUND " + agent.getName(), "security");
+                        tables.add(agent.getName());
                     }
                 } catch(FIPAException fe) {
                     fe.printStackTrace();
@@ -82,8 +84,13 @@ public class Security extends Agent {
 
 
 
-    public void takeDown() {
-        System.out.println(getLocalName() + ": done working.");
+    protected void takeDown() {
+        try {
+            DFService.deregister(this);
+            Logs.write(this.getName() + " TAKEN DOWN AND UNREGISTERED FROM DFSERVICE", "security");
+        } catch(FIPAException e) {
+            e.printStackTrace();
+        }
     }
 
 }

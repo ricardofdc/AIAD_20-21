@@ -8,6 +8,7 @@ import jade.domain.DFService;
 import jade.domain.FIPAException;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
+import library.Logs;
 
 import java.util.ArrayList;
 
@@ -63,6 +64,7 @@ public class Student extends Agent {
         dfd.addServices(sd);
         try {
             DFService.register(this, dfd);
+            Logs.write(this.getName() + " REGISTERED AS STUDENT", "student");
         } catch(FIPAException fe) {
             fe.printStackTrace();
         }
@@ -84,9 +86,9 @@ public class Student extends Agent {
                     DFAgentDescription[] result = DFService.search(myAgent, dfd);
                     librarian = new ArrayList<AID>();
 
-                    for(int i = 0; i < result.length; i++) {
-                        System.out.println("Student found " + result[i].getName());
-                        librarian.add(result[i].getName());
+                    for (DFAgentDescription agent : result) {
+                        Logs.write(this.myAgent.getName() + " FOUND " + agent.getName(), "student");
+                        librarian.add(agent.getName());
                     }
                 } catch(FIPAException fe) {
                     fe.printStackTrace();
@@ -95,8 +97,13 @@ public class Student extends Agent {
         });
     }
 
-    public void takeDown() {
-        System.out.println(getLocalName() + ": done working.");
+    protected void takeDown() {
+        try {
+            DFService.deregister(this);
+            Logs.write(this.getName() + " TAKEN DOWN AND UNREGISTERED FROM DFSERVICE", "student");
+        } catch(FIPAException e) {
+            e.printStackTrace();
+        }
     }
 
 
