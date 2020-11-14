@@ -22,7 +22,7 @@ public class Librarian extends Agent {
     	registerLibrarian();
 		getFloorsSecurityAID();
 
-		addBehaviour(new LibrarianListenBehaviour(this, MessageTemplate.MatchPerformative(ACLMessage.REQUEST)));
+		addBehaviour(new LibrarianListenBehaviour(this));
 
     }
 

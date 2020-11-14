@@ -1,6 +1,7 @@
 package agents;
 
 import agentBehaviours.ListeningBehaviour;
+import agentBehaviours.TableListenBehaviour;
 import agentBehaviours.WorkingBehaviour;
 import jade.core.Agent;
 import jade.domain.DFService;
@@ -28,12 +29,8 @@ public class Table extends Agent {
     }
 
     public void setup() {
-        //addBehaviour(new WorkingBehaviour());
-        //addBehaviour(new ListeningBehaviour(this));
-
-        //System.out.println(getLocalName() + ": starting to work!");
-
         registerTable();
+        addBehaviour(new TableListenBehaviour(this));
     }
 
     private void registerTable() {

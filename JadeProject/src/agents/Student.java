@@ -58,7 +58,8 @@ public class Student extends Agent {
             protected void onWake() {
                 super.onWake();
 
-                addBehaviour(new StudentRequestBehaviour((Student) this.myAgent, new ACLMessage(ACLMessage.REQUEST)));
+                addBehaviour(new StudentRequestBehaviour((Student) this.myAgent));
+                addBehaviour(new StudentListenBehaviour());
 
             }
         });

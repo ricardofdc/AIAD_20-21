@@ -1,47 +1,63 @@
 package agentBehaviours;
 
 import agents.Librarian;
+import jade.core.behaviours.CyclicBehaviour;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
 import jade.proto.AchieveREResponder;
 
 //FIPA Request Responder
-public class LibrarianListenBehaviour extends AchieveREResponder {
-    private Librarian librarian;
+public class LibrarianListenBehaviour extends CyclicBehaviour {
+    private final Librarian librarian;
+    MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.REQUEST);
 
-
-    public LibrarianListenBehaviour(Librarian librarian, MessageTemplate mt) {
-        super(librarian, mt);
+    public LibrarianListenBehaviour(Librarian librarian){
         this.librarian = librarian;
     }
 
-    protected ACLMessage handleRequest(ACLMessage request) {
-        ACLMessage reply = request.createReply();
-        switch (request.getOntology()){
-            case "TABLE":
-                //agree
-                reply.setPerformative(ACLMessage.AGREE);
-                reply.setContent("TABLE request accepted");
-                System.out.println("TABLE request accepted");
-                registerPrepareResultNotification(new LibrarianRequestBehaviour(librarian, request));
-                break;
-            case "BOOK":
-                //refuse
-                reply.setPerformative(ACLMessage.REFUSE);
-                reply.setContent("BOOK request refused");
-                break;
-            default:
-                //refuse
-                break;
+
+    @Override
+    public void action() {
+        ACLMessage msg = myAgent.receive(mt);
+        if(msg != null) {
+            ACLMessage reply = msg.createReply();
+            switch (msg.getPerformative()){
+                case ACLMessage.REQUEST:
+                    switch (msg.getOntology()){
+                        case "TABLE":
+                            //agree
+                            reply.setPerformative(ACLMessage.AGREE);
+                            reply.setContent("TABLE request accepted");
+                            sendRequestToSecurity(msg);
+                            break;
+                        case "BOOK":
+                            //refuse
+                            reply.setPerformative(ACLMessage.REFUSE);
+                            reply.setContent("BOOK request refused");
+                            break;
+                        default:
+                            //refuse
+                            reply.setPerformative(ACLMessage.NOT_UNDERSTOOD);
+                            break;
+                    }
+                    break;
+                default:
+                    break;
+            }
+            System.out.println(reply);
+            myAgent.send(reply);
+
+        } else {
+            block();
         }
-        return reply;
     }
 
-    protected ACLMessage prepareResultNotification(ACLMessage request, ACLMessage response) {
-        ACLMessage result = request.createReply();
-        System.out.println(request);
-        //registerPrepareResultNotification(new LibrarianRequestBehaviour(librarian, request));
-        System.out.println("here");
-        return result;
+    private void sendRequestToSecurity(ACLMessage request){
+        request.clearAllReceiver();
+        for(int i=0; i<librarian.getFloorsSecurity().size(); i++){
+            request.addReceiver(librarian.getFloorsSecurity().get(i));
+        }
+        request.setSender(myAgent.getAID());
+        myAgent.send(request);
     }
 }
