@@ -1,0 +1,154 @@
+14.11.2020(17:31:48) :: security_0@192.168.1.101:1099/JADE REGISTERED AS SECURITY
+.11.2020(17:31:48) :: table_1_1@192.168.1.101:1099/JADE REGISTERED AS TABLE_1
+14.11.2020(17:31:48) :: table_0_2@192.168.1.101:1099/JADE REGISTERED AS TABLE_0
+14.11.2020(17:31:48) :: table_0_1@192.168.1.101:1099/JADE REGISTERED AS TABLE_0
+14.11.2020(17:31:48) :: table_0_0@192.168.1.101:1099/JADE REGISTERED AS TABLE_0
+14.11.2020(17:31:48) :: table_1_2@192.168.1.101:1099/JADE REGISTERED AS TABLE_1
+14.11.2020(17:31:48) :: table_0_3@192.168.1.101:1099/JADE REGISTERED AS TABLE_0
+14.11.2020(17:31:48) :: table_2_3@192.168.1.101:1099/JADE REGISTERED AS TABLE_2
+14.11.2020(17:31:48) :: table_2_0@192.168.1.101:1099/JADE REGISTERED AS TABLE_2
+14.11.2020(17:31:48) :: table_1_3@192.168.1.101:1099/JADE REGISTERED AS TABLE_1
+14.11.2020(17:31:48) :: table_2_1@192.168.1.101:1099/JADE REGISTERED AS TABLE_2
+14.11.2020(17:31:48) :: table_3_0@192.168.1.101:1099/JADE REGISTERED AS TABLE_3
+14.11.2020(17:31:48) :: table_2_2@192.168.1.101:1099/JADE REGISTERED AS TABLE_2
+14.11.2020(17:31:48) :: table_3_1@192.168.1.101:1099/JADE REGISTERED AS TABLE_3
+14.11.2020(17:31:48) :: table_3_2@192.168.1.101:1099/JADE REGISTERED AS TABLE_3
+14.11.2020(17:31:48) :: table_3_3@192.168.1.101:1099/JADE REGISTERED AS TABLE_3
+14.11.2020(17:31:48) :: security_1@192.168.1.101:1099/JADE REGISTERED AS SECURITY
+14.11.2020(17:31:48) :: table_4_3@192.168.1.101:1099/JADE REGISTERED AS TABLE_4
+14.11.2020(17:31:48) :: security_3@192.168.1.101:1099/JADE REGISTERED AS SECURITY
+14.11.2020(17:31:48) :: security_2@192.168.1.101:1099/JADE REGISTERED AS SECURITY
+14.11.2020(17:31:48) :: security_4@192.168.1.101:1099/JADE REGISTERED AS SECURITY
+14.11.2020(17:31:48) :: table_4_0@192.168.1.101:1099/JADE REGISTERED AS TABLE_4
+14.11.2020(17:31:48) :: table_4_1@192.168.1.101:1099/JADE REGISTERED AS TABLE_4
+14.11.2020(17:31:48) :: table_4_2@192.168.1.101:1099/JADE REGISTERED AS TABLE_4
+14.11.2020(17:31:48) :: 001_ricardo@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:31:48) :: librarian@192.168.1.101:1099/JADE REGISTERED AS LIBRARIAN
+14.11.2020(17:31:48) :: 007_carlos@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:31:48) :: 000_rui@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:31:48) :: 009_joana@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:31:48) :: 018_ana@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:31:48) :: 011_andre@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:31:48) :: 008_barbara@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:31:48) :: 023_vitor@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:31:48) :: 006_jose@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:31:48) :: 010_rute@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:31:48) :: 016_mateus@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:31:48) :: 019_carla@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:31:48) :: 022_david@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:31:48) :: 012_jorge@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:31:48) :: 015_andre@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:31:48) :: 014_carolina@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:31:48) :: 005_antonio@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:31:48) :: 017_carlos@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:31:48) :: 004_carolina@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:31:48) :: 002_ana@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:31:48) :: 013_miguel@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:31:48) :: 020_judite@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:31:48) :: 003_francisca@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:31:48) :: 021_leonor@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:31:48) :: 001_ricardo@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:48) :: librarian@192.168.1.101:1099/JADE FOUND ( agent-identifier :name security_3@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:48) :: librarian@192.168.1.101:1099/JADE FOUND ( agent-identifier :name security_4@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:48) :: librarian@192.168.1.101:1099/JADE FOUND ( agent-identifier :name security_1@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:48) :: librarian@192.168.1.101:1099/JADE FOUND ( agent-identifier :name security_2@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:48) :: librarian@192.168.1.101:1099/JADE FOUND ( agent-identifier :name security_0@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:48) :: 007_carlos@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:48) :: 000_rui@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:48) :: 009_joana@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:48) :: 018_ana@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:48) :: 008_barbara@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:48) :: 011_andre@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:48) :: 023_vitor@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:48) :: 006_jose@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:48) :: 010_rute@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:48) :: 016_mateus@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:48) :: 019_carla@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:48) :: 022_david@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:48) :: 012_jorge@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:48) :: 015_andre@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:48) :: 014_carolina@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:48) :: 005_antonio@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:48) :: 017_carlos@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:48) :: 004_carolina@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:48) :: 002_ana@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:48) :: 013_miguel@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:48) :: 020_judite@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:48) :: 003_francisca@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:48) :: 021_leonor@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:49) :: 012_jorge@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:31:49) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:31:49) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:31:49) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:31:49) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:31:49) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:31:49) :: security_0@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_0_2@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:49) :: security_0@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_0_3@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:49) :: security_0@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_0_0@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:49) :: security_0@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_0_1@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:49) :: security_1@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_1_2@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:49) :: security_1@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_1_0@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:49) :: security_1@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_1_3@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:49) :: security_1@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_1_1@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:49) :: security_3@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_3_1@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:49) :: security_3@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_3_2@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:49) :: security_3@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_3_0@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:49) :: security_3@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_3_3@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:49) :: security_2@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_2_2@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:49) :: security_2@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_2_3@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:49) :: security_2@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_2_0@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:49) :: security_2@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_2_1@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:49) :: security_4@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_4_1@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:49) :: security_4@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_4_2@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:49) :: security_4@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_4_3@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:31:49) :: security_4@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_4_0@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:33:59) :: table_3_0@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: table_1_2@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: table_2_1@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: table_0_3@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: table_1_0@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: table_0_1@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: table_2_3@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: table_4_3@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: table_3_2@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: table_4_1@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: table_2_0@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: table_0_2@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: table_1_1@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: table_0_0@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: table_1_3@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: table_3_3@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: table_2_2@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: table_3_1@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: table_4_2@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: table_4_0@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: 003_francisca@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: 021_leonor@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: 007_carlos@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: 009_joana@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: 010_rute@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: 000_rui@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: 016_mateus@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: 019_carla@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: 020_judite@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: 001_ricardo@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: 012_jorge@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: 017_carlos@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: 006_jose@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: 013_miguel@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: 022_david@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: 011_andre@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: 004_carolina@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: 005_antonio@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: 015_andre@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: 002_ana@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: 014_carolina@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: 018_ana@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: 008_barbara@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: 023_vitor@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: librarian@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: security_3@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: security_4@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: security_0@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: security_1@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+14.11.2020(17:33:59) :: security_2@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE

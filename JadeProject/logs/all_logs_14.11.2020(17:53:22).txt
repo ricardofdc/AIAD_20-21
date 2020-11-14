@@ -1,0 +1,243 @@
+14.11.2020(17:53:23) :: table_0_1@192.168.1.101:1099/JADE REGISTERED AS TABLE_0
+14.11.2020(17:53:23) :: table_1_1@192.168.1.101:1099/JADE REGISTERED AS TABLE_1
+14.11.2020(17:53:23) :: table_3_2@192.168.1.101:1099/JADE REGISTERED AS TABLE_3
+14.11.2020(17:53:23) :: table_2_2@192.168.1.101:1099/JADE REGISTERED AS TABLE_2
+14.11.2020(17:53:23) :: table_2_0@192.168.1.101:1099/JADE REGISTERED AS TABLE_2
+14.11.2020(17:53:23) :: table_0_0@192.168.1.101:1099/JADE REGISTERED AS TABLE_0
+14.11.2020(17:53:23) :: table_1_0@192.168.1.101:1099/JADE REGISTERED AS TABLE_1
+14.11.2020(17:53:23) :: table_0_3@192.168.1.101:1099/JADE REGISTERED AS TABLE_0
+14.11.2020(17:53:23) :: table_0_2@192.168.1.101:1099/JADE REGISTERED AS TABLE_0
+14.11.2020(17:53:23) :: table_1_2@192.168.1.101:1099/JADE REGISTERED AS TABLE_1
+14.11.2020(17:53:23) :: security_0@192.168.1.101:1099/JADE REGISTERED AS SECURITY
+14.11.2020(17:53:23) :: table_3_3@192.168.1.101:1099/JADE REGISTERED AS TABLE_3
+14.11.2020(17:53:23) :: table_2_3@192.168.1.101:1099/JADE REGISTERED AS TABLE_2
+14.11.2020(17:53:23) :: table_1_3@192.168.1.101:1099/JADE REGISTERED AS TABLE_1
+14.11.2020(17:53:23) :: table_2_1@192.168.1.101:1099/JADE REGISTERED AS TABLE_2
+14.11.2020(17:53:23) :: table_3_1@192.168.1.101:1099/JADE REGISTERED AS TABLE_3
+14.11.2020(17:53:23) :: table_3_0@192.168.1.101:1099/JADE REGISTERED AS TABLE_3
+14.11.2020(17:53:23) :: security_2@192.168.1.101:1099/JADE REGISTERED AS SECURITY
+14.11.2020(17:53:23) :: table_4_1@192.168.1.101:1099/JADE REGISTERED AS TABLE_4
+14.11.2020(17:53:23) :: security_1@192.168.1.101:1099/JADE REGISTERED AS SECURITY
+14.11.2020(17:53:23) :: table_4_0@192.168.1.101:1099/JADE REGISTERED AS TABLE_4
+14.11.2020(17:53:23) :: security_3@192.168.1.101:1099/JADE REGISTERED AS SECURITY
+14.11.2020(17:53:23) :: security_4@192.168.1.101:1099/JADE REGISTERED AS SECURITY
+14.11.2020(17:53:23) :: table_4_3@192.168.1.101:1099/JADE REGISTERED AS TABLE_4
+14.11.2020(17:53:23) :: table_4_2@192.168.1.101:1099/JADE REGISTERED AS TABLE_4
+14.11.2020(17:53:23) :: librarian@192.168.1.101:1099/JADE REGISTERED AS LIBRARIAN
+14.11.2020(17:53:23) :: 000_rui@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:53:23) :: 012_jorge@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:53:23) :: 005_antonio@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:53:23) :: 013_miguel@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:53:23) :: 007_carlos@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:53:23) :: 006_jose@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:53:23) :: 011_andre@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:53:23) :: 003_francisca@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:53:23) :: 008_barbara@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:53:23) :: 009_joana@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:53:23) :: 001_ricardo@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:53:23) :: 014_carolina@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:53:23) :: 019_carla@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:53:23) :: 004_carolina@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:53:23) :: 020_judite@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:53:23) :: 015_andre@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:53:23) :: 002_ana@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:53:23) :: 010_rute@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:53:23) :: 016_mateus@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:53:23) :: 023_vitor@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:53:23) :: 017_carlos@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:53:23) :: 018_ana@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:53:23) :: 022_david@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:53:23) :: 021_leonor@192.168.1.101:1099/JADE REGISTERED AS STUDENT
+14.11.2020(17:53:23) :: librarian@192.168.1.101:1099/JADE FOUND ( agent-identifier :name security_3@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:23) :: librarian@192.168.1.101:1099/JADE FOUND ( agent-identifier :name security_4@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:23) :: librarian@192.168.1.101:1099/JADE FOUND ( agent-identifier :name security_1@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:23) :: librarian@192.168.1.101:1099/JADE FOUND ( agent-identifier :name security_2@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:23) :: librarian@192.168.1.101:1099/JADE FOUND ( agent-identifier :name security_0@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:23) :: 013_miguel@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:23) :: 005_antonio@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:23) :: 000_rui@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:23) :: 007_carlos@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:23) :: 012_jorge@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:23) :: 006_jose@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:23) :: 011_andre@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:23) :: 003_francisca@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:23) :: 008_barbara@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:23) :: 009_joana@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:23) :: 001_ricardo@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:23) :: 014_carolina@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:23) :: 019_carla@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:23) :: 004_carolina@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:23) :: 020_judite@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:23) :: 015_andre@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:23) :: 002_ana@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:23) :: 010_rute@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:23) :: 016_mateus@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:23) :: 023_vitor@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:23) :: 017_carlos@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:23) :: 018_ana@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:23) :: 022_david@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:23) :: 021_leonor@192.168.1.101:1099/JADE FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:24) :: 008_barbara@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:24) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:24) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:24) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:24) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:24) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:24) :: security_0@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_0_2@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:24) :: security_0@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_0_3@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:24) :: security_0@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_0_0@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:24) :: security_0@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_0_1@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:24) :: security_2@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_2_2@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:24) :: security_2@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_2_3@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:24) :: security_2@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_2_0@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:24) :: security_2@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_2_1@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:24) :: security_1@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_1_2@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:24) :: security_1@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_1_0@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:24) :: security_1@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_1_3@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:24) :: security_1@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_1_1@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:24) :: security_4@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_4_1@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:24) :: security_3@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_3_1@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:24) :: security_4@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_4_2@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:24) :: security_3@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_3_2@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:24) :: security_4@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_4_3@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:24) :: security_3@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_3_0@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:24) :: security_4@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_4_0@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:24) :: security_3@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_3_3@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+14.11.2020(17:53:27) :: 011_andre@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:27) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:27) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:27) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:27) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:27) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:28) :: 014_carolina@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:28) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:28) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:28) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:28) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:28) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:29) :: 000_rui@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:29) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:29) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:29) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:29) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:29) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:29) :: 013_miguel@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:29) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:29) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:29) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:29) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:29) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:29) :: 020_judite@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:29) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:29) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:29) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:29) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:29) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:29) :: 001_ricardo@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:29) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:29) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:29) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:29) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:29) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:30) :: 005_antonio@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:30) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:30) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:30) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:30) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:30) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:30) :: 023_vitor@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:30) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:30) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:30) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:30) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:30) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:30) :: 018_ana@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:30) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:30) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:30) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:30) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:30) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:31) :: 002_ana@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:31) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:31) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:31) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:31) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:31) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:31) :: 019_carla@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:31) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:31) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:31) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:31) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:31) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:32) :: 012_jorge@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:32) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:32) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:32) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:32) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:32) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:32) :: 016_mateus@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:32) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:32) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:32) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:32) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:32) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:33) :: 003_francisca@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:33) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:33) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:33) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:33) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:33) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:35) :: 022_david@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:35) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:35) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:35) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:35) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:35) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:35) :: 009_joana@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:35) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:35) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:35) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:35) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:35) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:36) :: 010_rute@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:36) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:36) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:36) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:36) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:36) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:37) :: 015_andre@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:37) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:38) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:38) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:38) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:38) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:39) :: 006_jose@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:39) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:39) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:39) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:39) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:39) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:40) :: 017_carlos@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:40) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:40) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:40) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:40) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:40) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:40) :: 021_leonor@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:40) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:40) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:40) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:40) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:40) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:41) :: 004_carolina@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:41) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:41) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:41) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:41) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:41) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:43) :: 007_carlos@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:43) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:43) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:43) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:43) :: librarian@192.168.1.101:1099/JADE TABLE request accepted
+14.11.2020(17:53:43) :: librarian@192.168.1.101:1099/JADE TABLE request accepted

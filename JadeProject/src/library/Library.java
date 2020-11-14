@@ -38,8 +38,6 @@ public class Library {
 			Logs.init();
 			createContainers();
 
-			librariansContainer.acceptNewAgent("librarian", new Librarian()).start();
-
 			BufferedReader reader = new BufferedReader(new FileReader(filename));
 			
 			workingTime = Integer.parseUnsignedInt(reader.readLine() + "000");
@@ -64,6 +62,8 @@ public class Library {
 				}
 			}
 
+			librariansContainer.acceptNewAgent("librarian", new Librarian()).start();
+
 			Random random = new Random();
 			
 			int number_of_students = Integer.parseUnsignedInt(reader.readLine());
@@ -83,7 +83,7 @@ public class Library {
 				String course = in_arr[1];
 				int noise = Integer.parseUnsignedInt(in_arr[2]);
 				int action = Integer.parseUnsignedInt(in_arr[3]);
-				int timeOfArrival = random.nextInt(this.workingTime);
+				int timeOfArrival = random.nextInt(this.workingTime - 2) + 2;
 				
 				String nickname;
 				if (i<10) {

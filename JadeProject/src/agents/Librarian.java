@@ -2,7 +2,7 @@ package agents;
 
 import java.util.ArrayList;
 
-import agentBehaviours.ListeningBehaviour;
+import agentBehaviours.LibrarianListenBehaviour;
 import jade.core.AID;
 import jade.core.Agent;
 import jade.core.behaviours.WakerBehaviour;
@@ -10,6 +10,8 @@ import jade.domain.DFService;
 import jade.domain.FIPAException;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
+import jade.lang.acl.ACLMessage;
+import jade.lang.acl.MessageTemplate;
 import library.Logs;
 
 public class Librarian extends Agent {
@@ -19,9 +21,14 @@ public class Librarian extends Agent {
     public void setup() {    	
     	registerLibrarian();
 		getFloorsSecurityAID();
-    	
-    	//addBehaviour(new ListeningBehaviour(this));
+
+		addBehaviour(new LibrarianListenBehaviour(this, MessageTemplate.MatchPerformative(ACLMessage.REQUEST)));
+
     }
+
+    public ArrayList<AID> getFloorsSecurity(){
+    	return floorsSecurity;
+	}
     
     private void registerLibrarian() {
     	DFAgentDescription dfd = new DFAgentDescription();
@@ -39,30 +46,23 @@ public class Librarian extends Agent {
     }
     
     private void getFloorsSecurityAID() {
-    	addBehaviour(new WakerBehaviour(this, 1000) {
-			@Override
-			protected void onWake() {
-				super.onWake();
+		DFAgentDescription dfd = new DFAgentDescription();
+		ServiceDescription sd = new ServiceDescription();
 
-				DFAgentDescription dfd = new DFAgentDescription();
-				ServiceDescription sd = new ServiceDescription();
+		sd.setType("security");
+		dfd.addServices(sd);
 
-				sd.setType("security");
-				dfd.addServices(sd);
+		try {
+			DFAgentDescription[] result = DFService.search(this, dfd);
+			floorsSecurity = new ArrayList<AID>();
 
-				try {
-					DFAgentDescription[] result = DFService.search(myAgent, dfd);
-					floorsSecurity = new ArrayList<AID>();
-
-					for (DFAgentDescription agent : result) {
-						Logs.write(this.myAgent.getName() + " FOUND " + agent.getName(), "librarian");
-						floorsSecurity.add(agent.getName());
-					}
-				} catch(FIPAException fe) {
-					fe.printStackTrace();
-				}
+			for (DFAgentDescription agent : result) {
+				Logs.write(this.getName() + " FOUND " + agent.getName(), "librarian");
+				floorsSecurity.add(agent.getName());
 			}
-		});
+		} catch(FIPAException fe) {
+			fe.printStackTrace();
+		}
     }
 
 	protected void takeDown() {

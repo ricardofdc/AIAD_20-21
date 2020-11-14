@@ -8,6 +8,7 @@ import jade.domain.DFService;
 import jade.domain.FIPAException;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
+import jade.lang.acl.ACLMessage;
 import library.Logs;
 
 import java.util.ArrayList;
@@ -42,17 +43,25 @@ public class Student extends Agent {
         return action;
     }
 
+    public ArrayList<AID> getLibrarianAID() {
+        return librarian;
+    }
+
     public void setup() {
     	super.setup();
 
     	registerStudent();
-    	getLibrarianAID();
-		
-    	addBehaviour(new StudentRequestTable(this, (long) timeOfArrival));
-        //addBehaviour(new WorkingBehaviour());
-        //addBehaviour(new ListeningBehaviour(this));
+        findLibrarianAID();
 
-        //System.out.println(getLocalName() + ": starting to work!");
+        addBehaviour(new WakerBehaviour(this, timeOfArrival) {
+            @Override
+            protected void onWake() {
+                super.onWake();
+
+                addBehaviour(new StudentRequestBehaviour((Student) this.myAgent, new ACLMessage(ACLMessage.REQUEST)));
+
+            }
+        });
     }
 
     private void registerStudent(){
@@ -70,31 +79,24 @@ public class Student extends Agent {
         }
     }
 
-    private void getLibrarianAID() {
-        addBehaviour(new WakerBehaviour(this, 1000) {
-            @Override
-            protected void onWake() {
-                super.onWake();
+    private void findLibrarianAID() {
+        DFAgentDescription dfd = new DFAgentDescription();
+        ServiceDescription sd = new ServiceDescription();
 
-                DFAgentDescription dfd = new DFAgentDescription();
-                ServiceDescription sd = new ServiceDescription();
+        sd.setType("librarian");
+        dfd.addServices(sd);
 
-                sd.setType("librarian");
-                dfd.addServices(sd);
+        try {
+            DFAgentDescription[] result = DFService.search(this, dfd);
+            librarian = new ArrayList<AID>();
 
-                try {
-                    DFAgentDescription[] result = DFService.search(myAgent, dfd);
-                    librarian = new ArrayList<AID>();
-
-                    for (DFAgentDescription agent : result) {
-                        Logs.write(this.myAgent.getName() + " FOUND " + agent.getName(), "student");
-                        librarian.add(agent.getName());
-                    }
-                } catch(FIPAException fe) {
-                    fe.printStackTrace();
-                }
+            for (DFAgentDescription agent : result) {
+                Logs.write(this.getName() + " FOUND " + agent.getName(), "student");
+                librarian.add(agent.getName());
             }
-        });
+        } catch(FIPAException fe) {
+            fe.printStackTrace();
+        }
     }
 
     protected void takeDown() {

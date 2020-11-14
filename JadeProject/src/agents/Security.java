@@ -1,6 +1,7 @@
 package agents;
 
 import agentBehaviours.ListeningBehaviour;
+import agentBehaviours.SecurityListenBehaviour;
 import agentBehaviours.WorkingBehaviour;
 import jade.core.AID;
 import jade.core.Agent;
@@ -9,6 +10,8 @@ import jade.domain.DFService;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
 import jade.domain.FIPAException;
+import jade.lang.acl.ACLMessage;
+import jade.lang.acl.MessageTemplate;
 import library.Floor;
 import library.Logs;
 
@@ -30,13 +33,9 @@ public class Security extends Agent {
     public int getNoiseTolerance() { return noiseTolerance; }
 
     public void setup() {
-        //addBehaviour(new WorkingBehaviour());
-        //addBehaviour(new ListeningBehaviour(this));
-
-        //System.out.println(getLocalName() + ": starting to work!");
-
         registerSecurity();
         getTablesAID();
+        addBehaviour(new SecurityListenBehaviour(this, MessageTemplate.MatchPerformative(ACLMessage.REQUEST)));
     }
 
     private void registerSecurity() {
