@@ -40,7 +40,7 @@ public class Security extends Agent {
         dfd.addServices(sd);
         try {
             DFService.register(this, dfd);
-            Logs.write(this.getName() + " REGISTERED AS SECURITY", "security", floor.getfloorNr());
+            Logs.write(this.getName() + " REGISTERED AS SECURITY WITH NOISE_TOLERANCE=" + this.noiseTolerance, "security", floor.getfloorNr());
         } catch(FIPAException fe) {
             fe.printStackTrace();
         }

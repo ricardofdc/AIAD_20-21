@@ -41,27 +41,33 @@ public class Library {
 
 	public Library(String filename) {
 		try{
+			Random random = new Random();
 			createContainers();
 
 			BufferedReader reader = new BufferedReader(new FileReader(filename));
-			
+
+			//read first line: working time of library
 			workingTime = Integer.parseUnsignedInt(reader.readLine() + "000");
 
-			int number_of_floors = Integer.parseUnsignedInt(reader.readLine());
+			//read security related lines
+			String security_input = reader.readLine();
+			String[] security_input_array = security_input.split(" ");
+			int number_of_floors = Integer.parseUnsignedInt(security_input_array[0]);
+			int average_tolerance = Integer.parseUnsignedInt(security_input_array[1]);
 			Logs.init(number_of_floors);
 			securities = new Agent[number_of_floors];
 			tables = new Agent[number_of_floors][];
 			for(int i = 0; i< number_of_floors; i++){
 				String in = reader.readLine();
 				String[] in_arr = in.split(" ");
-				if(in_arr.length != 3){
+				if(in_arr.length != 2){
 					System.err.println("Error on parse of file " + filename + ".");
-					System.err.println("Floors must have 3 arguments: \"<n.tables> <course> <noise_tol>\".");
+					System.err.println("Floors must have 2 arguments: \"<n.tables> <course>\".");
 					System.exit(1);
 				}
 				int num_tables = Integer.parseUnsignedInt(in_arr[0]);
 				String course = in_arr[1];
-				int noise_tolerance = Integer.parseUnsignedInt(in_arr[2]);
+				int noise_tolerance = average_tolerance - 2 + random.nextInt(5); // input[2 .. 8]
 
 				Floor floor = new Floor(i, course);
 				tables[i] = new Agent[num_tables];
@@ -76,26 +82,26 @@ public class Library {
 			librarian = new Librarian();
 			librariansContainer.acceptNewAgent("librarian", librarian).start();
 
-			Random random = new Random();
-			
-			int number_of_students = Integer.parseUnsignedInt(reader.readLine());
+
+			//read student related lines
+			String student_input = reader.readLine();
+			String[] student_input_array = student_input.split(" ");
+			int number_of_students = Integer.parseUnsignedInt(student_input_array[0]);
+			int average_noise = Integer.parseUnsignedInt(student_input_array[1]);
 			students = new Agent[number_of_students];
 			for(int i = 0; i< number_of_students; i++) {
 				String in = reader.readLine();
 				String[] in_arr = in.split(" ");
-				if(in_arr.length != 4){
+				if(in_arr.length != 2){
 					System.err.println("Error on parse of file " + filename + ".");
-					System.err.println("Students must have 4 arguments: \"<name> <course> <noise> <action>\".");
-					System.err.println("Noise must be between 1 and 10.");
-					System.err.println("Action = 0 -> student wants a table.");
-					System.err.println("Action = 1 -> student wants a book.");
+					System.err.println("Students must have 2 arguments: \"<name> <course>\".");
 					System.exit(1);
 				}
 
 				String name = in_arr[0];
 				String course = in_arr[1];
-				int noise = Integer.parseUnsignedInt(in_arr[2]);
-				int action = Integer.parseUnsignedInt(in_arr[3]);
+				int noise = average_noise - 2 + random.nextInt(5);
+				int action = 0;
 				int timeOfArrival = random.nextInt(this.workingTime) + 1000;
 				
 				String nickname;
@@ -154,52 +160,66 @@ public class Library {
 		System.out.println("=======================================");
 		System.out.println(" ");
 		System.out.println("Library working");
-		int time = 0;
 
+
+		//get average students noise
+		double totalNoise = 0;
+		int numStudents = 0;
+		for(Agent agent: students){
+			totalNoise += ((Student)agent).getNoise();
+			numStudents++;
+		}
+		double averageStudentsNoise = totalNoise / numStudents;
+
+		// get runtime tables information
 		double curr_total_occupancy = 0;
+		double curr_total_satisfaction = 0;
 		int curr_total_iterations = 0;
-
-
+		int time = 0;
 		while(time < workingTime){
 			try {
 				Thread.sleep(1000);
 				time += 1000;
 				System.out.print(".");
 				double occupancy = 0;
-				int totalTables = 0;
+				double satisfaction = 0;
+				int numTables_ocupancy = 0;
+				int numTables_satisfaction = 0;
 
 				for (Agent[] table : tables) {
 					for (Agent agent : table) {
 						occupancy += (((Table) agent).isFree() ? 0 : 1);
-						totalTables++;
+						numTables_ocupancy++;
+						if(!((Table)agent).isFree()){
+							satisfaction += ((Table) agent).getSatisfaction();
+							numTables_satisfaction++;
+						}
 					}
 				}
-
-				curr_total_occupancy += occupancy / totalTables;
+				if(numTables_satisfaction != 0){
+					curr_total_satisfaction += satisfaction / numTables_satisfaction;
+				}
+				curr_total_occupancy += occupancy / numTables_ocupancy;
 				curr_total_iterations++;
 
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 		}
-
 		double averageOccupancy = curr_total_occupancy / curr_total_iterations;
+		double averageSatisfaction = curr_total_satisfaction / curr_total_iterations;
 
+		//get number of security kicks and average securities noise tolerance
 		int numberKicks = 0;
+		double totalNoiseTolerance = 0;
+		int numberSecurities = 0;
 		for (Agent security: securities) {
 			numberKicks += ((Security)security).getNumberKicks();
+			totalNoiseTolerance += ((Security)security).getNoiseTolerance();
+			numberSecurities++;
 		}
+		double averageNoiseTolerance = totalNoiseTolerance / numberSecurities;
 
-		double satisfaction = 0;
-		int countTables = 0;
-		for (Agent[] table : tables) {
-			for (Agent agent : table) {
-				satisfaction += ((Table) agent).getSatisfaction();
-				countTables++;
-			}
-		}
-
-		double averageSatisfaction = satisfaction / countTables;
 
 		System.out.println(" \n");
 		System.out.println("=======================================");
@@ -209,6 +229,8 @@ public class Library {
 		System.out.println("=======================================");
 		System.out.println("                                       ");
 		System.out.println("-> Working time: " + workingTime/1000 + " seconds");
+		System.out.println("-> Average securities noise tolerance: " + averageNoiseTolerance);
+		System.out.println("-> Average students noise: " + averageStudentsNoise);
 		System.out.println("-> Number of securities kicks: " + numberKicks);
 		System.out.println("-> Average table satisfaction: " + (averageSatisfaction * 100) + "%");
 		System.out.println("-> Average table occupancy: " + (averageOccupancy * 100) + "%");

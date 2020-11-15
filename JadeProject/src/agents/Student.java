@@ -83,7 +83,7 @@ public class Student extends Agent {
         dfd.addServices(sd);
         try {
             DFService.register(this, dfd);
-            Logs.write(this.getName() + " REGISTERED AS STUDENT", "student");
+            Logs.write(this.getName() + " REGISTERED AS STUDENT WITH NOISE=" + this.noise, "student");
         } catch(FIPAException fe) {
             fe.printStackTrace();
         }

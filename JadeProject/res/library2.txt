@@ -1,56 +1,108 @@
-20
-5
-4 MIEIC 6
-4 MIEM 5
-4 MIEGI 2
-4 MIEC 9
-4 MIEQ 4
-48
-rui MIEIC 3 0
-ricardo MIEIC 2 0
-ana MIEIC 4 0
-francisca MIEM 5 0
-carolina MIEM 7 0
-antonio MIEGI 7 0
-jose MIEC 1 0
-carlos MIEC 3 0
-barbara MIEQ 2 0
-joana MIEQ 8 0
-rute MIEM 4 0
-andre MIEGI 3 0
-jorge MIEIC 3 0
-miguel MIEIC 2 0
-carolina MIEIC 4 0
-andre MIEM 5 0
-mateus MIEM 7 0
-carlos MIEGI 7 0
-ana MIEC 1 0
-carla MIEC 3 0
-judite MIEQ 2 0
-leonor MIEQ 8 0
-david MIEM 4 0
-vitor MIEGI 3 0
-rui MIEIC 3 0
-ricardo MIEIC 2 0
-ana MIEIC 4 0
-francisca MIEM 5 0
-carolina MIEM 7 0
-antonio MIEGI 7 0
-jose MIEC 1 0
-carlos MIEC 3 0
-barbara MIEQ 2 0
-joana MIEQ 8 0
-rute MIEM 4 0
-andre MIEGI 3 0
-jorge MIEIC 3 0
-miguel MIEIC 2 0
-carolina MIEIC 4 0
-andre MIEM 5 0
-mateus MIEM 7 0
-carlos MIEGI 7 0
-ana MIEC 1 0
-carla MIEC 3 0
-judite MIEQ 2 0
-leonor MIEQ 8 0
-david MIEM 4 0
-vitor MIEGI 3 0
+15
+5 8
+4 MIEIC
+4 MIEM
+4 MIEGI
+4 MIEC
+4 MIEQ
+100 4
+rui MIEIC
+ricardo MIEIC
+ana MIEIC
+francisca MIEM
+carolina MIEM
+antonio MIEGI
+jose MIEC
+carlos MIEC
+barbara MIEQ
+joana MIEQ
+rute MIEM
+andre MIEGI
+jorge MIEIC
+miguel MIEIC
+carolina MIEIC
+andre MIEM
+mateus MIEM
+carlos MIEGI
+ana MIEC
+carla MIEC
+judite MIEQ
+leonor MIEQ
+david MIEM
+vitor MIEGI
+rui MIEIC
+ricardo MIEIC
+ana MIEIC
+francisca MIEM
+carolina MIEM
+antonio MIEGI
+jose MIEC
+carlos MIEC
+barbara MIEQ
+joana MIEQ
+rute MIEM
+andre MIEGI
+jorge MIEIC
+miguel MIEIC
+carolina MIEIC
+andre MIEM
+mateus MIEM
+carlos MIEGI
+ana MIEC
+carla MIEC
+judite MIEQ
+leonor MIEQ
+david MIEM
+vitor MIEGI
+david MIEM
+vitor MIEGI
+rui MIEIC
+ricardo MIEIC
+ana MIEIC
+francisca MIEM
+carolina MIEM
+antonio MIEGI
+jose MIEC
+carlos MIEC
+barbara MIEQ
+joana MIEQ
+rute MIEM
+andre MIEGI
+jorge MIEIC
+miguel MIEIC
+carolina MIEIC
+andre MIEM
+mateus MIEM
+carlos MIEGI
+ana MIEC
+carla MIEC
+judite MIEQ
+leonor MIEQ
+david MIEM
+vitor MIEGI
+rui MIEIC
+ricardo MIEIC
+ana MIEIC
+francisca MIEM
+carolina MIEM
+antonio MIEGI
+jose MIEC
+carlos MIEC
+barbara MIEQ
+joana MIEQ
+rute MIEM
+andre MIEGI
+jorge MIEIC
+miguel MIEIC
+carolina MIEIC
+andre MIEM
+mateus MIEM
+carlos MIEGI
+ana MIEC
+carla MIEC
+judite MIEQ
+leonor MIEQ
+david MIEM
+vitor MIEGI
+david MIEM
+vitor MIEGI
