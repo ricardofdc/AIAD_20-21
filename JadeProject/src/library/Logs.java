@@ -20,9 +20,8 @@ public class Logs {
     private static Path[] securitiesPath;
     private static Path[] tablesPath;
 
-    private static final SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy_HH:mm:ss");
-
     public static void init(int floorsNumber) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy_HH:mm:ss");
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         String time = dateFormat.format(timestamp);
 
@@ -72,6 +71,7 @@ public class Logs {
     }
 
     public static void write(String content, String file, int i) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("[HH:mm:ss]");
         Path path;
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         String time = dateFormat.format(timestamp);

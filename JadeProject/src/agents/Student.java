@@ -82,6 +82,7 @@ public class Student extends Agent {
 
 
     protected void takeDown() {
+        super.takeDown();
         try {
             DFService.deregister(this);
             Logs.write(this.getName() + " TAKEN DOWN AND UNREGISTERED FROM DFSERVICE", "student");
@@ -89,6 +90,4 @@ public class Student extends Agent {
             e.printStackTrace();
         }
     }
-
-
 }
