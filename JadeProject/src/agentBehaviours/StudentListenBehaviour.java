@@ -9,10 +9,12 @@ import library.Logs;
 
 public class StudentListenBehaviour extends CyclicBehaviour {
     MessageTemplate mt = MessageTemplate.or(
-            MessageTemplate.or( MessageTemplate.MatchPerformative(ACLMessage.AGREE),
-                    MessageTemplate.MatchPerformative(ACLMessage.INFORM)),
-            MessageTemplate.or( MessageTemplate.MatchPerformative(ACLMessage.REFUSE),
-                    MessageTemplate.MatchPerformative(ACLMessage.NOT_UNDERSTOOD)));
+                MessageTemplate.or( MessageTemplate.or( MessageTemplate.MatchPerformative(ACLMessage.AGREE),
+                                                        MessageTemplate.MatchPerformative(ACLMessage.INFORM)),
+                                    MessageTemplate.or( MessageTemplate.MatchPerformative(ACLMessage.CONFIRM),
+                                                        MessageTemplate.MatchPerformative(ACLMessage.DISCONFIRM))),
+                MessageTemplate.or( MessageTemplate.MatchPerformative(ACLMessage.REFUSE),
+                                    MessageTemplate.MatchPerformative(ACLMessage.NOT_UNDERSTOOD)));
 
     @Override
     public void action() {
