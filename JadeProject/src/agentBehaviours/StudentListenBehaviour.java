@@ -30,6 +30,7 @@ public class StudentListenBehaviour extends CyclicBehaviour {
             switch (msg.getPerformative()){
                 case ACLMessage.AGREE:
                     Logs.write(myAgent.getName() + " RECEIVED AGREE FROM " + msg.getSender(), "student");
+                    handleAgree(msg);
                     break;
                 case ACLMessage.REFUSE:
                     handleRefuse();
@@ -56,7 +57,16 @@ public class StudentListenBehaviour extends CyclicBehaviour {
         }
     }
 
-    private void handleConfirm(ACLMessage msg) {
+    private void handleAgree(ACLMessage msg) {
+		switch (msg.getOntology()) {
+		case "SEAT":
+			((Student)myAgent).setTableAID(msg.getSender());
+	    	myAgent.addBehaviour(new StudentNoiseBehaviour(myAgent, 500, msg.getSender()));
+			break;
+		}
+	}
+
+	private void handleConfirm(ACLMessage msg) {
     	if (isSeated)
     		return;
     	
@@ -72,6 +82,8 @@ public class StudentListenBehaviour extends CyclicBehaviour {
 	}
 
 	private void handleRefuse() {
+		isSeated = false;
+		
         myAgent.addBehaviour(new WakerBehaviour(myAgent, 500) {
             @Override
             protected void onWake() {
@@ -82,10 +94,11 @@ public class StudentListenBehaviour extends CyclicBehaviour {
     }
     
     private void handleInform(ACLMessage msg) {
+    	ACLMessage toSend;
     	switch(msg.getOntology()) {
             case "BEST_FLOOR":
 
-                ACLMessage toSend = new ACLMessage(ACLMessage.REQUEST);
+                toSend = new ACLMessage(ACLMessage.REQUEST);
                 toSend.setOntology("TABLE");
                 String floor = msg.getContent();
                 addTableReceivers(floor, toSend);
@@ -93,6 +106,19 @@ public class StudentListenBehaviour extends CyclicBehaviour {
                 myAgent.send(toSend);
 
                 break;
+            case "KICK":
+            	toSend = new ACLMessage(ACLMessage.INFORM);
+            	
+            	toSend.setOntology("SET_EMPTY");
+            	toSend.addReceiver(((Student)myAgent).getTableAID());
+            	Logs.write(myAgent.getName() + " SENT INFORM:\n" + toSend, "student");
+            	myAgent.send(toSend);
+            	
+            	isSeated = false;
+            	
+            	myAgent.doDelete();
+            	
+            	break;
             default:
                 break;
     	}
