@@ -54,8 +54,14 @@ public class TableListenBehaviour extends CyclicBehaviour {
             	if (table.isFree()) {
             		reply.setPerformative(ACLMessage.AGREE);
             		reply.setContent("YOU ARE SEATED");
-            		
             		table.setIsFree(false);
+            		String studentCourse = request.getContent();
+                    if(studentCourse.equals(table.getFloor().getCourse())){
+                        table.setSatisfaction(1);
+                    }
+                    else{
+                        table.setSatisfaction(0);
+                    }
             	} else {
             		reply.setPerformative(ACLMessage.REFUSE);
             		reply.setContent("SORRY BUT YOUR PLACE WAS TAKEN");

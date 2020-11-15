@@ -1,5 +1,6 @@
 package agentBehaviours;
 
+import agents.Student;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.core.behaviours.WakerBehaviour;
 import jade.domain.DFService;
@@ -62,6 +63,7 @@ public class StudentListenBehaviour extends CyclicBehaviour {
     	ACLMessage request = msg.createReply();
         request.setPerformative(ACLMessage.REQUEST);
         request.setOntology("SEAT");
+        request.setContent(((Student)myAgent).getCourse());
 
         Logs.write(myAgent.getName() + " SENT REQUEST:\n" + request, "student");
     	myAgent.send(request);
