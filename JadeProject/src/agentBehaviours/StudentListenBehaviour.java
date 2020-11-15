@@ -61,7 +61,7 @@ public class StudentListenBehaviour extends CyclicBehaviour {
 		switch (msg.getOntology()) {
 		case "SEAT":
 			((Student)myAgent).setTableAID(msg.getSender());
-	    	myAgent.addBehaviour(new StudentNoiseBehaviour(myAgent, 500, msg.getSender()));
+	    	myAgent.addBehaviour(new StudentNoiseBehaviour(myAgent, 2000, msg.getSender()));
 			break;
 		}
 	}

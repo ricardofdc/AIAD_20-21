@@ -176,10 +176,10 @@ public class Library {
 		double curr_total_satisfaction = 0;
 		int curr_total_iterations = 0;
 		int time = 0;
-		while(time < workingTime){
+		while(time <= workingTime){
 			try {
-				Thread.sleep(1000);
-				time += 1000;
+				Thread.sleep(300);
+				time += 300;
 				System.out.print(".");
 				double occupancy = 0;
 				double satisfaction = 0;
