@@ -50,7 +50,7 @@ public class StudentRequestBehaviour extends OneShotBehaviour {
 			librarians = new ArrayList<AID>();
 
 			for (DFAgentDescription agent : result) {
-				Logs.write(myAgent + " FOUND " + agent.getName(), "student");
+				Logs.write(myAgent.getName() + " FOUND " + agent.getName(), "student");
 				librarians.add(agent.getName());
 			}
 		} catch(FIPAException fe) {

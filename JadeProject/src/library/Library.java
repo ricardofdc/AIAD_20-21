@@ -9,6 +9,7 @@ import agents.Security;
 import agents.Table;
 import jade.core.*;
 import jade.core.Runtime;
+import jade.domain.JADEAgentManagement.KillAgent;
 import jade.wrapper.*;
 
 import agents.Librarian;
@@ -29,6 +30,11 @@ public class Library {
 	private AgentContainer securitiesContainer;
 	private AgentContainer tablesContainer;
 	private AgentContainer studentsContainer;
+
+	private Agent librarian;
+	private Agent[] securities;
+	private Agent[][] tables;
+	private Agent[] students;
 	
 	// Period of time, in milliseconds, the library is working.
 	private int workingTime;
@@ -43,6 +49,8 @@ public class Library {
 
 			int number_of_floors = Integer.parseUnsignedInt(reader.readLine());
 			Logs.init(number_of_floors);
+			securities = new Agent[number_of_floors];
+			tables = new Agent[number_of_floors][];
 			for(int i = 0; i< number_of_floors; i++){
 				String in = reader.readLine();
 				String[] in_arr = in.split(" ");
@@ -56,17 +64,22 @@ public class Library {
 				int noise_tolerance = Integer.parseUnsignedInt(in_arr[2]);
 
 				Floor floor = new Floor(i, course);
+				tables[i] = new Agent[num_tables];
 				for(int j=0; j<num_tables; j++){
-					tablesContainer.acceptNewAgent("table_"+i+"_"+j, new Table(floor)).start();
+					tables[i][j] = new Table(floor);
+					tablesContainer.acceptNewAgent("table_"+i+"_"+j, tables[i][j]).start();
 				}
-				securitiesContainer.acceptNewAgent("security_" + i, new Security(floor, noise_tolerance)).start();
+				securities[i] = new Security(floor, noise_tolerance);
+				securitiesContainer.acceptNewAgent("security_" + i, securities[i]).start();
 			}
 
-			librariansContainer.acceptNewAgent("librarian", new Librarian()).start();
+			librarian = new Librarian();
+			librariansContainer.acceptNewAgent("librarian", librarian).start();
 
 			Random random = new Random();
 			
 			int number_of_students = Integer.parseUnsignedInt(reader.readLine());
+			students = new Agent[number_of_students];
 			for(int i = 0; i< number_of_students; i++) {
 				String in = reader.readLine();
 				String[] in_arr = in.split(" ");
@@ -83,7 +96,7 @@ public class Library {
 				String course = in_arr[1];
 				int noise = Integer.parseUnsignedInt(in_arr[2]);
 				int action = Integer.parseUnsignedInt(in_arr[3]);
-				int timeOfArrival = random.nextInt(this.workingTime - 2) + 2;
+				int timeOfArrival = random.nextInt(this.workingTime) + 1000;
 				
 				String nickname;
 				if (i<10) {
@@ -95,8 +108,8 @@ public class Library {
 				else{
 					nickname = i+"_"+name;
 				}
-				
-				studentsContainer.acceptNewAgent(nickname, new Student(course, noise, action, timeOfArrival)).start();
+				students[i] = new Student(course, noise, action, timeOfArrival);
+				studentsContainer.acceptNewAgent(nickname, students[i]).start();
 			}
 			reader.close();
 		} catch (IOException | StaleProxyException e) {
@@ -125,5 +138,102 @@ public class Library {
 		studentsProfile = new ProfileImpl();
 		studentsProfile.setParameter(Profile.CONTAINER_NAME, "Students");
 		studentsContainer = rt.createAgentContainer(studentsProfile);
+	}
+
+	public void run(){
+		//fazer calculos estatisticos
+
+		//calcular satisfação de cada piso;
+		//calcular quantos clientes foram expulsos
+		//calcular ocupação média da biblioteca
+
+		System.out.println("=======================================");
+		System.out.println("==                                   ==");
+		System.out.println("==        MULTI AGENT LIBRARY        ==");
+		System.out.println("==                                   ==");
+		System.out.println("=======================================");
+		System.out.println(" ");
+		System.out.println("Library working");
+		int time = 0;
+
+		double curr_total_occupancy = 0;
+		int curr_total_iterations = 0;
+
+
+		while(time < workingTime){
+			try {
+				Thread.sleep(1000);
+				time += 1000;
+				System.out.print(".");
+				double occupancy = 0;
+				int totalTables = 0;
+
+				for (Agent[] table : tables) {
+					for (Agent agent : table) {
+						occupancy += (((Table) agent).isFree() ? 0 : 1);
+						totalTables++;
+					}
+				}
+
+				curr_total_occupancy += occupancy / totalTables;
+				curr_total_iterations++;
+
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+
+		double averageOccupancy = curr_total_occupancy / curr_total_iterations;
+
+		int numberKicks = 0;
+		for (Agent security: securities) {
+			numberKicks += ((Security)security).getNumberKicks();
+		}
+
+		double satisfaction = 0;
+		int countTables = 0;
+		for (Agent[] table : tables) {
+			for (Agent agent : table) {
+				satisfaction += ((Table) agent).getSatisfaction();
+				countTables++;
+			}
+		}
+
+		double averageSatisfaction = satisfaction / countTables;
+
+		System.out.println(" \n");
+		System.out.println("=======================================");
+		System.out.println("==                                   ==");
+		System.out.println("==              RESULTS              ==");
+		System.out.println("==                                   ==");
+		System.out.println("=======================================");
+		System.out.println("                                       ");
+		System.out.println("-> Working time: " + workingTime/1000 + " seconds");
+		System.out.println("-> Number of securities kicks: " + numberKicks);
+		System.out.println("-> Average table satisfaction: " + (averageSatisfaction * 100) + "%");
+		System.out.println("-> Average table occupancy: " + (averageOccupancy * 100) + "%");
+
+	}
+
+	public void shutdown() {
+		try {
+			librariansContainer.suspend();
+			securitiesContainer.suspend();
+			tablesContainer.suspend();
+			studentsContainer.suspend();
+			mainContainer.suspend();
+		} catch (ControllerException e) {
+			e.printStackTrace();
+		}
+
+		try {
+			librariansContainer.kill();
+			securitiesContainer.kill();
+			tablesContainer.kill();
+			studentsContainer.kill();
+			mainContainer.kill();
+		} catch (StaleProxyException e) {
+			e.printStackTrace();
+		}
 	}
 }

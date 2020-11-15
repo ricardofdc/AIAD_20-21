@@ -128,7 +128,6 @@ public class LibrarianListenBehaviour extends CyclicBehaviour {
                     numResponses = 0;
                     bestSatisfacton = -1;
                     bestFloor = -1;
-
                 }
                 break;
             case "BOOK":
@@ -168,7 +167,7 @@ public class LibrarianListenBehaviour extends CyclicBehaviour {
             floorsSecurity = new ArrayList<AID>();
 
             for (DFAgentDescription agent : result) {
-                Logs.write(myAgent + " FOUND " + agent.getName(), "librarian");
+                Logs.write(myAgent.getName() + " FOUND " + agent.getName(), "librarian");
                 floorsSecurity.add(agent.getName());
             }
         } catch(FIPAException fe) {

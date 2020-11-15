@@ -12,11 +12,21 @@ import library.Logs;
 public class Table extends Agent {
     private final Floor floor;
     private boolean isFree;
+    private int satisfaction;
 
 
     public Table(Floor floor){
         this.floor=floor;
         this.isFree = true;
+        this.satisfaction = 0;
+    }
+
+    public int getSatisfaction() {
+        return satisfaction;
+    }
+
+    public void setSatisfaction(int satisfaction) {
+        this.satisfaction = satisfaction;
     }
 
     public Floor getFloor(){ return floor; }
@@ -51,6 +61,7 @@ public class Table extends Agent {
     }
 
     protected void takeDown() {
+        super.takeDown();
         try {
             DFService.deregister(this);
             Logs.write(this.getName() + " TAKEN DOWN AND UNREGISTERED FROM DFSERVICE", "table", floor.getfloorNr());

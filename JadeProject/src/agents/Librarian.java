@@ -45,6 +45,7 @@ public class Librarian extends Agent {
     }
 
 	protected void takeDown() {
+    	super.takeDown();
 		try {
 			DFService.deregister(this);
 			Logs.write(this.getName() + " TAKEN DOWN AND UNREGISTERED FROM DFSERVICE", "librarian");

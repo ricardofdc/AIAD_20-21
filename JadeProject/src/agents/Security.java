@@ -14,10 +14,12 @@ import java.util.ArrayList;
 public class Security extends Agent {
     private final Floor floor;
     private final int noiseTolerance;
+    private int numberKicks;
 
     public Security(Floor floor, int noiseTolerance){
-        this.floor=floor;
-        this.noiseTolerance=noiseTolerance;
+        this.floor = floor;
+        this.noiseTolerance = noiseTolerance;
+        this.numberKicks = 0;
     }
 
     public Floor getFloor(){ return floor; }
@@ -45,6 +47,7 @@ public class Security extends Agent {
     }
 
     protected void takeDown() {
+        super.takeDown();
         try {
             DFService.deregister(this);
             Logs.write(this.getName() + " TAKEN DOWN AND UNREGISTERED FROM DFSERVICE", "security", floor.getfloorNr());
@@ -53,4 +56,11 @@ public class Security extends Agent {
         }
     }
 
+    public int getNumberKicks() {
+        return numberKicks;
+    }
+
+    public void addKick() {
+        numberKicks++;
+    }
 }

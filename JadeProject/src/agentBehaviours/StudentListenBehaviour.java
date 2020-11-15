@@ -108,7 +108,7 @@ public class StudentListenBehaviour extends CyclicBehaviour {
             DFAgentDescription[] result = DFService.search(myAgent, dfd);
 
             for (DFAgentDescription agent : result) {
-                //Logs.write(myAgent.getName() + " FOUND " + agent.getName(), "student", floorNr);
+                Logs.write(myAgent.getName() + " FOUND " + agent.getName(), "student");
                 msg.addReceiver(agent.getName());
             }
         } catch(FIPAException fe) {
