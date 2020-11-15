@@ -12,6 +12,7 @@ import jade.lang.acl.MessageTemplate;
 import library.Logs;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 //FIPA Request Responder
 public class SecurityListenBehaviour extends CyclicBehaviour {
@@ -27,6 +28,8 @@ public class SecurityListenBehaviour extends CyclicBehaviour {
     private String course = "";
     private AID librarianAID;
     private ArrayList<AID> tables = new ArrayList<>();
+    
+    private Random rnd = new Random();
     //private AID freeTable = null;
 
     public SecurityListenBehaviour(Security security) {
@@ -81,7 +84,19 @@ public class SecurityListenBehaviour extends CyclicBehaviour {
     private void handleInform(ACLMessage msg) {
 		switch (msg.getOntology()) {
 		case "NOISE":
-			System.out.println("");
+			int rndTolerance = rnd.nextInt(11);
+			
+			if (rndTolerance > ((Security)myAgent).getNoiseTolerance()) {
+				ACLMessage reply = msg.createReply();
+				
+				reply.setPerformative(ACLMessage.INFORM);
+				reply.setOntology("KICK");
+				
+				((Security)myAgent).addKick();
+				
+				myAgent.send(reply);
+			}
+			
 			break;
 		}
 	}

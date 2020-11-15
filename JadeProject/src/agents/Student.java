@@ -21,6 +21,7 @@ public class Student extends Agent {
     private final int noise;
     private final int action; // 0 -> get table; 1 -> get book
     private final int timeOfArrival;
+    
     private AID tableAID;
 
     public Student( String course, int noise, int action, int timeOfArrival) {
@@ -30,6 +31,14 @@ public class Student extends Agent {
         this.timeOfArrival = timeOfArrival;	//milliseconds
 
         //later we can make noise and course be random
+    }
+    
+    public void setTableAID(AID tableAID) {
+    	this.tableAID = tableAID;
+    }
+    
+    public AID getTableAID() {
+    	return tableAID;
     }
 
     public String getCourse() {

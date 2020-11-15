@@ -55,15 +55,12 @@ public class StudentNoiseBehaviour extends TickerBehaviour {
 		int generatedNoise = rnd.nextInt(11);
 		
 		if (generatedNoise <= ((Student)myAgent).getNoise()) {
-			System.out.println(myAgent.getLocalName() + " ::: noise ::: " + generatedNoise);
 			ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
 			
 			msg.setOntology("NOISE");
 			msg.addReceiver(floorSecurity);
-			
+
 			myAgent.send(msg);
-			
-			stop();
 		}
 	}
 	

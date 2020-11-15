@@ -216,15 +216,6 @@ public class Library {
 	}
 
 	public void shutdown() {
-		try {
-			librariansContainer.suspend();
-			securitiesContainer.suspend();
-			tablesContainer.suspend();
-			studentsContainer.suspend();
-			mainContainer.suspend();
-		} catch (ControllerException e) {
-			e.printStackTrace();
-		}
 
 		try {
 			librariansContainer.kill();

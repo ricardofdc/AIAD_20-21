@@ -1,5 +1,6 @@
 package agentBehaviours;
 
+import agents.Student;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.core.behaviours.WakerBehaviour;
 import jade.domain.DFService;
@@ -59,6 +60,7 @@ public class StudentListenBehaviour extends CyclicBehaviour {
     private void handleAgree(ACLMessage msg) {
 		switch (msg.getOntology()) {
 		case "SEAT":
+			((Student)myAgent).setTableAID(msg.getSender());
 	    	myAgent.addBehaviour(new StudentNoiseBehaviour(myAgent, 500, msg.getSender()));
 			break;
 		}
@@ -91,10 +93,11 @@ public class StudentListenBehaviour extends CyclicBehaviour {
     }
     
     private void handleInform(ACLMessage msg) {
+    	ACLMessage toSend;
     	switch(msg.getOntology()) {
             case "BEST_FLOOR":
 
-                ACLMessage toSend = new ACLMessage(ACLMessage.REQUEST);
+                toSend = new ACLMessage(ACLMessage.REQUEST);
                 toSend.setOntology("TABLE");
                 String floor = msg.getContent();
                 addTableReceivers(floor, toSend);
@@ -102,6 +105,19 @@ public class StudentListenBehaviour extends CyclicBehaviour {
                 myAgent.send(toSend);
 
                 break;
+            case "KICK":
+            	toSend = new ACLMessage(ACLMessage.INFORM);
+            	
+            	toSend.setOntology("SET_EMPTY");
+            	toSend.addReceiver(((Student)myAgent).getTableAID());
+            	Logs.write(myAgent.getName() + " SENT INFORM:\n" + toSend, "student");
+            	myAgent.send(toSend);
+            	
+            	isSeated = false;
+            	
+            	myAgent.doDelete();
+            	
+            	break;
             default:
                 break;
     	}
