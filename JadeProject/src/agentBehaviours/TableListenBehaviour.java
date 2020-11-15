@@ -53,11 +53,13 @@ public class TableListenBehaviour extends CyclicBehaviour {
             case "SEAT":
             	if (table.isFree()) {
             		reply.setPerformative(ACLMessage.AGREE);
+            		reply.setOntology("SEAT");
             		reply.setContent("YOU ARE SEATED");
             		
             		table.setIsFree(false);
             	} else {
             		reply.setPerformative(ACLMessage.REFUSE);
+            		reply.setOntology("SEAT");
             		reply.setContent("SORRY BUT YOUR PLACE WAS TAKEN");
             	}
             	break;

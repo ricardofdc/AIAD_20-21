@@ -21,6 +21,7 @@ public class Student extends Agent {
     private final int noise;
     private final int action; // 0 -> get table; 1 -> get book
     private final int timeOfArrival;
+    private AID tableAID;
 
     public Student( String course, int noise, int action, int timeOfArrival) {
         this.course = course;

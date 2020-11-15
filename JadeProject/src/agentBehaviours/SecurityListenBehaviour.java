@@ -17,7 +17,8 @@ import java.util.ArrayList;
 public class SecurityListenBehaviour extends CyclicBehaviour {
     private final int floorNr;
     MessageTemplate mt = MessageTemplate.or(
-            MessageTemplate.MatchPerformative(ACLMessage.DISCONFIRM),
+            MessageTemplate.or( MessageTemplate.MatchPerformative(ACLMessage.DISCONFIRM),
+            					MessageTemplate.MatchPerformative(ACLMessage.INFORM)),
             MessageTemplate.or( MessageTemplate.MatchPerformative(ACLMessage.REQUEST),
                                 MessageTemplate.MatchPerformative(ACLMessage.CONFIRM)));
 
@@ -65,6 +66,10 @@ public class SecurityListenBehaviour extends CyclicBehaviour {
                         numResponses = -1;
                     }
                     break;
+                case ACLMessage.INFORM:
+                	Logs.write(myAgent.getName() + " RECEIVED INFORM FROM " + msg.getSender(), "security", floorNr);
+                	handleInform(msg);
+                	break;
                 default:
                     break;
             }
@@ -73,7 +78,15 @@ public class SecurityListenBehaviour extends CyclicBehaviour {
         }
     }
 
-    private ACLMessage handleLibrarianRequest(ACLMessage request, ACLMessage reply) {
+    private void handleInform(ACLMessage msg) {
+		switch (msg.getOntology()) {
+		case "NOISE":
+			System.out.println("");
+			break;
+		}
+	}
+
+	private ACLMessage handleLibrarianRequest(ACLMessage request, ACLMessage reply) {
         switch (request.getOntology()){
             case "TABLE":
                 //agree

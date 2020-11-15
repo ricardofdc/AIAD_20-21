@@ -29,6 +29,7 @@ public class StudentListenBehaviour extends CyclicBehaviour {
             switch (msg.getPerformative()){
                 case ACLMessage.AGREE:
                     Logs.write(myAgent.getName() + " RECEIVED AGREE FROM " + msg.getSender(), "student");
+                    handleAgree(msg);
                     break;
                 case ACLMessage.REFUSE:
                     handleRefuse();
@@ -55,7 +56,15 @@ public class StudentListenBehaviour extends CyclicBehaviour {
         }
     }
 
-    private void handleConfirm(ACLMessage msg) {
+    private void handleAgree(ACLMessage msg) {
+		switch (msg.getOntology()) {
+		case "SEAT":
+	    	myAgent.addBehaviour(new StudentNoiseBehaviour(myAgent, 500, msg.getSender()));
+			break;
+		}
+	}
+
+	private void handleConfirm(ACLMessage msg) {
     	if (isSeated)
     		return;
     	
@@ -70,6 +79,8 @@ public class StudentListenBehaviour extends CyclicBehaviour {
 	}
 
 	private void handleRefuse() {
+		isSeated = false;
+		
         myAgent.addBehaviour(new WakerBehaviour(myAgent, 500) {
             @Override
             protected void onWake() {
