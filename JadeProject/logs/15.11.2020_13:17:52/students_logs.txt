@@ -1,0 +1,10 @@
+001_ricardo@172.17.0.1:1099/JADE REGISTERED AS STUDENT
+000_rui@172.17.0.1:1099/JADE REGISTERED AS STUDENT
+agents.Student@5660380f FOUND ( agent-identifier :name librarian@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+001_ricardo@172.17.0.1:1099/JADE RECEIVED AGREE FROM ( agent-identifier :name librarian@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+001_ricardo@172.17.0.1:1099/JADE RECEIVED INFORM FROM ( agent-identifier :name librarian@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+agents.Student@35dd8e70 FOUND ( agent-identifier :name librarian@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+000_rui@172.17.0.1:1099/JADE RECEIVED AGREE FROM ( agent-identifier :name librarian@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+000_rui@172.17.0.1:1099/JADE RECEIVED INFORM FROM ( agent-identifier :name librarian@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+001_ricardo@172.17.0.1:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
+000_rui@172.17.0.1:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE

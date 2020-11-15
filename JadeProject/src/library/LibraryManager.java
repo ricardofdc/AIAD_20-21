@@ -11,7 +11,7 @@ public class LibraryManager {
             System.exit(1);
         }
 
-        if(!new File(args[0]).exists()){
+        if(!new File(args[0]).exists()) {
             System.err.println("File " + args[0] + " not found.");
             System.exit(1);
         }

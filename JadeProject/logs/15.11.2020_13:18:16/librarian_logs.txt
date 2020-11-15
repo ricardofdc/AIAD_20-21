@@ -1,0 +1,106 @@
+librarian@172.17.0.1:1099/JADE REGISTERED AS LIBRARIAN
+librarian@172.17.0.1:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@172.17.0.1:1099/JADE"  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+agents.Librarian@5df384f9 FOUND ( agent-identifier :name security_2@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+agents.Librarian@5df384f9 FOUND ( agent-identifier :name security_4@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+agents.Librarian@5df384f9 FOUND ( agent-identifier :name security_3@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+agents.Librarian@5df384f9 FOUND ( agent-identifier :name security_1@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+agents.Librarian@5df384f9 FOUND ( agent-identifier :name security_0@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+librarian@172.17.0.1:1099/JADE SENT REQUEST:
+(REQUEST
+ :sender  ( agent-identifier :name librarian@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+ :receiver  (set ( agent-identifier :name security_2@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc )) ( agent-identifier :name security_4@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc )) ( agent-identifier :name security_3@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc )) ( agent-identifier :name security_1@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc )) ( agent-identifier :name security_0@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc )) )
+ :content  "MIEC" 
+ :ontology  TABLE )
+librarian@172.17.0.1:1099/JADE SENT REPLY: (AGREE
+ :receiver  (set ( agent-identifier :name "001_ricardo@172.17.0.1:1099/JADE"  :addresses (sequence http://SIMAO-DESKTOP:7778/acc )) )
+ :content  "TABLE request accepted" 
+ :reply-with  "001_ricardo@172.17.0.1:1099/JADE1605446296299"  :ontology  TABLE )
+librarian@172.17.0.1:1099/JADE RECEIVED INFORM FROM ( agent-identifier :name security_4@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+(INFORM
+ :sender  ( agent-identifier :name security_4@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+ :receiver  (set ( agent-identifier :name librarian@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc )) )
+ :content  "50 4" 
+ :ontology  SATISFACTION )
+librarian@172.17.0.1:1099/JADE RECEIVED INFORM FROM ( agent-identifier :name security_1@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+(INFORM
+ :sender  ( agent-identifier :name security_1@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+ :receiver  (set ( agent-identifier :name librarian@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc )) )
+ :content  "50 1" 
+ :ontology  SATISFACTION )
+librarian@172.17.0.1:1099/JADE RECEIVED INFORM FROM ( agent-identifier :name security_3@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+(INFORM
+ :sender  ( agent-identifier :name security_3@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+ :receiver  (set ( agent-identifier :name librarian@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc )) )
+ :content  "100 3" 
+ :ontology  SATISFACTION )
+librarian@172.17.0.1:1099/JADE RECEIVED INFORM FROM ( agent-identifier :name security_2@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+(INFORM
+ :sender  ( agent-identifier :name security_2@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+ :receiver  (set ( agent-identifier :name librarian@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc )) )
+ :content  "50 2" 
+ :ontology  SATISFACTION )
+librarian@172.17.0.1:1099/JADE RECEIVED INFORM FROM ( agent-identifier :name security_0@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+(INFORM
+ :sender  ( agent-identifier :name security_0@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+ :receiver  (set ( agent-identifier :name librarian@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc )) )
+ :content  "50 0" 
+ :ontology  SATISFACTION )
+librarian@172.17.0.1:1099/JADE SENT REPLY:
+(INFORM
+ :sender  ( agent-identifier :name librarian@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+ :receiver  (set ( agent-identifier :name "001_ricardo@172.17.0.1:1099/JADE"  :addresses (sequence http://SIMAO-DESKTOP:7778/acc )) )
+ :content  "3" 
+ :ontology  BEST_FLOOR )
+librarian@172.17.0.1:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "000_rui@172.17.0.1:1099/JADE"  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+agents.Librarian@5df384f9 FOUND ( agent-identifier :name security_2@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+agents.Librarian@5df384f9 FOUND ( agent-identifier :name security_4@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+agents.Librarian@5df384f9 FOUND ( agent-identifier :name security_3@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+agents.Librarian@5df384f9 FOUND ( agent-identifier :name security_1@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+agents.Librarian@5df384f9 FOUND ( agent-identifier :name security_0@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+librarian@172.17.0.1:1099/JADE SENT REQUEST:
+(REQUEST
+ :sender  ( agent-identifier :name librarian@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+ :receiver  (set ( agent-identifier :name security_2@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc )) ( agent-identifier :name security_4@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc )) ( agent-identifier :name security_3@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc )) ( agent-identifier :name security_1@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc )) ( agent-identifier :name security_0@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc )) )
+ :content  "MIEC" 
+ :ontology  TABLE )
+librarian@172.17.0.1:1099/JADE SENT REPLY: (AGREE
+ :receiver  (set ( agent-identifier :name "000_rui@172.17.0.1:1099/JADE"  :addresses (sequence http://SIMAO-DESKTOP:7778/acc )) )
+ :content  "TABLE request accepted" 
+ :reply-with  "000_rui@172.17.0.1:1099/JADE1605446299189"  :ontology  TABLE )
+librarian@172.17.0.1:1099/JADE RECEIVED INFORM FROM ( agent-identifier :name security_2@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+(INFORM
+ :sender  ( agent-identifier :name security_2@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+ :receiver  (set ( agent-identifier :name librarian@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc )) )
+ :content  "50 2" 
+ :ontology  SATISFACTION )
+librarian@172.17.0.1:1099/JADE RECEIVED INFORM FROM ( agent-identifier :name security_3@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+(INFORM
+ :sender  ( agent-identifier :name security_3@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+ :receiver  (set ( agent-identifier :name librarian@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc )) )
+ :content  "100 3" 
+ :ontology  SATISFACTION )
+librarian@172.17.0.1:1099/JADE RECEIVED INFORM FROM ( agent-identifier :name security_4@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+(INFORM
+ :sender  ( agent-identifier :name security_4@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+ :receiver  (set ( agent-identifier :name librarian@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc )) )
+ :content  "50 4" 
+ :ontology  SATISFACTION )
+librarian@172.17.0.1:1099/JADE RECEIVED INFORM FROM ( agent-identifier :name security_1@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+(INFORM
+ :sender  ( agent-identifier :name security_1@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+ :receiver  (set ( agent-identifier :name librarian@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc )) )
+ :content  "50 1" 
+ :ontology  SATISFACTION )
+librarian@172.17.0.1:1099/JADE RECEIVED INFORM FROM ( agent-identifier :name security_0@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+(INFORM
+ :sender  ( agent-identifier :name security_0@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+ :receiver  (set ( agent-identifier :name librarian@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc )) )
+ :content  "50 0" 
+ :ontology  SATISFACTION )
+librarian@172.17.0.1:1099/JADE SENT REPLY:
+(INFORM
+ :sender  ( agent-identifier :name librarian@172.17.0.1:1099/JADE  :addresses (sequence http://SIMAO-DESKTOP:7778/acc ))
+ :receiver  (set ( agent-identifier :name "000_rui@172.17.0.1:1099/JADE"  :addresses (sequence http://SIMAO-DESKTOP:7778/acc )) )
+ :content  "3" 
+ :ontology  BEST_FLOOR )
+librarian@172.17.0.1:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
