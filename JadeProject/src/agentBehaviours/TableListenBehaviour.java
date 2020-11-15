@@ -22,9 +22,9 @@ public class TableListenBehaviour extends CyclicBehaviour {
         if(msg != null) {
             ACLMessage reply = msg.createReply();
             switch (msg.getPerformative()){
-                case ACLMessage.REQUEST:        // security request
+                case ACLMessage.REQUEST:
                     Logs.write(myAgent.getName() + " RECEIVED REQUEST FROM " + msg.getSender(), "table");
-                    reply = handleSecurityRequest(msg, reply);
+                    reply = handleRequest(msg, reply);
                     break;
                 default:
                     break;
@@ -37,10 +37,10 @@ public class TableListenBehaviour extends CyclicBehaviour {
         }
     }
 
-    private ACLMessage handleSecurityRequest(ACLMessage request, ACLMessage reply) {
+    private ACLMessage handleRequest(ACLMessage request, ACLMessage reply) {
         switch (request.getOntology()){
             case "TABLE":
-                if(table.isFree()){
+                if (table.isFree()) {
                     reply.setPerformative(ACLMessage.CONFIRM);
                     reply.setContent("free");
                 }
@@ -50,6 +50,17 @@ public class TableListenBehaviour extends CyclicBehaviour {
                 }
 
                 break;
+            case "SEAT":
+            	if (table.isFree()) {
+            		reply.setPerformative(ACLMessage.AGREE);
+            		reply.setContent("YOU ARE SEATED");
+            		
+            		table.setIsFree(false);
+            	} else {
+            		reply.setPerformative(ACLMessage.REFUSE);
+            		reply.setContent("SORRY BUT YOUR PLACE WAS TAKEN");
+            	}
+            	break;
             default:
                 //refuse
                 reply.setPerformative(ACLMessage.NOT_UNDERSTOOD);
