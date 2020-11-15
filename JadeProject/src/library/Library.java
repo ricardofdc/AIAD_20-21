@@ -35,7 +35,6 @@ public class Library {
 
 	public Library(String filename) {
 		try{
-			Logs.init();
 			createContainers();
 
 			BufferedReader reader = new BufferedReader(new FileReader(filename));
@@ -43,6 +42,7 @@ public class Library {
 			workingTime = Integer.parseUnsignedInt(reader.readLine() + "000");
 
 			int number_of_floors = Integer.parseUnsignedInt(reader.readLine());
+			Logs.init(number_of_floors);
 			for(int i = 0; i< number_of_floors; i++){
 				String in = reader.readLine();
 				String[] in_arr = in.split(" ");
@@ -56,10 +56,10 @@ public class Library {
 				int noise_tolerance = Integer.parseUnsignedInt(in_arr[2]);
 
 				Floor floor = new Floor(i, course);
-				securitiesContainer.acceptNewAgent("security_" + i, new Security(floor, noise_tolerance)).start();
 				for(int j=0; j<num_tables; j++){
 					tablesContainer.acceptNewAgent("table_"+i+"_"+j, new Table(floor)).start();
 				}
+				securitiesContainer.acceptNewAgent("security_" + i, new Security(floor, noise_tolerance)).start();
 			}
 
 			librariansContainer.acceptNewAgent("librarian", new Librarian()).start();

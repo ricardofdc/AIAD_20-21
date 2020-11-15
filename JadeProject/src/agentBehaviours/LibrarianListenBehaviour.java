@@ -1,19 +1,35 @@
 package agentBehaviours;
 
 import agents.Librarian;
+import agents.Security;
+import jade.core.AID;
 import jade.core.behaviours.CyclicBehaviour;
+import jade.domain.DFService;
+import jade.domain.FIPAAgentManagement.DFAgentDescription;
+import jade.domain.FIPAAgentManagement.ServiceDescription;
+import jade.domain.FIPAException;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
-import jade.proto.AchieveREResponder;
+import library.Logs;
+
+import java.security.KeyPair;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 //FIPA Request Responder
 public class LibrarianListenBehaviour extends CyclicBehaviour {
-    private final Librarian librarian;
-    MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.REQUEST);
 
-    public LibrarianListenBehaviour(Librarian librarian){
-        this.librarian = librarian;
-    }
+    MessageTemplate mt = MessageTemplate.or(
+            MessageTemplate.MatchPerformative(ACLMessage.REFUSE),
+            MessageTemplate.or( MessageTemplate.MatchPerformative(ACLMessage.REQUEST),
+                                MessageTemplate.MatchPerformative(ACLMessage.INFORM)));
+
+    private ArrayList<AID> floorsSecurity = new ArrayList<>();
+    private int numResponses = -1;
+    private int bestSatisfacton = -1;
+    private int bestFloor = -1;
+    private AID studentAID = null;
 
 
     @Override
@@ -22,42 +38,127 @@ public class LibrarianListenBehaviour extends CyclicBehaviour {
         if(msg != null) {
             ACLMessage reply = msg.createReply();
             switch (msg.getPerformative()){
-                case ACLMessage.REQUEST:
-                    switch (msg.getOntology()){
-                        case "TABLE":
-                            //agree
-                            reply.setPerformative(ACLMessage.AGREE);
-                            reply.setContent("TABLE request accepted");
-                            sendRequestToSecurity(msg);
-                            break;
-                        case "BOOK":
-                            //refuse
-                            reply.setPerformative(ACLMessage.REFUSE);
-                            reply.setContent("BOOK request refused");
-                            break;
-                        default:
-                            //refuse
-                            reply.setPerformative(ACLMessage.NOT_UNDERSTOOD);
-                            break;
-                    }
+                case ACLMessage.REQUEST:  // student request
+                    Logs.write(myAgent.getName() + " RECEIVED REQUEST FROM " + msg.getSender(), "librarian");
+                    reply = handleStudentRequest(msg, reply);
+                    Logs.write(myAgent.getName() + " SENT REPLY: " + reply, "librarian");
+                    myAgent.send(reply);
+                    break;
+                case ACLMessage.REFUSE:
+                    Logs.write(myAgent.getName() + " RECEIVED REFUSE FROM " + msg.getSender(), "librarian");
+                    //TODO: voltar a enviar o request para o security
+                    return;
+                    //break;
+                case ACLMessage.INFORM:   // security inform
+                    Logs.write(myAgent.getName() + " RECEIVED INFORM FROM " + msg.getSender(), "librarian");
+                    Logs.write(msg+"", "librarian");
+                    handleSecurityInform(msg);
                     break;
                 default:
                     break;
             }
-            System.out.println(reply);
-            myAgent.send(reply);
-
         } else {
             block();
         }
     }
 
+    private void handleSecurityInform(ACLMessage inform) {
+        numResponses++;
+
+        String content = inform.getContent();
+        String[] array = content.split(" ");
+
+        int curr_sat = Integer.parseInt(array[0]);
+        int curr_floor = Integer.parseInt(array[1]);
+        if(curr_sat > bestSatisfacton){
+            bestSatisfacton = curr_sat;
+            bestFloor = curr_floor;
+        }
+
+        if(numResponses == floorsSecurity.size()){
+            sendStudentResponse();
+        }
+    }
+
+    private void sendStudentResponse() {
+        ACLMessage reply = new ACLMessage(ACLMessage.INFORM);
+        reply.setSender(myAgent.getAID());
+        reply.addReceiver(studentAID);
+        if(bestSatisfacton == 0){
+            reply.setOntology("NO_FREE_SPACE");
+            reply.setContent("Unfortunately the library is full.");
+        }
+        else{
+            reply.setOntology("BEST_FLOOR");
+            reply.setContent(String.valueOf(bestFloor));
+        }
+
+        myAgent.send(reply);
+        Logs.write(myAgent.getName() + " SENT REPLY:\n" + reply, "librarian");
+        numResponses = -1;
+    }
+
+    private ACLMessage handleStudentRequest(ACLMessage request, ACLMessage reply) {
+        switch (request.getOntology()){
+            case "TABLE":
+                //agree
+                if(numResponses != -1){
+                    reply.setPerformative(ACLMessage.REFUSE);
+                    reply.setContent("TABLE request refused");
+                }
+                else{
+                    studentAID = request.getSender();
+                    reply.setPerformative(ACLMessage.AGREE);
+                    reply.setContent("TABLE request accepted");
+                    sendRequestToSecurity(request);
+                    numResponses = 0;
+                    bestSatisfacton = -1;
+                    bestFloor = -1;
+
+                }
+                break;
+            case "BOOK":
+                //refuse
+                reply.setPerformative(ACLMessage.REFUSE);
+                reply.setContent("BOOK request refused");
+                break;
+            default:
+                //refuse
+                reply.setPerformative(ACLMessage.NOT_UNDERSTOOD);
+                break;
+        }
+        return reply;
+    }
+
     private void sendRequestToSecurity(ACLMessage request){
         request.clearAllReceiver();
-        for(int i=0; i<librarian.getFloorsSecurity().size(); i++){
-            request.addReceiver(librarian.getFloorsSecurity().get(i));
+        getFloorsSecurityAID();
+        for (AID aid : floorsSecurity) {
+            request.addReceiver(aid);
         }
         request.setSender(myAgent.getAID());
+
         myAgent.send(request);
+        Logs.write(myAgent.getName() + " SENT REQUEST:\n" + request, "librarian");
+    }
+
+    private void getFloorsSecurityAID() {
+        DFAgentDescription dfd = new DFAgentDescription();
+        ServiceDescription sd = new ServiceDescription();
+
+        sd.setType("security");
+        dfd.addServices(sd);
+
+        try {
+            DFAgentDescription[] result = DFService.search(myAgent, dfd);
+            floorsSecurity = new ArrayList<AID>();
+
+            for (DFAgentDescription agent : result) {
+                Logs.write(myAgent + " FOUND " + agent.getName(), "librarian");
+                floorsSecurity.add(agent.getName());
+            }
+        } catch(FIPAException fe) {
+            fe.printStackTrace();
+        }
     }
 }

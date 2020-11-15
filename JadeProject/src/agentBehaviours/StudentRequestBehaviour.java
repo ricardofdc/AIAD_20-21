@@ -1,38 +1,60 @@
 package agentBehaviours;
 
-import java.util.Vector;
-
-import agents.Librarian;
+import java.util.ArrayList;
 import agents.Student;
-import jade.core.Agent;
+import jade.core.AID;
 import jade.core.behaviours.OneShotBehaviour;
-import jade.core.behaviours.WakerBehaviour;
+import jade.domain.DFService;
+import jade.domain.FIPAAgentManagement.DFAgentDescription;
+import jade.domain.FIPAAgentManagement.ServiceDescription;
+import jade.domain.FIPAException;
 import jade.lang.acl.ACLMessage;
-import jade.proto.AchieveREInitiator;
 import library.Logs;
 
 //FIPA Request Initiator
 public class StudentRequestBehaviour extends OneShotBehaviour {
-	private final Student student;
+	private ArrayList<AID> librarians;
 
-	public StudentRequestBehaviour(Student a) {
-		this.student = a;
-	}
 
 	@Override
 	public void action() {
 		ACLMessage request = new ACLMessage(ACLMessage.REQUEST);
 
 		request.clearAllReceiver();
-		for(int i=0; i<student.getLibrarianAID().size(); i++){
-			request.addReceiver(student.getLibrarianAID().get(i));
+		findLibrariansAID();
+		for (AID librarian : librarians) {
+			request.addReceiver(librarian);
 		}
-		request.setSender(student.getAID());
-		switch (student.getAction()) {
-			case 0 -> request.setOntology("TABLE");
-			case 1 -> request.setOntology("BOOK");
+		request.setSender(myAgent.getAID());
+		switch (((Student)myAgent).getAction()) {
+			case 0:
+				request.setOntology("TABLE");
+				break;
+			case 1:
+				request.setOntology("BOOK");
+				break;
 		}
-		request.setContent(student.getCourse());
-		this.student.send(request);
+		request.setContent(((Student)myAgent).getCourse());
+		myAgent.send(request);
+	}
+
+	private void findLibrariansAID() {
+		DFAgentDescription dfd = new DFAgentDescription();
+		ServiceDescription sd = new ServiceDescription();
+
+		sd.setType("librarian");
+		dfd.addServices(sd);
+
+		try {
+			DFAgentDescription[] result = DFService.search(myAgent, dfd);
+			librarians = new ArrayList<AID>();
+
+			for (DFAgentDescription agent : result) {
+				Logs.write(myAgent + " FOUND " + agent.getName(), "student");
+				librarians.add(agent.getName());
+			}
+		} catch(FIPAException fe) {
+			fe.printStackTrace();
+		}
 	}
 }

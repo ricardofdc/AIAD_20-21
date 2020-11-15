@@ -1,0 +1,33 @@
+security_1@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+security_1@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_1_2@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+security_1@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_1_3@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+security_1@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_1_0@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+security_1@192.168.1.101:1099/JADE FOUND ( agent-identifier :name table_1_1@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+security_1@192.168.1.101:1099/JADE SENT REQUEST:
+(REQUEST
+ :sender  ( agent-identifier :name security_1@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+ :receiver  (set ( agent-identifier :name table_1_2@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) ( agent-identifier :name table_1_3@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) ( agent-identifier :name table_1_0@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) ( agent-identifier :name table_1_1@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "isFree?" 
+ :ontology  TABLE )
+security_1@192.168.1.101:1099/JADE SENT REPLY:
+(AGREE
+ :sender  ( agent-identifier :name security_1@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+ :receiver  (set ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request accepted" 
+ :reply-with  librarian@192.168.1.101:1099/JADE1605401665446  :ontology  TABLE )
+security_1@192.168.1.101:1099/JADE RECEIVED CONFIRM FROM ( agent-identifier :name table_1_2@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+security_1@192.168.1.101:1099/JADE RECEIVED CONFIRM FROM ( agent-identifier :name table_1_3@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+security_1@192.168.1.101:1099/JADE RECEIVED CONFIRM FROM ( agent-identifier :name table_1_0@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+security_1@192.168.1.101:1099/JADE RECEIVED CONFIRM FROM ( agent-identifier :name table_1_1@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+security_1@192.168.1.101:1099/JADE SENT REPLY:
+(INFORM
+ :sender  ( agent-identifier :name security_1@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+ :receiver  (set ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "50 1" 
+ :ontology  SATISFACTION )
+security_1@192.168.1.101:1099/JADE SENT REPLY:
+(INFORM
+ :sender  ( agent-identifier :name security_1@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+ :receiver  (set ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "50 1" 
+ :ontology  SATISFACTION )

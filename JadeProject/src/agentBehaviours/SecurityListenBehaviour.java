@@ -3,21 +3,34 @@ package agentBehaviours;
 import agents.Security;
 import jade.core.AID;
 import jade.core.behaviours.CyclicBehaviour;
+import jade.domain.DFService;
+import jade.domain.FIPAAgentManagement.DFAgentDescription;
+import jade.domain.FIPAAgentManagement.ServiceDescription;
+import jade.domain.FIPAException;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
+import library.Logs;
+
+import java.util.ArrayList;
 
 //FIPA Request Responder
 public class SecurityListenBehaviour extends CyclicBehaviour {
-    private Security security;
-    MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.REQUEST );
-    private int numResponses = 0;
+    private final int floorNr;
+    MessageTemplate mt = MessageTemplate.or(
+            MessageTemplate.MatchPerformative(ACLMessage.DISCONFIRM),
+            MessageTemplate.or( MessageTemplate.MatchPerformative(ACLMessage.REQUEST),
+                                MessageTemplate.MatchPerformative(ACLMessage.CONFIRM)));
+
+    private int numResponses = -1;
     private int numTables = 0;
     private String course = "";
     private AID librarianAID;
+    private ArrayList<AID> tables = new ArrayList<>();
+    //private AID freeTable = null;
 
     public SecurityListenBehaviour(Security security) {
-        this.security = security;
-
+        super();
+        this.floorNr = security.getFloor().getfloorNr();
     }
 
     @Override
@@ -27,48 +40,29 @@ public class SecurityListenBehaviour extends CyclicBehaviour {
             ACLMessage reply = msg.createReply();
             switch (msg.getPerformative()){
                 case ACLMessage.REQUEST:        // librarian request
-                    switch (msg.getOntology()){
-                        case "TABLE":
-                            //agree
-                            if(numResponses != 0){
-                                reply.setPerformative(ACLMessage.REFUSE);
-                                reply.setContent("TABLE request refused");
-                            }
-                            else {
-                                reply.setPerformative(ACLMessage.AGREE);
-                                reply.setContent("TABLE request accepted");
-                                this.course = msg.getContent();
-                                this.librarianAID = msg.getSender();
-                                getFreeTables();
-                            }
-                            break;
-                        case "BOOK":
-                            //refuse
-                            reply.setPerformative(ACLMessage.REFUSE);
-                            reply.setContent("BOOK request refused");
-                            break;
-                        default:
-                            //refuse
-                            reply.setPerformative(ACLMessage.NOT_UNDERSTOOD);
-                            break;
-                    }
+                    Logs.write(myAgent.getName() + " RECEIVED REQUEST FROM " + msg.getSender(), "security", floorNr);
+                    reply = handleLibrarianRequest(msg, reply);
                     myAgent.send(reply);
+                    Logs.write(myAgent.getName() + " SENT REPLY:\n" + reply, "security", floorNr);
                     break;
                 case ACLMessage.CONFIRM:        //tables response
+                    Logs.write(myAgent.getName() + " RECEIVED CONFIRM FROM " + msg.getSender(), "security", floorNr);
                     numTables++;
                     numResponses++;
-                    if(numResponses == security.getTables().size()){
+                    //freeTable = msg.getSender();
+                    if(numResponses == tables.size()){
                         replyLibrarian(getSecuritySatisfaction());
                         numTables = 0;
-                        numResponses = 0;
+                        numResponses = -1;
                     }
                     break;
                 case ACLMessage.DISCONFIRM:     //tables response
+                    Logs.write(myAgent.getName() + " RECEIVED DISCONFIRM FROM " + msg.getSender(), "security", floorNr);
                     numResponses++;
-                    if(numResponses == security.getTables().size()){
+                    if(numResponses == tables.size()){
                         replyLibrarian(getSecuritySatisfaction());
                         numTables = 0;
-                        numResponses = 0;
+                        numResponses = -1;
                     }
                     break;
                 default:
@@ -79,17 +73,73 @@ public class SecurityListenBehaviour extends CyclicBehaviour {
         }
     }
 
+    private ACLMessage handleLibrarianRequest(ACLMessage request, ACLMessage reply) {
+        switch (request.getOntology()){
+            case "TABLE":
+                //agree
+                if(numResponses != -1){
+                    reply.setPerformative(ACLMessage.REFUSE);
+                    reply.setContent("TABLE request refused");
+                }
+                else {
+                    reply.setPerformative(ACLMessage.AGREE);
+                    reply.setContent("TABLE request accepted");
+                    this.course = request.getContent();
+                    this.librarianAID = request.getSender();
+                    this.numResponses = 0;
+                    getFreeTables();
+                }
+                break;
+            case "BOOK":
+                //refuse
+                reply.setPerformative(ACLMessage.REFUSE);
+                reply.setContent("BOOK request refused");
+                break;
+            default:
+                //refuse
+                reply.setPerformative(ACLMessage.NOT_UNDERSTOOD);
+                break;
+        }
+        return reply;
+    }
+
     void getFreeTables(){
         ACLMessage request = new ACLMessage(ACLMessage.REQUEST);
         request.clearAllReceiver();
-        for(int i=0; i<security.getTables().size(); i++){
-            request.addReceiver(security.getTables().get(i));
+        tables = getTablesAID();
+        for (AID table : tables) {
+            request.addReceiver(table);
         }
         request.setOntology("TABLE");
         request.setContent("isFree?");
         request.setSender(myAgent.getAID());
         myAgent.send(request);
+        Logs.write(myAgent.getName() + " SENT REQUEST:\n" + request, "security", floorNr);
     }
+
+    private ArrayList<AID> getTablesAID() {
+        DFAgentDescription dfd = new DFAgentDescription();
+        ServiceDescription sd = new ServiceDescription();
+        ArrayList<AID> tables = new ArrayList<>();
+
+        sd.setType("table_" + ((Security)myAgent).getFloor().getfloorNr());
+        dfd.addServices(sd);
+
+        try {
+            DFAgentDescription[] result = DFService.search(myAgent, dfd);
+            tables = new ArrayList<AID>();
+
+            for (DFAgentDescription agent : result) {
+                Logs.write(myAgent.getName() + " FOUND " + agent.getName(), "security", floorNr);
+                tables.add(agent.getName());
+            }
+        } catch(FIPAException fe) {
+            fe.printStackTrace();
+        }
+
+        return tables;
+    }
+
 
 
     int getSecuritySatisfaction(){
@@ -97,11 +147,10 @@ public class SecurityListenBehaviour extends CyclicBehaviour {
             return 0;
         }
         int satisfaction = 0;
-        if(this.course.equals(this.security.getFloor().getCourse())){
+        if(this.course.equals(((Security)myAgent).getFloor().getCourse())){
             satisfaction += 50;
         }
-        satisfaction += numTables * 50 / this.security.getTables().size();
-        replyLibrarian(satisfaction);
+        satisfaction += numTables * 50 / tables.size();
 
         return satisfaction;
 
@@ -112,8 +161,9 @@ public class SecurityListenBehaviour extends CyclicBehaviour {
         reply.clearAllReceiver();
         reply.addReceiver(librarianAID);
         reply.setOntology("SATISFACTION");
-        reply.setContent(String.valueOf(satisfaction));
+        reply.setContent(satisfaction + " " + ((Security)myAgent).getFloor().getfloorNr());
         reply.setSender(myAgent.getAID());
         myAgent.send(reply);
+        Logs.write(myAgent.getName() + " SENT REPLY:\n" + reply, "security", floorNr);
     }
 }

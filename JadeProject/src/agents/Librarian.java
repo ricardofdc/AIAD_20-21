@@ -20,9 +20,8 @@ public class Librarian extends Agent {
 
     public void setup() {    	
     	registerLibrarian();
-		getFloorsSecurityAID();
 
-		addBehaviour(new LibrarianListenBehaviour(this));
+		addBehaviour(new LibrarianListenBehaviour());
 
     }
 
@@ -40,26 +39,6 @@ public class Librarian extends Agent {
 		try {
 			DFService.register(this, dfd);
 			Logs.write(this.getName() + " REGISTERED AS LIBRARIAN", "librarian");
-		} catch(FIPAException fe) {
-			fe.printStackTrace();
-		}
-    }
-    
-    private void getFloorsSecurityAID() {
-		DFAgentDescription dfd = new DFAgentDescription();
-		ServiceDescription sd = new ServiceDescription();
-
-		sd.setType("security");
-		dfd.addServices(sd);
-
-		try {
-			DFAgentDescription[] result = DFService.search(this, dfd);
-			floorsSecurity = new ArrayList<AID>();
-
-			for (DFAgentDescription agent : result) {
-				Logs.write(this.getName() + " FOUND " + agent.getName(), "librarian");
-				floorsSecurity.add(agent.getName());
-			}
 		} catch(FIPAException fe) {
 			fe.printStackTrace();
 		}

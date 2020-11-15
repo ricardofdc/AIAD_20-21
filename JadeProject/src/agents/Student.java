@@ -51,14 +51,13 @@ public class Student extends Agent {
     	super.setup();
 
     	registerStudent();
-        findLibrarianAID();
 
         addBehaviour(new WakerBehaviour(this, timeOfArrival) {
             @Override
             protected void onWake() {
                 super.onWake();
 
-                addBehaviour(new StudentRequestBehaviour((Student) this.myAgent));
+                addBehaviour(new StudentRequestBehaviour());
                 addBehaviour(new StudentListenBehaviour());
 
             }
@@ -80,25 +79,6 @@ public class Student extends Agent {
         }
     }
 
-    private void findLibrarianAID() {
-        DFAgentDescription dfd = new DFAgentDescription();
-        ServiceDescription sd = new ServiceDescription();
-
-        sd.setType("librarian");
-        dfd.addServices(sd);
-
-        try {
-            DFAgentDescription[] result = DFService.search(this, dfd);
-            librarian = new ArrayList<AID>();
-
-            for (DFAgentDescription agent : result) {
-                Logs.write(this.getName() + " FOUND " + agent.getName(), "student");
-                librarian.add(agent.getName());
-            }
-        } catch(FIPAException fe) {
-            fe.printStackTrace();
-        }
-    }
 
     protected void takeDown() {
         try {

@@ -1,9 +1,7 @@
 package agents;
 
 import agentBehaviours.SecurityListenBehaviour;
-import jade.core.AID;
 import jade.core.Agent;
-import jade.core.behaviours.WakerBehaviour;
 import jade.domain.DFService;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
@@ -17,8 +15,6 @@ public class Security extends Agent {
     private final Floor floor;
     private final int noiseTolerance;
 
-    private ArrayList<AID> tables;
-
     public Security(Floor floor, int noiseTolerance){
         this.floor=floor;
         this.noiseTolerance=noiseTolerance;
@@ -28,13 +24,8 @@ public class Security extends Agent {
 
     public int getNoiseTolerance() { return noiseTolerance; }
 
-    public ArrayList<AID> getTables(){
-        return tables;
-    }
-
     public void setup() {
         registerSecurity();
-        getTablesAID();
         addBehaviour(new SecurityListenBehaviour(this));
     }
 
@@ -52,36 +43,6 @@ public class Security extends Agent {
             fe.printStackTrace();
         }
     }
-
-    private void getTablesAID() {
-        int floor = this.floor.getfloorNr();
-        addBehaviour(new WakerBehaviour(this, 1000) {
-            @Override
-            protected void onWake() {
-                super.onWake();
-
-                DFAgentDescription dfd = new DFAgentDescription();
-                ServiceDescription sd = new ServiceDescription();
-
-                sd.setType("table_" + floor);
-                dfd.addServices(sd);
-
-                try {
-                    DFAgentDescription[] result = DFService.search(myAgent, dfd);
-                    tables = new ArrayList<AID>();
-
-                    for (DFAgentDescription agent : result) {
-                        Logs.write(this.myAgent.getName() + " FOUND " + agent.getName(), "security");
-                        tables.add(agent.getName());
-                    }
-                } catch(FIPAException fe) {
-                    fe.printStackTrace();
-                }
-            }
-        });
-    }
-
-
 
     protected void takeDown() {
         try {

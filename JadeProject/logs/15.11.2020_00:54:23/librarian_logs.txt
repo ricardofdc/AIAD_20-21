@@ -1,0 +1,1644 @@
+librarian@192.168.1.101:1099/JADE REGISTERED AS LIBRARIAN
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "000_rui@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+agents.Librarian@234dac9b FOUND ( agent-identifier :name security_2@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+agents.Librarian@234dac9b FOUND ( agent-identifier :name security_3@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+agents.Librarian@234dac9b FOUND ( agent-identifier :name security_4@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+agents.Librarian@234dac9b FOUND ( agent-identifier :name security_0@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+agents.Librarian@234dac9b FOUND ( agent-identifier :name security_1@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REQUEST:
+(REQUEST
+ :sender  ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+ :receiver  (set ( agent-identifier :name security_2@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) ( agent-identifier :name security_3@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) ( agent-identifier :name security_4@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) ( agent-identifier :name security_0@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) ( agent-identifier :name security_1@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "MIEC" 
+ :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE SENT REPLY: (AGREE
+ :receiver  (set ( agent-identifier :name "000_rui@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request accepted" 
+ :reply-with  "000_rui@192.168.1.101:1099/JADE1605401665433"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED INFORM FROM ( agent-identifier :name security_2@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+(INFORM
+ :sender  ( agent-identifier :name security_2@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+ :receiver  (set ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "50 2" 
+ :ontology  SATISFACTION )
+librarian@192.168.1.101:1099/JADE RECEIVED INFORM FROM ( agent-identifier :name security_2@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+(INFORM
+ :sender  ( agent-identifier :name security_2@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+ :receiver  (set ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "50 2" 
+ :ontology  SATISFACTION )
+librarian@192.168.1.101:1099/JADE RECEIVED INFORM FROM ( agent-identifier :name security_3@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+(INFORM
+ :sender  ( agent-identifier :name security_3@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+ :receiver  (set ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "100 3" 
+ :ontology  SATISFACTION )
+librarian@192.168.1.101:1099/JADE RECEIVED INFORM FROM ( agent-identifier :name security_1@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+(INFORM
+ :sender  ( agent-identifier :name security_1@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+ :receiver  (set ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "50 1" 
+ :ontology  SATISFACTION )
+librarian@192.168.1.101:1099/JADE RECEIVED INFORM FROM ( agent-identifier :name security_3@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+(INFORM
+ :sender  ( agent-identifier :name security_3@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+ :receiver  (set ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "100 3" 
+ :ontology  SATISFACTION )
+librarian@192.168.1.101:1099/JADE SENT REPLY:
+(INFORM
+ :sender  ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+ :receiver  (set ( agent-identifier :name "000_rui@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "3" 
+ :ontology  BEST_FLOOR )
+librarian@192.168.1.101:1099/JADE RECEIVED INFORM FROM ( agent-identifier :name security_4@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+(INFORM
+ :sender  ( agent-identifier :name security_4@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+ :receiver  (set ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "50 4" 
+ :ontology  SATISFACTION )
+librarian@192.168.1.101:1099/JADE RECEIVED INFORM FROM ( agent-identifier :name security_1@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+(INFORM
+ :sender  ( agent-identifier :name security_1@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+ :receiver  (set ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "50 1" 
+ :ontology  SATISFACTION )
+librarian@192.168.1.101:1099/JADE RECEIVED INFORM FROM ( agent-identifier :name security_4@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+(INFORM
+ :sender  ( agent-identifier :name security_4@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+ :receiver  (set ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "50 4" 
+ :ontology  SATISFACTION )
+librarian@192.168.1.101:1099/JADE RECEIVED INFORM FROM ( agent-identifier :name security_0@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+(INFORM
+ :sender  ( agent-identifier :name security_0@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+ :receiver  (set ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "50 0" 
+ :ontology  SATISFACTION )
+librarian@192.168.1.101:1099/JADE RECEIVED INFORM FROM ( agent-identifier :name security_0@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+(INFORM
+ :sender  ( agent-identifier :name security_0@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+ :receiver  (set ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "50 0" 
+ :ontology  SATISFACTION )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401668543"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401669049"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401669560"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401670068"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401670575"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401671083"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401671590"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401672099"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401672616"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401673125"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401673632"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401674136"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401674640"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401675145"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401675650"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401676153"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401676657"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401677162"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401677666"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401678169"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401678673"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401679176"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401679682"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401680187"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401680692"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401681196"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401681726"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401682230"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401682732"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401683236"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401683740"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401684244"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401684749"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401685256"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401685760"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401686291"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401686796"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401687303"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401687808"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401688312"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401688815"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401689327"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401689832"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401690336"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401690839"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401691343"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401691846"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401692351"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401692854"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401693358"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401693863"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401694368"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401694874"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401695379"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401695884"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401696387"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401696916"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401697420"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401697924"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401698428"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401698932"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401699435"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401699939"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401700443"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401700948"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401701454"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401701958"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401702463"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401702968"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401703473"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401703976"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401704480"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401704984"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401705488"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401705992"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401706495"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401706999"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401707502"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401708005"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401708508"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401709011"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401709515"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401710017"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401710520"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401711052"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401711555"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401712059"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401712563"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401713066"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401713568"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401714072"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401714575"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401715079"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401715582"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401716111"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401716614"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401717118"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401717622"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401718128"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401718634"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401719139"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401719643"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401720146"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401720650"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401721175"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401721679"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401722182"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401722685"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401723191"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401723697"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401724202"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401724706"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401725210"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401725714"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401726218"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401726722"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401727226"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401727729"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401728233"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401728763"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401729266"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401729769"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401730272"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401730774"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401731276"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401731779"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401732283"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401732786"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401733289"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401733792"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401734295"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401734799"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401735303"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401735807"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401736309"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401736812"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401737317"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401737822"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401738325"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401738828"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401739330"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401739834"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401740336"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401740839"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401741369"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401741873"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401742376"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401742880"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401743383"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401743887"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401744390"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401744893"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401745396"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401745899"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401746427"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401746931"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401747434"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401747936"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401748442"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401748947"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401749451"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401749957"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401750460"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401750963"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401751466"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401751970"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401752473"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401752975"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401753478"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401753981"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401754484"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401754988"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401755491"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401755995"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401756498"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401757002"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401757506"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401758010"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401758513"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401759015"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401759518"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401760023"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401760527"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401761031"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401761535"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401762040"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401762546"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401763075"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401763579"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401764082"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401764585"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401765088"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401765591"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401766094"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401766596"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401767099"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401767602"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401768105"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401768609"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401769112"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401769617"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401770121"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401770650"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401771153"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401771656"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401772159"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401772663"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401773166"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401773669"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401774172"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401774675"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401775178"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401775707"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401776212"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401776714"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401777217"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401777720"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401778222"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401778726"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401779228"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401779732"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401780236"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401780764"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401781267"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401781771"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401782274"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401782777"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401783279"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401783783"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401784286"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401784791"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401785293"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401785796"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401786299"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401786801"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401787304"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401787807"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401788310"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401788813"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401789315"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401789843"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401790346"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401790849"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401791352"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401791854"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401792358"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401792862"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401793365"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401793870"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401794375"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401794878"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401795381"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401795883"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401796385"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401796888"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401797391"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401797896"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401798399"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401798902"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401799406"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401799908"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401800413"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401800916"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401801418"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401801921"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401802450"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401802952"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401803454"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401803957"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401804459"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401804962"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401805466"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401805969"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401806472"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401806989"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401807493"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401807996"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401808499"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401809001"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401809503"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401810005"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401810508"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401811010"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401811513"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401812015"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401812518"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401813020"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401813523"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401814027"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401814532"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401815036"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401815539"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401816044"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401816549"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401817052"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401817554"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401818057"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401818561"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401819063"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401819566"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401820068"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401820570"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401821072"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401821574"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401822076"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401822579"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401823082"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401823584"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401824087"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401824590"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401825094"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE RECEIVED REQUEST FROM ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
+librarian@192.168.1.101:1099/JADE SENT REPLY: (REFUSE
+ :receiver  (set ( agent-identifier :name "001_ricardo@192.168.1.101:1099/JADE"  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc )) )
+ :content  "TABLE request refused" 
+ :reply-with  "001_ricardo@192.168.1.101:1099/JADE1605401825598"  :ontology  TABLE )
+librarian@192.168.1.101:1099/JADE TAKEN DOWN AND UNREGISTERED FROM DFSERVICE
