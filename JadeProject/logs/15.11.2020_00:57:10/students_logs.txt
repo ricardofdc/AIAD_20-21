@@ -1,8 +1,0 @@
-000_rui@192.168.1.101:1099/JADE REGISTERED AS STUDENT
-001_ricardo@192.168.1.101:1099/JADE REGISTERED AS STUDENT
-agents.Student@7e67700b FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
-001_ricardo@192.168.1.101:1099/JADE RECEIVED AGREE FROM ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
-001_ricardo@192.168.1.101:1099/JADE RECEIVED INFORM FROM ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
-agents.Student@4a8dd055 FOUND ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
-000_rui@192.168.1.101:1099/JADE RECEIVED AGREE FROM ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
-000_rui@192.168.1.101:1099/JADE RECEIVED INFORM FROM ( agent-identifier :name librarian@192.168.1.101:1099/JADE  :addresses (sequence http://ricardo-omenbyhplaptop:7778/acc ))
