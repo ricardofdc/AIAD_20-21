@@ -1,9 +1,8 @@
 package agentBehaviours;
 
-import agents.Librarian;
-import agents.Security;
 import jade.core.AID;
 import jade.core.behaviours.CyclicBehaviour;
+import jade.core.behaviours.WakerBehaviour;
 import jade.domain.DFService;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
@@ -11,17 +10,15 @@ import jade.domain.FIPAException;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
 import library.Logs;
-
-import java.security.KeyPair;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+
 
 //FIPA Request Responder
 public class LibrarianListenBehaviour extends CyclicBehaviour {
 
     MessageTemplate mt = MessageTemplate.or(
-            MessageTemplate.MatchPerformative(ACLMessage.REFUSE),
+            MessageTemplate.or( MessageTemplate.MatchPerformative(ACLMessage.REFUSE),
+                                MessageTemplate.MatchPerformative(ACLMessage.AGREE)),
             MessageTemplate.or( MessageTemplate.MatchPerformative(ACLMessage.REQUEST),
                                 MessageTemplate.MatchPerformative(ACLMessage.INFORM)));
 
@@ -30,6 +27,7 @@ public class LibrarianListenBehaviour extends CyclicBehaviour {
     private int bestSatisfacton = -1;
     private int bestFloor = -1;
     private AID studentAID = null;
+    private ACLMessage lastRequestSentToSecurity;
 
 
     @Override
@@ -41,17 +39,19 @@ public class LibrarianListenBehaviour extends CyclicBehaviour {
                 case ACLMessage.REQUEST:  // student request
                     Logs.write(myAgent.getName() + " RECEIVED REQUEST FROM " + msg.getSender(), "librarian");
                     reply = handleStudentRequest(msg, reply);
-                    Logs.write(myAgent.getName() + " SENT REPLY: " + reply, "librarian");
+                    Logs.write(myAgent.getName() + " SENT REPLY: \n" + reply, "librarian");
                     myAgent.send(reply);
+                    break;
+                case ACLMessage.AGREE:
+                    Logs.write(myAgent.getName() + " RECEIVED AGREE FROM " + msg.getSender(), "librarian");
                     break;
                 case ACLMessage.REFUSE:
                     Logs.write(myAgent.getName() + " RECEIVED REFUSE FROM " + msg.getSender(), "librarian");
-                    //TODO: voltar a enviar o request para o security
+                    handleRefuse(msg.getSender());
                     return;
                     //break;
                 case ACLMessage.INFORM:   // security inform
-                    Logs.write(myAgent.getName() + " RECEIVED INFORM FROM " + msg.getSender(), "librarian");
-                    Logs.write(msg+"", "librarian");
+                    Logs.write(myAgent.getName() + " RECEIVED INFORM FROM " + msg.getSender() + "\n" + msg, "librarian");
                     handleSecurityInform(msg);
                     break;
                 default:
@@ -60,6 +60,20 @@ public class LibrarianListenBehaviour extends CyclicBehaviour {
         } else {
             block();
         }
+    }
+
+    private void handleRefuse(AID sender) {
+        myAgent.addBehaviour(new WakerBehaviour(myAgent, 200) {
+            @Override
+            protected void onWake() {
+                super.onWake();
+                ACLMessage request = lastRequestSentToSecurity;
+                request.clearAllReceiver();
+                request.addReceiver(sender);
+                myAgent.send(request);
+                Logs.write(myAgent.getName() + " SENT REQUEST:\n" + request, "librarian");
+            }
+        });
     }
 
     private void handleSecurityInform(ACLMessage inform) {
@@ -137,7 +151,7 @@ public class LibrarianListenBehaviour extends CyclicBehaviour {
             request.addReceiver(aid);
         }
         request.setSender(myAgent.getAID());
-
+        lastRequestSentToSecurity = request;
         myAgent.send(request);
         Logs.write(myAgent.getName() + " SENT REQUEST:\n" + request, "librarian");
     }

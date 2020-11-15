@@ -18,36 +18,43 @@ public class Logs {
     private static Path librarianPath;
     private static Path studentsPath;
     private static Path[] securitiesPath;
-    private static Path tablesPath;
+    private static Path[] tablesPath;
 
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy_HH:mm:ss");
 
-    public static void init(int securitiesNumber) {
+    public static void init(int floorsNumber) {
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         String time = dateFormat.format(timestamp);
 
         String logsFolder = "logs/" + time + "/";
         String securitiesFolder = "logs/" + time + "/securities/";
-        String allLogsFile = logsFolder + "all_logs.txt";
-        String librarianLogsFile = logsFolder + "librarian_logs.txt";
-        String studentsLogsFile = logsFolder + "students_logs.txt";
-        String[] securitiesLogsFiles = new String[securitiesNumber];
-        for(int i=0; i<securitiesNumber; i++){
-            securitiesLogsFiles[i] = securitiesFolder + "security" + i + "_logs.txt";
+        String tablesFolder = "logs/" + time + "/tables/";
+        String allLogsFile = logsFolder + "all_logs.log";
+        String librarianLogsFile = logsFolder + "librarian_logs.log";
+        String studentsLogsFile = logsFolder + "students_logs.log";
+        String[] securitiesLogsFiles = new String[floorsNumber];
+        String[] tablesLogsFiles = new String[floorsNumber];
+        for(int i=0; i<floorsNumber; i++){
+            securitiesLogsFiles[i] = securitiesFolder + "security" + i + "_logs.log";
+            tablesLogsFiles[i] = tablesFolder + "tables" + i + "_logs.log";
         }
-        String tablesLogsFile = logsFolder + "tables_logs.txt";
 
         File dir = new File("logs/");
         if(!dir.exists()){
             dir.mkdir();
         }
 
-        dir = new File("logs/" + time + "/");
+        dir = new File(logsFolder);
         if(!dir.exists()){
             dir.mkdir();
         }
 
-        dir = new File("logs/" + time + "/securities/");
+        dir = new File(securitiesFolder);
+        if(!dir.exists()){
+            dir.mkdir();
+        }
+
+        dir = new File(tablesFolder);
         if(!dir.exists()){
             dir.mkdir();
         }
@@ -55,32 +62,20 @@ public class Logs {
         allPath = Paths.get(allLogsFile);
         librarianPath = Paths.get(librarianLogsFile);
         studentsPath = Paths.get(studentsLogsFile);
-        securitiesPath = new Path[securitiesNumber];
-        for(int i=0; i<securitiesNumber; i++){
+        securitiesPath = new Path[floorsNumber];
+        tablesPath = new Path[floorsNumber];
+        for(int i=0; i<floorsNumber; i++){
             securitiesPath[i] = Paths.get(securitiesLogsFiles[i]);
+            tablesPath[i] = Paths.get(tablesLogsFiles[i]);
         }
-        tablesPath = Paths.get(tablesLogsFile);
 
     }
 
     public static void write(String content, String file, int i) {
-        /*
-        Path path = allPath;
-
+        Path path;
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         String time = dateFormat.format(timestamp);
-
         content = time + " :: " + content;
-
-        try {
-            Files.write(path, Collections.singletonList(content), StandardCharsets.UTF_8,
-                    Files.exists(path) ? StandardOpenOption.APPEND : StandardOpenOption.CREATE);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-         */
-        Path path;
 
         switch (file) {
             case "librarian":
@@ -93,7 +88,7 @@ public class Logs {
                 path = securitiesPath[i];
                 break;
             case "table":
-                path = tablesPath;
+                path = tablesPath[i];
                 break;
             default:
                 path = allPath;

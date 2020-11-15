@@ -1,8 +1,6 @@
 package agents;
 
-import agentBehaviours.ListeningBehaviour;
 import agentBehaviours.TableListenBehaviour;
-import agentBehaviours.WorkingBehaviour;
 import jade.core.Agent;
 import jade.domain.DFService;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
@@ -46,7 +44,7 @@ public class Table extends Agent {
         dfd.addServices(sd);
         try {
             DFService.register(this, dfd);
-            Logs.write(this.getName() + " REGISTERED AS TABLE_" + this.floor.getfloorNr(), "table");
+            Logs.write(this.getName() + " REGISTERED AS TABLE_" + this.floor.getfloorNr(), "table", floor.getfloorNr());
         } catch(FIPAException fe) {
             fe.printStackTrace();
         }
@@ -55,7 +53,7 @@ public class Table extends Agent {
     protected void takeDown() {
         try {
             DFService.deregister(this);
-            Logs.write(this.getName() + " TAKEN DOWN AND UNREGISTERED FROM DFSERVICE", "table");
+            Logs.write(this.getName() + " TAKEN DOWN AND UNREGISTERED FROM DFSERVICE", "table", floor.getfloorNr());
         } catch(FIPAException e) {
             e.printStackTrace();
         }

@@ -38,7 +38,7 @@ public class Security extends Agent {
         dfd.addServices(sd);
         try {
             DFService.register(this, dfd);
-            Logs.write(this.getName() + " REGISTERED AS SECURITY", "security");
+            Logs.write(this.getName() + " REGISTERED AS SECURITY", "security", floor.getfloorNr());
         } catch(FIPAException fe) {
             fe.printStackTrace();
         }
@@ -47,7 +47,7 @@ public class Security extends Agent {
     protected void takeDown() {
         try {
             DFService.deregister(this);
-            Logs.write(this.getName() + " TAKEN DOWN AND UNREGISTERED FROM DFSERVICE", "security");
+            Logs.write(this.getName() + " TAKEN DOWN AND UNREGISTERED FROM DFSERVICE", "security", floor.getfloorNr());
         } catch(FIPAException e) {
             e.printStackTrace();
         }
