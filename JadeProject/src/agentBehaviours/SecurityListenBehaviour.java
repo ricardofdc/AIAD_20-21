@@ -14,7 +14,6 @@ import library.Logs;
 import java.util.ArrayList;
 import java.util.Random;
 
-//FIPA Request Responder
 public class SecurityListenBehaviour extends CyclicBehaviour {
     private final int floorNr;
     MessageTemplate mt = MessageTemplate.or(
@@ -30,7 +29,6 @@ public class SecurityListenBehaviour extends CyclicBehaviour {
     private ArrayList<AID> tables = new ArrayList<>();
     
     private Random rnd = new Random();
-    //private AID freeTable = null;
 
     public SecurityListenBehaviour(Security security) {
         super();
@@ -93,7 +91,8 @@ public class SecurityListenBehaviour extends CyclicBehaviour {
 				reply.setOntology("KICK");
 				
 				((Security)myAgent).addKick();
-				
+
+                Logs.write(myAgent.getName() + " SENT KICK INFORM:\n" + reply, "security", floorNr);
 				myAgent.send(reply);
 			}
 			

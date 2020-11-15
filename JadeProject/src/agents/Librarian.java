@@ -1,33 +1,19 @@
 package agents;
 
-import java.util.ArrayList;
-
 import agentBehaviours.LibrarianListenBehaviour;
-import jade.core.AID;
 import jade.core.Agent;
-import jade.core.behaviours.WakerBehaviour;
 import jade.domain.DFService;
 import jade.domain.FIPAException;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
-import jade.lang.acl.ACLMessage;
-import jade.lang.acl.MessageTemplate;
 import library.Logs;
 
 public class Librarian extends Agent {
-	
-	private ArrayList<AID> floorsSecurity;
 
     public void setup() {    	
     	registerLibrarian();
-
 		addBehaviour(new LibrarianListenBehaviour());
-
     }
-
-    public ArrayList<AID> getFloorsSecurity(){
-    	return floorsSecurity;
-	}
     
     private void registerLibrarian() {
     	DFAgentDescription dfd = new DFAgentDescription();

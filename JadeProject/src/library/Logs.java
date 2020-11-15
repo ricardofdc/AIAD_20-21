@@ -9,7 +9,6 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
 import java.util.Collections;
 
 public class Logs {
@@ -67,7 +66,6 @@ public class Logs {
             securitiesPath[i] = Paths.get(securitiesLogsFiles[i]);
             tablesPath[i] = Paths.get(tablesLogsFiles[i]);
         }
-
     }
 
     public static void write(String content, String file, int i) {
@@ -101,7 +99,6 @@ public class Logs {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     public static void write(String content, String file) {

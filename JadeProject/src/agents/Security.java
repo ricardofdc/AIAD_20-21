@@ -9,8 +9,6 @@ import jade.domain.FIPAException;
 import library.Floor;
 import library.Logs;
 
-import java.util.ArrayList;
-
 public class Security extends Agent {
     private final Floor floor;
     private final int noiseTolerance;

@@ -8,14 +8,10 @@ import jade.domain.DFService;
 import jade.domain.FIPAException;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
-import jade.lang.acl.ACLMessage;
 import library.Logs;
 
-import java.util.ArrayList;
 
 public class Student extends Agent {
-
-    private ArrayList<AID> librarian;
 
     private final String course;
     private final int noise;
@@ -30,7 +26,6 @@ public class Student extends Agent {
         this.action = action;
         this.timeOfArrival = timeOfArrival;	//milliseconds
 
-        //later we can make noise and course be random
     }
     
     public void setTableAID(AID tableAID) {
@@ -51,10 +46,6 @@ public class Student extends Agent {
 
     public int getAction() {
         return action;
-    }
-
-    public ArrayList<AID> getLibrarianAID() {
-        return librarian;
     }
 
     public void setup() {
@@ -88,7 +79,6 @@ public class Student extends Agent {
             fe.printStackTrace();
         }
     }
-
 
     protected void takeDown() {
         super.takeDown();

@@ -14,7 +14,6 @@ public class Table extends Agent {
     private boolean isFree;
     private int satisfaction;
 
-
     public Table(Floor floor){
         this.floor=floor;
         this.isFree = true;
@@ -30,7 +29,6 @@ public class Table extends Agent {
     }
 
     public Floor getFloor(){ return floor; }
-
 
     public boolean isFree(){
         return isFree;

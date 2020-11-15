@@ -19,6 +19,5 @@ public class LibraryManager {
         Library library = new Library(args[0]);
         library.run();
         library.shutdown();
-
     }
 }

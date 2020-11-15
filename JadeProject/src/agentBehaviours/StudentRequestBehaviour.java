@@ -11,10 +11,8 @@ import jade.domain.FIPAException;
 import jade.lang.acl.ACLMessage;
 import library.Logs;
 
-//FIPA Request Initiator
 public class StudentRequestBehaviour extends OneShotBehaviour {
 	private ArrayList<AID> librarians;
-
 
 	@Override
 	public void action() {
@@ -36,6 +34,7 @@ public class StudentRequestBehaviour extends OneShotBehaviour {
 		}
 		request.setContent(((Student)myAgent).getCourse());
 		myAgent.send(request);
+		Logs.write(myAgent.getName() + " SENT REQUEST:\n" + request, "student");
 	}
 
 	private void findLibrariansAID() {

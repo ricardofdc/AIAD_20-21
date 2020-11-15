@@ -1,7 +1,6 @@
 package agentBehaviours;
 
 import java.util.Random;
-
 import agents.Student;
 import jade.core.AID;
 import jade.core.Agent;
@@ -11,12 +10,11 @@ import jade.domain.FIPAException;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
 import jade.lang.acl.ACLMessage;
+import library.Logs;
 
 public class StudentNoiseBehaviour extends TickerBehaviour {
-	
-	private Random rnd = new Random();
-
-	private AID floorSecurity;
+	private final Random rnd = new Random();
+	private final AID floorSecurity;
 
 	public StudentNoiseBehaviour(Agent a, long period, AID table) {
 		super(a, period);
@@ -60,6 +58,7 @@ public class StudentNoiseBehaviour extends TickerBehaviour {
 			msg.setOntology("NOISE");
 			msg.addReceiver(floorSecurity);
 
+			Logs.write(myAgent.getName() + " SENT NOISE INFORM:\n" + msg, "student");
 			myAgent.send(msg);
 		}
 	}

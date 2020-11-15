@@ -238,7 +238,6 @@ public class Library {
 	}
 
 	public void shutdown() {
-
 		try {
 			librariansContainer.kill();
 			securitiesContainer.kill();

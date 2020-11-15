@@ -6,7 +6,6 @@ import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
 import library.Logs;
 
-//FIPA Request Responder
 public class TableListenBehaviour extends CyclicBehaviour {
     private final Table table;
     MessageTemplate mt = MessageTemplate.or(
@@ -51,7 +50,6 @@ public class TableListenBehaviour extends CyclicBehaviour {
 			break;
 		}
 	}
-
 
 	private ACLMessage handleRequest(ACLMessage request, ACLMessage reply) {
         switch (request.getOntology()){
