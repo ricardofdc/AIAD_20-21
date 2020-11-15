@@ -1,10 +1,5 @@
 package agentBehaviours;
 
-import java.util.ArrayList;
-
-import agents.Security;
-import agents.Student;
-import jade.core.AID;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.core.behaviours.WakerBehaviour;
 import jade.domain.DFService;
@@ -64,11 +59,12 @@ public class StudentListenBehaviour extends CyclicBehaviour {
     	if (isSeated)
     		return;
     	
-    	ACLMessage reply = msg.createReply();
-    	reply.setPerformative(ACLMessage.REQUEST);
-    	reply.setOntology("SEAT");
-    	
-    	myAgent.send(reply);
+    	ACLMessage request = msg.createReply();
+        request.setPerformative(ACLMessage.REQUEST);
+        request.setOntology("SEAT");
+
+        Logs.write(myAgent.getName() + " SENT REQUEST:\n" + request, "student");
+    	myAgent.send(request);
     	
     	isSeated = true;
 	}
@@ -85,17 +81,18 @@ public class StudentListenBehaviour extends CyclicBehaviour {
     
     private void handleInform(ACLMessage msg) {
     	switch(msg.getOntology()) {
-    	case "BEST_FLOOR":
-    		
-    		ACLMessage toSend = new ACLMessage(ACLMessage.REQUEST);
-    		toSend.setOntology("TABLE");
-    		
-    		addTableReceivers(toSend.getContent(), toSend);
-    		myAgent.send(toSend);
-    		
-    		break;
-    	default:
-    		break;
+            case "BEST_FLOOR":
+
+                ACLMessage toSend = new ACLMessage(ACLMessage.REQUEST);
+                toSend.setOntology("TABLE");
+                String floor = msg.getContent();
+                addTableReceivers(floor, toSend);
+                Logs.write(myAgent.getName() + " SENT REQUEST:\n" + toSend, "student");
+                myAgent.send(toSend);
+
+                break;
+            default:
+                break;
     	}
     }
 

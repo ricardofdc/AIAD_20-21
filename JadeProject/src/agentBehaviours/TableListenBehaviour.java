@@ -23,14 +23,14 @@ public class TableListenBehaviour extends CyclicBehaviour {
             ACLMessage reply = msg.createReply();
             switch (msg.getPerformative()){
                 case ACLMessage.REQUEST:
-                    Logs.write(myAgent.getName() + " RECEIVED REQUEST FROM " + msg.getSender(), "table");
+                    Logs.write(myAgent.getName() + " RECEIVED REQUEST FROM " + msg.getSender(), "table", table.getFloor().getfloorNr());
                     reply = handleRequest(msg, reply);
                     break;
                 default:
                     break;
             }
             myAgent.send(reply);
-            Logs.write(myAgent.getName() + " SENT REPLY " + reply, "table");
+            Logs.write(myAgent.getName() + " SENT REPLY " + reply, "table", table.getFloor().getfloorNr());
 
         } else {
             block();
