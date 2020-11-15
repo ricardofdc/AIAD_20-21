@@ -41,7 +41,7 @@ public class StudentListenBehaviour extends CyclicBehaviour {
     }
 
     private void handleRefuse() {
-        myAgent.addBehaviour(new WakerBehaviour(myAgent, 500) {
+        myAgent.addBehaviour(new WakerBehaviour(myAgent, 200) {
             @Override
             protected void onWake() {
                 super.onWake();

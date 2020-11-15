@@ -64,23 +64,10 @@ public class Logs {
     }
 
     public static void write(String content, String file, int i) {
-        /*
-        Path path = allPath;
-
+        Path path;
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         String time = dateFormat.format(timestamp);
-
         content = time + " :: " + content;
-
-        try {
-            Files.write(path, Collections.singletonList(content), StandardCharsets.UTF_8,
-                    Files.exists(path) ? StandardOpenOption.APPEND : StandardOpenOption.CREATE);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-         */
-        Path path;
 
         switch (file) {
             case "librarian":

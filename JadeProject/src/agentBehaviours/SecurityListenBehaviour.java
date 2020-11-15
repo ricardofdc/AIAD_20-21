@@ -82,7 +82,7 @@ public class SecurityListenBehaviour extends CyclicBehaviour {
                     reply.setContent("TABLE request refused");
                 }
                 else {
-                    reply.setPerformative(ACLMessage.AGREE);
+                    reply.setPerformative(ACLMessage.AGREE); 
                     reply.setContent("TABLE request accepted");
                     this.course = request.getContent();
                     this.librarianAID = request.getSender();

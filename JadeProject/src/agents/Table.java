@@ -1,8 +1,6 @@
 package agents;
 
-import agentBehaviours.ListeningBehaviour;
 import agentBehaviours.TableListenBehaviour;
-import agentBehaviours.WorkingBehaviour;
 import jade.core.Agent;
 import jade.domain.DFService;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
