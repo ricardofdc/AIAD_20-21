@@ -1,0 +1,10 @@
+5
+5
+4 MIEIC 6
+4 MIEM 5
+4 MIEGI 2
+4 MIEC 0
+4 MIEQ 4
+2
+rui MIEC 3 0
+ricardo MIEC 2 0
