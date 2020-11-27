@@ -1,7 +1,7 @@
 package agentBehaviours;
 
 import agents.Table;
-import jade.core.behaviours.CyclicBehaviour;
+import sajas.core.behaviours.CyclicBehaviour;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
 import library.Logs;

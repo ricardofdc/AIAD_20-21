@@ -2,9 +2,9 @@ package agents;
 
 import agentBehaviours.*;
 import jade.core.AID;
-import jade.core.Agent;
-import jade.core.behaviours.WakerBehaviour;
-import jade.domain.DFService;
+import sajas.core.Agent;
+import sajas.core.behaviours.WakerBehaviour;
+import sajas.domain.DFService;
 import jade.domain.FIPAException;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
