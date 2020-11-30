@@ -1,9 +1,9 @@
 package agentBehaviours;
 
 import agents.Student;
-import jade.core.behaviours.CyclicBehaviour;
-import jade.core.behaviours.WakerBehaviour;
-import jade.domain.DFService;
+import sajas.core.behaviours.CyclicBehaviour;
+import sajas.core.behaviours.WakerBehaviour;
+import sajas.domain.DFService;
 import jade.domain.FIPAException;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
