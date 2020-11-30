@@ -150,7 +150,7 @@ public class Library extends Repast3Launcher {
 
 	@Override
 	protected void launchJADE() {
-		System.out.println("here");
+
 		Runtime rt = Runtime.instance();
 		Profile mainProfile = new ProfileImpl();
 		mainProfile.setParameter(Profile.GUI, "true");
