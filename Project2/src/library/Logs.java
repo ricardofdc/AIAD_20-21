@@ -24,8 +24,6 @@ public class Logs {
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         String time = dateFormat.format(timestamp);
 
-        System.out.println("path separator: " + File.separator);
-
         String logsFolder = "logs" + File.separator + time + File.separator;
         String securitiesFolder = "logs" + File.separator + time + File.separator + "securities" + File.separator;
         String tablesFolder = "logs" + File.separator + time + File.separator + "tables" + File.separator;

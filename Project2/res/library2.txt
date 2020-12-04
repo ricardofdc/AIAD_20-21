@@ -5,7 +5,7 @@
 4 MIEGI
 4 MIEC
 4 MIEQ
-100 4
+10 4
 rui MIEIC
 ricardo MIEIC
 ana MIEIC

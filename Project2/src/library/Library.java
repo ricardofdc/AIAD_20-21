@@ -174,8 +174,11 @@ public class Library extends Repast3Launcher {
 
 		launchAgents();
 
-		run();
-		shutdown();
+		// add an agent with run comportment
+
+
+		//run();
+		//shutdown();
 	}
 
 	private void launchAgents() {
