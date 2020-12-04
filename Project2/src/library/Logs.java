@@ -20,13 +20,15 @@ public class Logs {
     private static Path[] tablesPath;
 
     public static void init(int floorsNumber) {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy_HH:mm:ss");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy_HH.mm.ss");
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         String time = dateFormat.format(timestamp);
 
-        String logsFolder = "logs/" + time + "/";
-        String securitiesFolder = "logs/" + time + "/securities/";
-        String tablesFolder = "logs/" + time + "/tables/";
+        System.out.println("path separator: " + File.separator);
+
+        String logsFolder = "logs" + File.separator + time + File.separator;
+        String securitiesFolder = "logs" + File.separator + time + File.separator + "securities" + File.separator;
+        String tablesFolder = "logs" + File.separator + time + File.separator + "tables" + File.separator;
         String allLogsFile = logsFolder + "all_logs.log";
         String librarianLogsFile = logsFolder + "librarian_logs.log";
         String studentsLogsFile = logsFolder + "students_logs.log";
@@ -37,7 +39,8 @@ public class Logs {
             tablesLogsFiles[i] = tablesFolder + "tables" + i + "_logs.log";
         }
 
-        File dir = new File("logs/");
+
+        File dir = new File("logs" + File.separator);
         if(!dir.exists()){
             dir.mkdir();
         }
