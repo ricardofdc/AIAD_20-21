@@ -1,8 +1,6 @@
 package library;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.Random;
 
@@ -23,6 +21,16 @@ import uchicago.src.sim.engine.SimInit;
 
 public class Library extends Repast3Launcher {
 
+	private static final int WORKING_TIME = 15000;
+	private static final int AVG_NOISE_TOLERANCE = 8;
+	private static final int AVG_STUDENT_NOISE = 8;
+	private final int N_FLOORS = 5;
+	private final String[] COURSES = {"MIEIC", "MIEM", "MIEGI", "MIEC", "MIEQ"};
+	private final int N_TABLES_PER_FLOOR = 5;
+	private final int N_STUDENTS = 20;
+	public static final boolean USE_RESULTS_COLLECTOR = true;
+
+
 	private ContainerController mainContainer;
 	private ContainerController librariansContainer;
 	private ContainerController securitiesContainer;
@@ -35,9 +43,7 @@ public class Library extends Repast3Launcher {
 	private Agent[] students;
 
 	Random random = new Random();
-	
-	// Period of time, in milliseconds, the library is working.
-	private int workingTime;
+
 
 	private String filename;
 
@@ -45,6 +51,7 @@ public class Library extends Repast3Launcher {
 		this.filename = filename;
 	}
 
+	/*
 	private void run(){
 		//fazer calculos estatisticos
 
@@ -136,6 +143,8 @@ public class Library extends Repast3Launcher {
 
 	}
 
+	 */
+
 	private void shutdown() {
 		try {
 			librariansContainer.kill();
@@ -183,34 +192,15 @@ public class Library extends Repast3Launcher {
 
 	private void launchAgents() {
 		try{
-			BufferedReader reader = new BufferedReader(new FileReader(filename));
 
-			//read first line: working time of library
-			workingTime = Integer.parseUnsignedInt(reader.readLine() + "000");
-
-			//read security related lines
-			String security_input = reader.readLine();
-			String[] security_input_array = security_input.split(" ");
-			int number_of_floors = Integer.parseUnsignedInt(security_input_array[0]);
-			int average_tolerance = Integer.parseUnsignedInt(security_input_array[1]);
-			Logs.init(number_of_floors);
-			securities = new Agent[number_of_floors];
-			tables = new Agent[number_of_floors][];
-			for(int i = 0; i< number_of_floors; i++){
-				String in = reader.readLine();
-				String[] in_arr = in.split(" ");
-				if(in_arr.length != 2){
-					System.err.println("Error on parse of file " + filename + ".");
-					System.err.println("Floors must have 2 arguments: \"<n.tables> <course>\".");
-					System.exit(1);
-				}
-				int num_tables = Integer.parseUnsignedInt(in_arr[0]);
-				String course = in_arr[1];
-				int noise_tolerance = average_tolerance - 2 + random.nextInt(5); // input[2 .. 8]
-
-				Floor floor = new Floor(i, course);
-				tables[i] = new Agent[num_tables];
-				for(int j=0; j<num_tables; j++){
+			Logs.init(N_FLOORS);
+			securities = new Agent[N_FLOORS];
+			tables = new Agent[N_FLOORS][];
+			for(int i = 0; i< N_FLOORS; i++){
+				int noise_tolerance = AVG_NOISE_TOLERANCE - 2 + random.nextInt(5); // input[2 .. 8]
+				Floor floor = new Floor(i, COURSES[i]);
+				tables[i] = new Agent[N_TABLES_PER_FLOOR];
+				for(int j=0; j<N_TABLES_PER_FLOOR; j++){
 					tables[i][j] = new Table(floor);
 					tablesContainer.acceptNewAgent("table_"+i+"_"+j, tables[i][j]).start();
 				}
@@ -222,45 +212,33 @@ public class Library extends Repast3Launcher {
 			librariansContainer.acceptNewAgent("librarian", librarian).start();
 
 
-			//read student related lines
-			String student_input = reader.readLine();
-			String[] student_input_array = student_input.split(" ");
-			int number_of_students = Integer.parseUnsignedInt(student_input_array[0]);
-			int average_noise = Integer.parseUnsignedInt(student_input_array[1]);
-			students = new Agent[number_of_students];
-			for(int i = 0; i< number_of_students; i++) {
-				String in = reader.readLine();
-				String[] in_arr = in.split(" ");
-				if(in_arr.length != 2){
-					System.err.println("Error on parse of file " + filename + ".");
-					System.err.println("Students must have 2 arguments: \"<name> <course>\".");
-					System.exit(1);
-				}
+			students = new Agent[N_STUDENTS];
+			for(int i = 0; i< N_STUDENTS; i++) {
 
-				String name = in_arr[0];
-				String course = in_arr[1];
-				int noise = average_noise - 2 + random.nextInt(5);
+				int noise = AVG_STUDENT_NOISE - 2 + random.nextInt(5);
 				int action = 0;
-				int timeOfArrival = random.nextInt(this.workingTime) + 1000;
+				int timeOfArrival = random.nextInt(WORKING_TIME);
 
 				String nickname;
 				if (i<10) {
-					nickname = "00"+i+"_"+name;
+					nickname = "00"+i+"_student";
 				}
 				else if (i<100){
-					nickname = "0"+i+"_"+name;
+					nickname = "0"+i+"_student";
 				}
 				else{
-					nickname = i+"_"+name;
+					nickname = i+"_student";
 				}
-				students[i] = new Student(course, noise, action, timeOfArrival);
+				int course_n = random.nextInt(N_FLOORS);
+				students[i] = new Student(COURSES[course_n], noise, action, timeOfArrival);
 				studentsContainer.acceptNewAgent(nickname, students[i]).start();
 			}
-			reader.close();
-		} catch (IOException | StaleProxyException e) {
+		} catch (StaleProxyException e) {
 			e.printStackTrace();
 		}
 	}
+
+
 
 	@Override
 	public String[] getInitParam() {
@@ -285,7 +263,7 @@ public class Library extends Repast3Launcher {
 		}
 
 		SimInit init = new SimInit();
-		init.setNumRuns(1);   // works only in batch mode
-		init.loadModel(new Library(args[0]), null, true);
+		//init.setNumRuns(1);   // works only in batch mode
+		init.loadModel(new Library(args[0]), null, false);
 	}
 }
