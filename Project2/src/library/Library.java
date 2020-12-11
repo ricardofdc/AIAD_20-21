@@ -33,7 +33,7 @@ public class Library extends Repast3Launcher {
 	private static final int AVG_STUDENT_NOISE = 8;
 	private final int N_FLOORS = 5;
 	private final String[] COURSES = {"MIEIC", "MIEM", "MIEGI", "MIEC", "MIEQ"};
-	private final int N_TABLES_PER_FLOOR = 5;
+	private final int N_TABLES_PER_FLOOR = 4;
 	private final int N_STUDENTS = 20;
 	public static final boolean USE_RESULTS_COLLECTOR = true;
 
@@ -53,7 +53,7 @@ public class Library extends Repast3Launcher {
 	Random random = new Random();
 
 	private DisplaySurface dsurf;
-	private int WIDTH = N_TABLES_PER_FLOOR * 15, HEIGHT = N_STUDENTS * 4;
+	private int WIDTH = N_FLOORS * 15, HEIGHT = N_STUDENTS * 4;
 	private Object2DGrid library2DGrid;
 
 	public Library() {
