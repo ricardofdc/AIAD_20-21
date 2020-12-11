@@ -68,7 +68,7 @@ public class TableListenBehaviour extends CyclicBehaviour {
             	if (table.isFree()) {
             		reply.setPerformative(ACLMessage.AGREE);
             		reply.setOntology("SEAT");
-            		reply.setContent("YOU ARE SEATED");
+            		reply.setContent(this.table.getX() + " " + this.table.getY());
             		table.setIsFree(false);
             		String studentCourse = request.getContent();
                     if(studentCourse.equals(table.getFloor().getCourse())){

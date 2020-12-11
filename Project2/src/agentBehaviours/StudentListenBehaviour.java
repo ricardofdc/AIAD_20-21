@@ -60,6 +60,8 @@ public class StudentListenBehaviour extends CyclicBehaviour {
     private void handleAgree(ACLMessage msg) {
 		switch (msg.getOntology()) {
 		case "SEAT":
+		    String[] coords = msg.getContent().split(" ");
+            ((Student)myAgent).setXY(Integer.parseInt(coords[0]), Integer.parseInt(coords[1]));
 			((Student)myAgent).setTableAID(msg.getSender());
 	    	myAgent.addBehaviour(new StudentNoiseBehaviour(myAgent, 2000, msg.getSender()));
 			break;

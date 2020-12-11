@@ -1,8 +1,5 @@
 package library;
 
-import java.awt.*;
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -22,6 +19,7 @@ import sajas.wrapper.ContainerController;
 import uchicago.src.sim.engine.Schedule;
 import uchicago.src.sim.engine.SimInit;
 import uchicago.src.sim.gui.DisplaySurface;
+import uchicago.src.sim.gui.Drawable;
 import uchicago.src.sim.gui.Object2DDisplay;
 import uchicago.src.sim.space.Object2DGrid;
 
@@ -49,125 +47,16 @@ public class Library extends Repast3Launcher {
 	private Agent librarian;
 	private Agent[] securities;
 	private Agent[][] tables;
-	private List<Table> tablesList;
+	private List<Drawable> drawablesList;
 	private Agent[] students;
 
 	Random random = new Random();
 
-	private String filename;
-
 	private DisplaySurface dsurf;
-	private int WIDTH = 20, HEIGHT = 20;
+	private int WIDTH = N_TABLES_PER_FLOOR * 15, HEIGHT = N_STUDENTS * 4;
 	private Object2DGrid library2DGrid;
 
-	public Library(String filename) {
-		this.filename = filename;
-	}
-
-	/*
-	private void run(){
-		//fazer calculos estatisticos
-
-		//calcular satisfação de cada piso;
-		//calcular quantos clientes foram expulsos
-		//calcular ocupação média da biblioteca
-
-		System.out.println("=======================================");
-		System.out.println("==                                   ==");
-		System.out.println("==        MULTI AGENT LIBRARY        ==");
-		System.out.println("==                                   ==");
-		System.out.println("=======================================");
-		System.out.println(" ");
-		System.out.println("Library working");
-
-
-		//get average students noise
-		double totalNoise = 0;
-		int numStudents = 0;
-		for(Agent agent: students){
-			totalNoise += ((Student)agent).getNoise();
-			numStudents++;
-		}
-		double averageStudentsNoise = totalNoise / numStudents;
-
-		// get runtime tables information
-		double curr_total_occupancy = 0;
-		double curr_total_satisfaction = 0;
-		int curr_total_iterations = 0;
-		int time = 0;
-		while(time <= workingTime){
-			try {
-				Thread.sleep(300);
-				time += 300;
-				System.out.print(".");
-				double occupancy = 0;
-				double satisfaction = 0;
-				int numTables_ocupancy = 0;
-				int numTables_satisfaction = 0;
-
-				for (Agent[] table : tables) {
-					for (Agent agent : table) {
-						occupancy += (((Table) agent).isFree() ? 0 : 1);
-						numTables_ocupancy++;
-						if(!((Table)agent).isFree()){
-							satisfaction += ((Table) agent).getSatisfaction();
-							numTables_satisfaction++;
-						}
-					}
-				}
-				if(numTables_satisfaction != 0){
-					curr_total_satisfaction += satisfaction / numTables_satisfaction;
-				}
-				curr_total_occupancy += occupancy / numTables_ocupancy;
-				curr_total_iterations++;
-
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		}
-		double averageOccupancy = curr_total_occupancy / curr_total_iterations;
-		double averageSatisfaction = curr_total_satisfaction / curr_total_iterations;
-
-		//get number of security kicks and average securities noise tolerance
-		int numberKicks = 0;
-		double totalNoiseTolerance = 0;
-		int numberSecurities = 0;
-		for (Agent security: securities) {
-			numberKicks += ((Security)security).getNumberKicks();
-			totalNoiseTolerance += ((Security)security).getNoiseTolerance();
-			numberSecurities++;
-		}
-		double averageNoiseTolerance = totalNoiseTolerance / numberSecurities;
-
-
-		System.out.println(" \n");
-		System.out.println("=======================================");
-		System.out.println("==                                   ==");
-		System.out.println("==              RESULTS              ==");
-		System.out.println("==                                   ==");
-		System.out.println("=======================================");
-		System.out.println("                                       ");
-		System.out.println("-> Working time: " + workingTime/1000 + " seconds");
-		System.out.println("-> Average securities noise tolerance: " + averageNoiseTolerance);
-		System.out.println("-> Average students noise: " + averageStudentsNoise);
-		System.out.println("-> Number of securities kicks: " + numberKicks);
-		System.out.println("-> Average table satisfaction: " + (averageSatisfaction * 100) + "%");
-		System.out.println("-> Average table occupancy: " + (averageOccupancy * 100) + "%");
-
-	}
-
-	 */
-
-	private void shutdown() {
-		try {
-			librariansContainer.kill();
-			securitiesContainer.kill();
-			tablesContainer.kill();
-			studentsContainer.kill();
-			mainContainer.kill();
-		} catch (StaleProxyException e) {
-			e.printStackTrace();
-		}
+	public Library() {
 	}
 
 	@Override
@@ -191,12 +80,12 @@ public class Library extends Repast3Launcher {
 
 	private void buildModel() {
 		library2DGrid = new Object2DGrid(WIDTH, HEIGHT);
-		tablesList = new ArrayList<Table>();
+		drawablesList = new ArrayList<Drawable>();
 	}
 
 	private void buildAndScheduleDisplay() {
 		Object2DDisplay libraryDisplay = new Object2DDisplay(library2DGrid);
-		libraryDisplay.setObjectList(tablesList);
+		libraryDisplay.setObjectList(drawablesList);
 		dsurf.addDisplayableProbeable(libraryDisplay, "Tables");
 		addSimEventListener(dsurf);
 
@@ -249,10 +138,10 @@ public class Library extends Repast3Launcher {
 				Floor floor = new Floor(i, COURSES[i]);
 				tables[i] = new Agent[N_TABLES_PER_FLOOR];
 				for(int j=0; j<N_TABLES_PER_FLOOR; j++){
-					Table table = new Table(floor, i*2, j*2);
+					Table table = new Table(floor, 10 + i*10, 5 + j*3);
 
 					tables[i][j] = table;
-					tablesList.add(table);
+					drawablesList.add(table);
 					tablesContainer.acceptNewAgent("table_"+i+"_"+j, table).start();
 				}
 				securities[i] = new Security(floor, noise_tolerance);
@@ -281,7 +170,8 @@ public class Library extends Repast3Launcher {
 					nickname = i+"_student";
 				}
 				int course_n = random.nextInt(N_FLOORS);
-				students[i] = new Student(COURSES[course_n], noise, action, timeOfArrival);
+				students[i] = new Student(COURSES[course_n], noise, action, timeOfArrival, i+1);
+				drawablesList.add((Drawable) students[i]);
 				studentsContainer.acceptNewAgent(nickname, students[i]).start();
 			}
 		} catch (StaleProxyException e) {
@@ -300,18 +190,9 @@ public class Library extends Repast3Launcher {
 	}
 
 	public static void main(String[] args) {
-		if (args.length != 1) {
-			System.err.println("Usage: java Library <filename>");
-			System.exit(1);
-		}
-
-		if(!new File(args[0]).exists()) {
-			System.err.println("File " + args[0] + " not found.");
-			System.exit(1);
-		}
 
 		SimInit init = new SimInit();
 		init.setNumRuns(1);   // works only in batch mode
-		init.loadModel(new Library(args[0]), null, BATCH_MODE);
+		init.loadModel(new Library(), null, BATCH_MODE);
 	}
 }

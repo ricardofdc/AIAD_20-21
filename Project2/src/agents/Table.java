@@ -85,11 +85,7 @@ public class Table extends Agent implements Drawable {
 
     @Override
     public void draw(SimGraphics simGraphics) {
-        if (isFree()) {
-            simGraphics.drawFastRect(freeColor);
-        } else {
-            simGraphics.drawFastRect(occupiedColor);
-        }
+        simGraphics.drawFastRect(freeColor);
     }
 
     @Override

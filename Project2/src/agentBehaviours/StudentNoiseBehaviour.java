@@ -1,5 +1,6 @@
 package agentBehaviours;
 
+import java.awt.*;
 import java.util.Random;
 import agents.Student;
 import jade.core.AID;
@@ -54,7 +55,7 @@ public class StudentNoiseBehaviour extends TickerBehaviour {
 		
 		if (generatedNoise <= ((Student)myAgent).getNoise()) {
 			ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
-			
+			((Student)myAgent).setColor(Color.RED);
 			msg.setOntology("NOISE");
 			msg.addReceiver(floorSecurity);
 
