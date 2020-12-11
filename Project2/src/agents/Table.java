@@ -8,11 +8,26 @@ import jade.domain.FIPAAgentManagement.ServiceDescription;
 import jade.domain.FIPAException;
 import library.Floor;
 import library.Logs;
+import uchicago.src.sim.gui.Drawable;
+import uchicago.src.sim.gui.SimGraphics;
 
-public class Table extends Agent {
+import java.awt.*;
+
+public class Table extends Agent implements Drawable {
     private final Floor floor;
     private boolean isFree;
     private int satisfaction;
+
+    private int x, y;
+    private static final Color freeColor = new Color(0, 255, 0);
+    private static final Color occupiedColor = new Color(255, 0, 0);
+
+    public Table(Floor floor, int x, int y) {
+        this(floor);
+
+        this.x = x;
+        this.y = y;
+    }
 
     public Table(Floor floor){
         this.floor=floor;
@@ -68,4 +83,22 @@ public class Table extends Agent {
         }
     }
 
+    @Override
+    public void draw(SimGraphics simGraphics) {
+        if (isFree()) {
+            simGraphics.drawFastRect(freeColor);
+        } else {
+            simGraphics.drawFastRect(occupiedColor);
+        }
+    }
+
+    @Override
+    public int getX() {
+        return x;
+    }
+
+    @Override
+    public int getY() {
+        return y;
+    }
 }
