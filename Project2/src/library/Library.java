@@ -1,7 +1,10 @@
 package library;
 
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import agents.Security;
@@ -16,10 +19,16 @@ import agents.Librarian;
 import agents.Student;
 import sajas.sim.repast3.Repast3Launcher;
 import sajas.wrapper.ContainerController;
+import uchicago.src.sim.engine.Schedule;
 import uchicago.src.sim.engine.SimInit;
+import uchicago.src.sim.gui.DisplaySurface;
+import uchicago.src.sim.gui.Object2DDisplay;
+import uchicago.src.sim.space.Object2DGrid;
 
 
 public class Library extends Repast3Launcher {
+
+	private static final boolean BATCH_MODE = false;
 
 	private static final int WORKING_TIME = 15000;
 	private static final int AVG_NOISE_TOLERANCE = 8;
@@ -40,12 +49,16 @@ public class Library extends Repast3Launcher {
 	private Agent librarian;
 	private Agent[] securities;
 	private Agent[][] tables;
+	private List<Table> tablesList;
 	private Agent[] students;
 
 	Random random = new Random();
 
-
 	private String filename;
+
+	private DisplaySurface dsurf;
+	private int WIDTH = 20, HEIGHT = 20;
+	private Object2DGrid library2DGrid;
 
 	public Library(String filename) {
 		this.filename = filename;
@@ -158,11 +171,45 @@ public class Library extends Repast3Launcher {
 	}
 
 	@Override
+	public void setup() {
+		super.setup();
+
+		if (dsurf != null) dsurf.dispose();
+		dsurf = new DisplaySurface(this, "Library Display");
+		registerDisplaySurface("Library Display", dsurf);
+	}
+
+	@Override
+	public void begin() {
+		buildModel();
+		if (!BATCH_MODE) {
+			buildAndScheduleDisplay();
+		}
+
+		super.begin();
+	}
+
+	private void buildModel() {
+		library2DGrid = new Object2DGrid(WIDTH, HEIGHT);
+		tablesList = new ArrayList<Table>();
+	}
+
+	private void buildAndScheduleDisplay() {
+		Object2DDisplay libraryDisplay = new Object2DDisplay(library2DGrid);
+		libraryDisplay.setObjectList(tablesList);
+		dsurf.addDisplayableProbeable(libraryDisplay, "Tables");
+		addSimEventListener(dsurf);
+
+		dsurf.display();
+
+		getSchedule().scheduleActionAtInterval(1, dsurf, "updateDisplay", Schedule.LAST);
+	}
+
+	@Override
 	protected void launchJADE() {
 
 		Runtime rt = Runtime.instance();
 		Profile mainProfile = new ProfileImpl();
-		mainProfile.setParameter(Profile.GUI, "true");
 		mainContainer = rt.createMainContainer(mainProfile);
 
 		Profile librariansProfile = new ProfileImpl();
@@ -183,7 +230,7 @@ public class Library extends Repast3Launcher {
 
 		launchAgents();
 
-		// add an agent with run comportment
+		// TODO: add an agent with run comportment
 
 
 		//run();
@@ -191,6 +238,7 @@ public class Library extends Repast3Launcher {
 	}
 
 	private void launchAgents() {
+
 		try{
 
 			Logs.init(N_FLOORS);
@@ -201,8 +249,11 @@ public class Library extends Repast3Launcher {
 				Floor floor = new Floor(i, COURSES[i]);
 				tables[i] = new Agent[N_TABLES_PER_FLOOR];
 				for(int j=0; j<N_TABLES_PER_FLOOR; j++){
-					tables[i][j] = new Table(floor);
-					tablesContainer.acceptNewAgent("table_"+i+"_"+j, tables[i][j]).start();
+					Table table = new Table(floor, i*2, j*2);
+
+					tables[i][j] = table;
+					tablesList.add(table);
+					tablesContainer.acceptNewAgent("table_"+i+"_"+j, table).start();
 				}
 				securities[i] = new Security(floor, noise_tolerance);
 				securitiesContainer.acceptNewAgent("security_" + i, securities[i]).start();
@@ -238,8 +289,6 @@ public class Library extends Repast3Launcher {
 		}
 	}
 
-
-
 	@Override
 	public String[] getInitParam() {
 		return new String[0];
@@ -247,11 +296,10 @@ public class Library extends Repast3Launcher {
 
 	@Override
 	public String getName() {
-		return "Library Service";
+		return "AIAD - Library Service";
 	}
 
 	public static void main(String[] args) {
-
 		if (args.length != 1) {
 			System.err.println("Usage: java Library <filename>");
 			System.exit(1);
@@ -263,7 +311,7 @@ public class Library extends Repast3Launcher {
 		}
 
 		SimInit init = new SimInit();
-		//init.setNumRuns(1);   // works only in batch mode
-		init.loadModel(new Library(args[0]), null, false);
+		init.setNumRuns(1);   // works only in batch mode
+		init.loadModel(new Library(args[0]), null, BATCH_MODE);
 	}
 }
