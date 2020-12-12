@@ -30,12 +30,12 @@ public class Library extends Repast3Launcher {
 
 	private static final boolean BATCH_MODE = false;
 
-	private int WORKING_TIME = 150000;
-	private int AVG_NOISE_TOLERANCE = 8;
-	private int AVG_STUDENT_NOISE = 8;
+	private int WORKING_TIME = 150;
+	private int AVG_NOISE_TOLERANCE = 5;
+	private int AVG_STUDENT_NOISE = 5;
 	private int N_FLOORS = 5;
-	private final String[] COURSES = {"MIEIC", "MIEM", "MIEGI", "MIEC", "MIEQ"};
-	private int N_TABLES_PER_FLOOR = 4;
+	private final String[] COURSES = {"MIEIC", "MIEM", "MIEGI", "MIEC", "MIEQ", "MIB", "MIEA", "MIEEC", "MI:EF", "MIEMM"};
+	private int N_TABLES_PER_FLOOR = 10;
 	private int N_STUDENTS = 100;
 	private int N_LIBRARIANS = 3;
 
@@ -203,7 +203,7 @@ public class Library extends Repast3Launcher {
 			}
 		});
 
-		plot.addSequence("Number of kicked students", new Sequence() {
+		plot.addSequence("Kicked students", new Sequence() {
 			public double getSValue() {
 				double numberKicks = 0;
 				int num_students = 0;
@@ -216,6 +216,18 @@ public class Library extends Repast3Launcher {
 					numberKicks += ((Security)security).getNumberKicks();
 				}
 				return numberKicks / num_students * 100;
+			}
+		});
+
+		plot.addSequence("Seated students", new Sequence() {
+			public double getSValue() {
+				double seated = 0;
+				for(Agent student: students){
+					if(((Student)student).getSeated()){
+						seated++;
+					}
+				}
+				return seated / N_STUDENTS * 100;
 			}
 		});
 
@@ -285,7 +297,7 @@ public class Library extends Repast3Launcher {
 
 				int noise = AVG_STUDENT_NOISE - 2 + random.nextInt(5);
 				int action = 0;
-				int timeOfArrival = random.nextInt(WORKING_TIME);
+				int timeOfArrival = random.nextInt(WORKING_TIME * 1000);
 
 				String nickname;
 				if (i<10) {
