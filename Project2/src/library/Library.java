@@ -16,6 +16,8 @@ import agents.Librarian;
 import agents.Student;
 import sajas.sim.repast3.Repast3Launcher;
 import sajas.wrapper.ContainerController;
+import uchicago.src.sim.analysis.OpenSequenceGraph;
+import uchicago.src.sim.analysis.Sequence;
 import uchicago.src.sim.engine.Schedule;
 import uchicago.src.sim.engine.SimInit;
 import uchicago.src.sim.gui.DisplaySurface;
@@ -28,14 +30,14 @@ public class Library extends Repast3Launcher {
 
 	private static final boolean BATCH_MODE = false;
 
-	private static final int WORKING_TIME = 15000;
-	private static final int AVG_NOISE_TOLERANCE = 8;
-	private static final int AVG_STUDENT_NOISE = 8;
-	private final int N_FLOORS = 5;
+	private int WORKING_TIME = 150000;
+	private int AVG_NOISE_TOLERANCE = 8;
+	private int AVG_STUDENT_NOISE = 8;
+	private int N_FLOORS = 5;
 	private final String[] COURSES = {"MIEIC", "MIEM", "MIEGI", "MIEC", "MIEQ"};
-	private final int N_TABLES_PER_FLOOR = 4;
-	private final int N_STUDENTS = 20;
-	public static final boolean USE_RESULTS_COLLECTOR = true;
+	private int N_TABLES_PER_FLOOR = 4;
+	private int N_STUDENTS = 100;
+	private int N_LIBRARIANS = 3;
 
 
 	private ContainerController mainContainer;
@@ -44,7 +46,7 @@ public class Library extends Repast3Launcher {
 	private ContainerController tablesContainer;
 	private ContainerController studentsContainer;
 
-	private Agent librarian;
+	private Agent[] librarians;
 	private Agent[] securities;
 	private Agent[][] tables;
 	private List<Drawable> drawablesList;
@@ -53,10 +55,79 @@ public class Library extends Repast3Launcher {
 	Random random = new Random();
 
 	private DisplaySurface dsurf;
-	private int WIDTH = N_FLOORS * 15, HEIGHT = N_STUDENTS * 4;
+	private int WIDTH = N_FLOORS * 15, HEIGHT = N_TABLES_PER_FLOOR * 4 + 50;
 	private Object2DGrid library2DGrid;
+	private OpenSequenceGraph plot;
+
 
 	public Library() {
+	}
+
+	public void setWORKING_TIME(int WORKING_TIME){
+		this.WORKING_TIME = WORKING_TIME;
+	}
+
+	public int getWORKING_TIME(){
+		return WORKING_TIME;
+	}
+
+	public void setAVG_NOISE_TOLERANCE(int AVG_NOISE_TOLERANCE){
+		this.AVG_NOISE_TOLERANCE = AVG_NOISE_TOLERANCE;
+	}
+
+	public int getAVG_NOISE_TOLERANCE(){
+		return AVG_NOISE_TOLERANCE;
+	}
+
+	public void setAVG_STUDENT_NOISE(int AVG_STUDENT_NOISE){
+		this.AVG_STUDENT_NOISE = AVG_STUDENT_NOISE;
+	}
+
+	public int getAVG_STUDENT_NOISE(){
+		return AVG_STUDENT_NOISE;
+	}
+
+	public void setN_FLOORS(int N_FLOORS){
+		this.N_FLOORS = N_FLOORS;
+	}
+
+	public int getN_FLOORS(){
+		return N_FLOORS;
+	}
+
+	public void setN_TABLES_PER_FLOOR(int N_TABLES_PER_FLOOR){
+		this.N_TABLES_PER_FLOOR = N_TABLES_PER_FLOOR;
+	}
+
+	public int getN_TABLES_PER_FLOOR(){
+		return N_TABLES_PER_FLOOR;
+	}
+
+	public void setN_STUDENTS(int N_STUDENTS){
+		this.N_STUDENTS = N_STUDENTS;
+	}
+
+	public int getN_STUDENTS(){
+		return N_STUDENTS;
+	}
+
+	public void setN_LIBRARIANS(int N_LIBRARIANS){
+		this.N_LIBRARIANS = N_LIBRARIANS;
+	}
+
+	public int getN_LIBRARIANS(){
+		return N_LIBRARIANS;
+	}
+
+	@Override
+	public String[] getInitParam() {
+		return new String[] {"WORKING_TIME",
+				"AVG_NOISE_TOLERANCE",
+				"AVG_STUDENT_NOISE",
+				"N_FLOORS",
+				"N_TABLES_PER_FLOOR",
+				"N_STUDENTS",
+				"N_LIBRARIANS"};
 	}
 
 	@Override
@@ -84,6 +155,9 @@ public class Library extends Repast3Launcher {
 	}
 
 	private void buildAndScheduleDisplay() {
+
+		//agents
+
 		Object2DDisplay libraryDisplay = new Object2DDisplay(library2DGrid);
 		libraryDisplay.setObjectList(drawablesList);
 		dsurf.addDisplayableProbeable(libraryDisplay, "Tables");
@@ -91,7 +165,65 @@ public class Library extends Repast3Launcher {
 
 		dsurf.display();
 
+		// graph
+		if (plot != null) plot.dispose();
+		plot = new OpenSequenceGraph("Library performance", this);
+		plot.setAxisTitles("time", "%");
+
+		plot.addSequence("Tables Occupation", new Sequence() {
+			public double getSValue() {
+				// iterate through consumers
+				double occupation = 0.0;
+				for(int i = 0; i < tables.length; i++) {
+					for(int j=0; j< tables[i].length; j++){
+						if(!((Table)tables[i][j]).isFree())
+							occupation++;
+					}
+				}
+				return occupation / (N_FLOORS*N_TABLES_PER_FLOOR) * 100;
+			}
+		});
+
+		plot.addSequence("Student Satisfaction", new Sequence() {
+			public double getSValue() {
+				double occupancy = 0;
+				double satisfaction = 0;
+				for (Agent[] table : tables) {
+					for (Agent agent : table) {
+						occupancy += (((Table) agent).isFree() ? 0 : 1);
+						if(!((Table)agent).isFree()){
+							satisfaction += ((Table) agent).getSatisfaction();
+						}
+					}
+				}
+				if(occupancy != 0){
+					return satisfaction / occupancy * 100;
+				}
+				return 100;
+			}
+		});
+
+		plot.addSequence("Number of kicked students", new Sequence() {
+			public double getSValue() {
+				double numberKicks = 0;
+				int num_students = 0;
+				for(Agent student: students){
+					if(((Student)student).getSeated()){
+						num_students++;
+					}
+				}
+				for (Agent security: securities) {
+					numberKicks += ((Security)security).getNumberKicks();
+				}
+				return numberKicks / num_students * 100;
+			}
+		});
+
+
+		plot.display();
+
 		getSchedule().scheduleActionAtInterval(1, dsurf, "updateDisplay", Schedule.LAST);
+		getSchedule().scheduleActionAtInterval(100, plot, "step", Schedule.LAST);
 	}
 
 	@Override
@@ -118,12 +250,6 @@ public class Library extends Repast3Launcher {
 		studentsContainer = rt.createAgentContainer(studentsProfile);
 
 		launchAgents();
-
-		// TODO: add an agent with run comportment
-
-
-		//run();
-		//shutdown();
 	}
 
 	private void launchAgents() {
@@ -148,9 +274,11 @@ public class Library extends Repast3Launcher {
 				securitiesContainer.acceptNewAgent("security_" + i, securities[i]).start();
 			}
 
-			librarian = new Librarian();
-			librariansContainer.acceptNewAgent("librarian", librarian).start();
-
+			librarians = new Agent[N_LIBRARIANS];
+			for(int i=0; i<N_LIBRARIANS; i++){
+				librarians[i] = new Librarian();
+				librariansContainer.acceptNewAgent("librarian" + i, librarians[i]).start();
+			}
 
 			students = new Agent[N_STUDENTS];
 			for(int i = 0; i< N_STUDENTS; i++) {
@@ -170,18 +298,13 @@ public class Library extends Repast3Launcher {
 					nickname = i+"_student";
 				}
 				int course_n = random.nextInt(N_FLOORS);
-				students[i] = new Student(COURSES[course_n], noise, action, timeOfArrival, i+1);
+				students[i] = new Student(COURSES[course_n], noise, action, timeOfArrival, i+1, N_TABLES_PER_FLOOR);
 				drawablesList.add((Drawable) students[i]);
 				studentsContainer.acceptNewAgent(nickname, students[i]).start();
 			}
 		} catch (StaleProxyException e) {
 			e.printStackTrace();
 		}
-	}
-
-	@Override
-	public String[] getInitParam() {
-		return new String[0];
 	}
 
 	@Override

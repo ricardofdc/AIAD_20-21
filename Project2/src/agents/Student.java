@@ -28,14 +28,22 @@ public class Student extends Agent implements Drawable {
     
     private AID tableAID;
     private int color_counter = 0;
+    private final int num_students;
+    private final int num_tables;
 
-    public Student( String course, int noise, int action, int timeOfArrival, int num) {
+    private int count_disconfirms = 0;
+    private int num_table_requests = 0;
+    private boolean seated = false;
+
+    public Student( String course, int noise, int action, int timeOfArrival, int num_students, int num_tables) {
         this.course = course;
         this.noise = noise;
         this.action = action;
         this.timeOfArrival = timeOfArrival;	//milliseconds
-        this.setXY(1, num * 2);
+        this.setXY((num_students % 20) * 2 + 10, (int) (Math.floor(num_students / 20.0) * 2 + num_tables * 3 + 10));
         this.color = Color.BLACK;
+        this.num_students = num_students;
+        this.num_tables = num_tables;
 
     }
 
@@ -72,7 +80,7 @@ public class Student extends Agent implements Drawable {
             @Override
             protected void onWake() {
                 super.onWake();
-                ((Student)myAgent).setColor(Color.PINK);
+                ((Student)myAgent).setColor(Color.blue);
                 addBehaviour(new StudentRequestBehaviour());
                 addBehaviour(new StudentListenBehaviour());
 
@@ -96,12 +104,12 @@ public class Student extends Agent implements Drawable {
     }
 
     protected void takeDown() {
+        this.setXY((num_students % 20) * 2 + 10, (int) (Math.floor(num_students / 20.0) * 2 + num_tables * 3 + 10));
+        setColor(Color.gray);
         super.takeDown();
         try {
             DFService.deregister(this);
             Logs.write(this.getName() + " TAKEN DOWN AND UNREGISTERED FROM DFSERVICE", "student");
-            setXY(1, 1);
-            setColor(Color.black);
         } catch(FIPAException e) {
             e.printStackTrace();
         }
@@ -109,8 +117,8 @@ public class Student extends Agent implements Drawable {
 
     @Override
     public void draw(SimGraphics simGraphics) {
-        if(color_counter == 5){
-            color = Color.PINK;
+        if(color_counter == 5 && color == Color.red){
+            color = Color.blue;
         }
         if(color == Color.RED){
             color_counter++;
@@ -131,5 +139,28 @@ public class Student extends Agent implements Drawable {
     public void setXY(int x, int y){
         this.x = x;
         this.y = y;
+    }
+
+    public int getCountDisconfirms() {
+        return count_disconfirms;
+    }
+
+    public void setCountDisconfirms(int count_disconfirms) {
+        this.count_disconfirms = count_disconfirms;
+    }
+
+    public int getNumTableRequests() {
+        return num_table_requests;
+    }
+
+    public void setNumTableRequests(int num_table_requests) {
+        this.num_table_requests = num_table_requests;
+    }
+
+    public void setSeated() {
+        this.seated = true;
+    }
+    public boolean getSeated() {
+        return this.seated;
     }
 }

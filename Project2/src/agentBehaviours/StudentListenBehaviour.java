@@ -21,7 +21,8 @@ public class StudentListenBehaviour extends CyclicBehaviour {
                                 MessageTemplate.MatchPerformative(ACLMessage.NOT_UNDERSTOOD)));
 
     boolean isSeated = false;
-    
+
+
     @Override
     public void action() {
 
@@ -48,6 +49,7 @@ public class StudentListenBehaviour extends CyclicBehaviour {
                 	Logs.write(myAgent.getName() + " RECEIVED CONFIRM FROM " + msg.getSender(), "student");
                 	break;
                 case ACLMessage.DISCONFIRM:
+                    handleDisconfirm(msg);
                     Logs.write(myAgent.getName() + " RECEIVED DISCONFIRM FROM " + msg.getSender(), "student");
                     break;
             }
@@ -57,12 +59,25 @@ public class StudentListenBehaviour extends CyclicBehaviour {
         }
     }
 
+    private void handleDisconfirm(ACLMessage msg) {
+        int disconfirms = ((Student)myAgent).getCountDisconfirms();
+
+        if(disconfirms + 1 == ((Student)myAgent).getNumTableRequests()){
+            ((Student)myAgent).setCountDisconfirms(0);
+            handleRefuse();
+        }
+        else{
+            ((Student)myAgent).setCountDisconfirms(disconfirms+1);
+        }
+    }
+
     private void handleAgree(ACLMessage msg) {
 		switch (msg.getOntology()) {
 		case "SEAT":
 		    String[] coords = msg.getContent().split(" ");
             ((Student)myAgent).setXY(Integer.parseInt(coords[0]), Integer.parseInt(coords[1]));
 			((Student)myAgent).setTableAID(msg.getSender());
+            ((Student)myAgent).setSeated();
 	    	myAgent.addBehaviour(new StudentNoiseBehaviour(myAgent, 2000, msg.getSender()));
 			break;
 		}
@@ -121,6 +136,9 @@ public class StudentListenBehaviour extends CyclicBehaviour {
             	myAgent.doDelete();
             	
             	break;
+            case "NO_FREE_SPACE":
+                handleRefuse();
+                break;
             default:
                 break;
     	}
@@ -136,6 +154,8 @@ public class StudentListenBehaviour extends CyclicBehaviour {
 
         try {
             DFAgentDescription[] result = DFService.search(myAgent, dfd);
+
+            ((Student)myAgent).setNumTableRequests(result.length);
 
             for (DFAgentDescription agent : result) {
                 Logs.write(myAgent.getName() + " FOUND " + agent.getName(), "student");

@@ -1,6 +1,8 @@
 package agentBehaviours;
 
 import java.util.ArrayList;
+import java.util.Random;
+
 import agents.Student;
 import jade.core.AID;
 import sajas.core.behaviours.OneShotBehaviour;
@@ -45,13 +47,17 @@ public class StudentRequestBehaviour extends OneShotBehaviour {
 		dfd.addServices(sd);
 
 		try {
+			Random r = new Random();
 			DFAgentDescription[] result = DFService.search(myAgent, dfd);
 			librarians = new ArrayList<AID>();
-
+			librarians.add(result[r.nextInt(result.length)].getName());
+/*
 			for (DFAgentDescription agent : result) {
 				Logs.write(myAgent.getName() + " FOUND " + agent.getName(), "student");
 				librarians.add(agent.getName());
 			}
+
+ */
 		} catch(FIPAException fe) {
 			fe.printStackTrace();
 		}
